@@ -34,7 +34,7 @@ try:
         dados2 = []
         for index, element in enumerate(odds_elements, start=1):
             print(f'Odd Risco Zero: {element.text} para {aposta_riscoZero[index-1].text}')
-            dados2.append(['BETESPORTE','Partida', aposta_riscoZero[index-1].text, element.text])
+            dados2.append(['BETESPORTE','risco0', aposta_riscoZero[index-1].text, element.text])
         sleep(5)
         
         
@@ -46,7 +46,7 @@ try:
         dados1 = []
         for index, element in enumerate(odds_elements, start=1):
             print(f'Super Odd: {element.text} para {aposta_superOdd[index-1].text}')
-            dados1.append(['BETESPORTE','Partida', aposta_superOdd[index-1].text, element.text])
+            dados1.append(['BETESPORTE','SUPERodd', aposta_superOdd[index-1].text, element.text])
             
         dados = dados1 + dados2
 
