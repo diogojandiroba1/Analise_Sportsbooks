@@ -1,0 +1,6 @@
+{
+    "statusCode": 422,
+    "errorMessage": "Internal server error",
+    "endpoint": "/api/leagues/674990359025340416/outrights",
+    "error": "{\"response\":\"jwt must be provided\",\"status\":422,\"message\":\"jwt must be provided\",\"name\":\"HttpException\"}"
+}
