@@ -1,0 +1,1102 @@
+{
+    "data": [
+        [
+            "680256828541796352",
+            "680052790583906304",
+            "ApostaTudo Specials",
+            "9",
+            "Especiais",
+            "29",
+            "BR",
+            "Brasil",
+            [
+                [
+                    "678579666185093120",
+                    {
+                        "BR-PT": "Neymar para marcar a Qualquer Momento"
+                    },
+                    ""
+                ],
+                [
+                    "667379766282010624",
+                    {
+                        "BR-PT": "Não"
+                    },
+                    ""
+                ]
+            ],
+            1,
+            "Inter de Limeira vs Santos FC",
+            "2025-02-23T21:30:00.000Z",
+            [
+                "",
+                "",
+                null,
+                {}
+            ],
+            false,
+            false,
+            {
+                "ClockRunning": false,
+                "ClockDirection": 0,
+                "UpdateDate": "0001-01-01T00:00:00.000Z",
+                "GameTimeBFFGotAt": 1740258659945
+            },
+            false,
+            [],
+            "638758554233955768",
+            [
+                [
+                    "0QA680256828650844160",
+                    "Apostar no Vencedor",
+                    "Apostar no Vencedor",
+                    [
+                        "QA8",
+                        "Apostar no Vencedor",
+                        0
+                    ],
+                    "680256828541796352",
+                    "680052790583906304",
+                    "9",
+                    [
+                        [
+                            "0QA680256828650844160Q0Q0",
+                            {
+                                "BR-PT": "Neymar para marcar a Qualquer Momento"
+                            },
+                            {
+                                "BR-PT": "Neymar para marcar a Qualquer Momento"
+                            },
+                            false,
+                            2,
+                            false,
+                            [
+                                "100",
+                                "2.00",
+                                "1/1",
+                                "1.00",
+                                "1.00",
+                                "1.00"
+                            ],
+                            0,
+                            0,
+                            {},
+                            "0QA680256828650844160",
+                            false,
+                            "680256828541796352",
+                            null,
+                            [],
+                            [
+                                null,
+                                0.09,
+                                200,
+                                0.09,
+                                100,
+                                100,
+                                false,
+                                true,
+                                false,
+                                false,
+                                0,
+                                0
+                            ],
+                            "9"
+                        ],
+                        [
+                            "0QA680256828650844160Q0Q1",
+                            {
+                                "BR-PT": "Não"
+                            },
+                            {
+                                "BR-PT": "Não"
+                            },
+                            false,
+                            0,
+                            false,
+                            [
+                                "0",
+                                "0.00",
+                                "1/0",
+                                "0.00",
+                                "0.00",
+                                "0.00"
+                            ],
+                            0,
+                            0,
+                            {},
+                            "0QA680256828650844160",
+                            true,
+                            "680256828541796352",
+                            null,
+                            [],
+                            [
+                                null,
+                                0.09,
+                                200,
+                                0.09,
+                                100,
+                                100,
+                                false,
+                                true,
+                                false,
+                                false,
+                                0,
+                                0
+                            ],
+                            "9"
+                        ]
+                    ],
+                    false,
+                    false,
+                    null,
+                    false,
+                    "638758545840905424",
+                    null,
+                    true,
+                    [
+                        "672128621129093120"
+                    ]
+                ]
+            ],
+            "Inter-de-Limeira-vs-Santos-FC",
+            "ApostaTudo-Specials",
+            "Brasil",
+            "Especiais",
+            9,
+            10000200,
+            "Outright",
+            1,
+            false,
+            null,
+            {
+                "IsBetBuilderEnabled": false,
+                "IsExposureEnabled": true,
+                "IsVIPExcludeEnabled": false,
+                "IsWBComboEnabled": false,
+                "IsWBSingleEnabled": false,
+                "MaxWinSingle": 0.7,
+                "EarlyPayout": null
+            },
+            "680052739065270272",
+            "8059",
+            {},
+            null,
+            null
+        ],
+        [
+            "680259419338211328",
+            "680052790583906304",
+            "ApostaTudo Specials",
+            "9",
+            "Especiais",
+            "29",
+            "BR",
+            "Brasil",
+            [
+                [
+                    "680253456229093376",
+                    {
+                        "BR-PT": "Menos de 6.5 Gols na partida"
+                    },
+                    ""
+                ],
+                [
+                    "667379766282010624",
+                    {
+                        "BR-PT": "Não"
+                    },
+                    ""
+                ]
+            ],
+            1,
+            "Barcelona vs Atletico de Madrid",
+            "2025-02-25T20:30:00.000Z",
+            [
+                "",
+                "",
+                null,
+                {}
+            ],
+            false,
+            false,
+            {
+                "ClockRunning": false,
+                "ClockDirection": 0,
+                "UpdateDate": "0001-01-01T00:00:00.000Z",
+                "GameTimeBFFGotAt": 1740258659945
+            },
+            false,
+            [],
+            "638758554234280089",
+            [
+                [
+                    "0QA680259419526942720",
+                    "Apostar no Vencedor",
+                    "Apostar no Vencedor",
+                    [
+                        "QA8",
+                        "Apostar no Vencedor",
+                        0
+                    ],
+                    "680259419338211328",
+                    "680052790583906304",
+                    "9",
+                    [
+                        [
+                            "0QA680259419526942720Q0Q0",
+                            {
+                                "BR-PT": "Menos de 6.5 Gols na partida"
+                            },
+                            {
+                                "BR-PT": "Menos de 6.5 Gols na partida"
+                            },
+                            false,
+                            2,
+                            false,
+                            [
+                                "100",
+                                "2.00",
+                                "1/1",
+                                "1.00",
+                                "1.00",
+                                "1.00"
+                            ],
+                            0,
+                            0,
+                            {},
+                            "0QA680259419526942720",
+                            false,
+                            "680259419338211328",
+                            null,
+                            [],
+                            [
+                                null,
+                                0.09,
+                                200,
+                                0.09,
+                                100,
+                                100,
+                                false,
+                                true,
+                                false,
+                                false,
+                                0,
+                                0
+                            ],
+                            "9"
+                        ],
+                        [
+                            "0QA680259419526942720Q0Q1",
+                            {
+                                "BR-PT": "Não"
+                            },
+                            {
+                                "BR-PT": "Não"
+                            },
+                            false,
+                            0,
+                            false,
+                            [
+                                "0",
+                                "0.00",
+                                "1/0",
+                                "0.00",
+                                "0.00",
+                                "0.00"
+                            ],
+                            0,
+                            0,
+                            {},
+                            "0QA680259419526942720",
+                            true,
+                            "680259419338211328",
+                            null,
+                            [],
+                            [
+                                null,
+                                0.09,
+                                200,
+                                0.09,
+                                100,
+                                100,
+                                false,
+                                true,
+                                false,
+                                false,
+                                0,
+                                0
+                            ],
+                            "9"
+                        ]
+                    ],
+                    false,
+                    false,
+                    null,
+                    false,
+                    "638758545849804569",
+                    null,
+                    true,
+                    [
+                        "672128621129093120"
+                    ]
+                ]
+            ],
+            "Barcelona-vs-Atletico-de-Madrid",
+            "ApostaTudo-Specials",
+            "Brasil",
+            "Especiais",
+            9,
+            10000200,
+            "Outright",
+            1,
+            false,
+            null,
+            {
+                "IsBetBuilderEnabled": false,
+                "IsExposureEnabled": true,
+                "IsVIPExcludeEnabled": false,
+                "IsWBComboEnabled": false,
+                "IsWBSingleEnabled": false,
+                "MaxWinSingle": 0.7,
+                "EarlyPayout": null
+            },
+            "680052739065270272",
+            "8059",
+            {},
+            null,
+            null
+        ],
+        [
+            "680264845991641088",
+            "680052790583906304",
+            "ApostaTudo Specials",
+            "9",
+            "Especiais",
+            "29",
+            "BR",
+            "Brasil",
+            [
+                [
+                    "667379766282010624",
+                    {
+                        "BR-PT": "Não"
+                    },
+                    ""
+                ],
+                [
+                    "680266577249325056",
+                    {
+                        "BR-PT": "Mohamed Salah para tocar na bola a qualquer momento"
+                    },
+                    ""
+                ]
+            ],
+            1,
+            "Liverpool vs Newcastle",
+            "2025-02-26T20:15:00.000Z",
+            [
+                "",
+                "",
+                null,
+                {}
+            ],
+            false,
+            false,
+            {
+                "ClockRunning": false,
+                "ClockDirection": 0,
+                "UpdateDate": "0001-01-01T00:00:00.000Z",
+                "GameTimeBFFGotAt": 1740258659945
+            },
+            false,
+            [],
+            "638758554233766690",
+            [
+                [
+                    "0QA680264846910287872",
+                    "Apostar no Vencedor",
+                    "Apostar no Vencedor",
+                    [
+                        "QA8",
+                        "Apostar no Vencedor",
+                        0
+                    ],
+                    "680264845991641088",
+                    "680052790583906304",
+                    "9",
+                    [
+                        [
+                            "0QA680264846910287872Q0Q0",
+                            {
+                                "BR-PT": "Não"
+                            },
+                            {
+                                "BR-PT": "Não"
+                            },
+                            false,
+                            0,
+                            false,
+                            [
+                                "0",
+                                "0.00",
+                                "1/0",
+                                "0.00",
+                                "0.00",
+                                "0.00"
+                            ],
+                            0,
+                            0,
+                            {},
+                            "0QA680264846910287872",
+                            true,
+                            "680264845991641088",
+                            null,
+                            [],
+                            [
+                                null,
+                                0.09,
+                                200,
+                                0.09,
+                                100,
+                                100,
+                                false,
+                                true,
+                                false,
+                                false,
+                                0,
+                                0
+                            ],
+                            "9"
+                        ],
+                        [
+                            "0QA680264846910287872Q0Q1",
+                            {
+                                "BR-PT": "Mohamed Salah para tocar na bola a qualquer momento"
+                            },
+                            {
+                                "BR-PT": "Mohamed Salah para tocar na bola a qualquer momento"
+                            },
+                            false,
+                            2,
+                            false,
+                            [
+                                "100",
+                                "2.00",
+                                "1/1",
+                                "1.00",
+                                "1.00",
+                                "1.00"
+                            ],
+                            0,
+                            0,
+                            {},
+                            "0QA680264846910287872",
+                            false,
+                            "680264845991641088",
+                            null,
+                            [],
+                            [
+                                null,
+                                0.09,
+                                200,
+                                0.09,
+                                100,
+                                100,
+                                false,
+                                true,
+                                false,
+                                false,
+                                0,
+                                0
+                            ],
+                            "9"
+                        ]
+                    ],
+                    false,
+                    false,
+                    null,
+                    false,
+                    "638758545861071313",
+                    null,
+                    true,
+                    [
+                        "672128621129093120"
+                    ]
+                ]
+            ],
+            "Liverpool-vs-Newcastle",
+            "ApostaTudo-Specials",
+            "Brasil",
+            "Especiais",
+            9,
+            10000200,
+            "Outright",
+            1,
+            false,
+            null,
+            {
+                "IsBetBuilderEnabled": false,
+                "IsExposureEnabled": true,
+                "IsVIPExcludeEnabled": false,
+                "IsWBComboEnabled": false,
+                "IsWBSingleEnabled": false,
+                "MaxWinSingle": 0.7,
+                "EarlyPayout": null
+            },
+            "680052739065270272",
+            "8059",
+            {},
+            null,
+            null
+        ],
+        [
+            "680267493218316288",
+            "680052790583906304",
+            "ApostaTudo Specials",
+            "9",
+            "Especiais",
+            "29",
+            "BR",
+            "Brasil",
+            [
+                [
+                    "667379766282010624",
+                    {
+                        "BR-PT": "Não"
+                    },
+                    ""
+                ],
+                [
+                    "680253456229093376",
+                    {
+                        "BR-PT": "Menos de 6.5 Gols na partida"
+                    },
+                    ""
+                ]
+            ],
+            1,
+            "Monaco vs Reims",
+            "2025-02-28T19:45:00.000Z",
+            [
+                "",
+                "",
+                null,
+                {}
+            ],
+            false,
+            false,
+            {
+                "ClockRunning": false,
+                "ClockDirection": 0,
+                "UpdateDate": "0001-01-01T00:00:00.000Z",
+                "GameTimeBFFGotAt": 1740258659945
+            },
+            false,
+            [],
+            "638758554234015420",
+            [
+                [
+                    "0QA680267493407059968",
+                    "Apostar no Vencedor",
+                    "Apostar no Vencedor",
+                    [
+                        "QA8",
+                        "Apostar no Vencedor",
+                        0
+                    ],
+                    "680267493218316288",
+                    "680052790583906304",
+                    "9",
+                    [
+                        [
+                            "0QA680267493407059968Q0Q0",
+                            {
+                                "BR-PT": "Não"
+                            },
+                            {
+                                "BR-PT": "Não"
+                            },
+                            false,
+                            0,
+                            false,
+                            [
+                                "0",
+                                "0.00",
+                                "1/0",
+                                "0.00",
+                                "0.00",
+                                "0.00"
+                            ],
+                            0,
+                            0,
+                            {},
+                            "0QA680267493407059968",
+                            true,
+                            "680267493218316288",
+                            null,
+                            [],
+                            [
+                                null,
+                                0.09,
+                                200,
+                                0.09,
+                                100,
+                                100,
+                                false,
+                                true,
+                                false,
+                                false,
+                                0,
+                                0
+                            ],
+                            "9"
+                        ],
+                        [
+                            "0QA680267493407059968Q0Q1",
+                            {
+                                "BR-PT": "Menos de 6.5 Gols na partida"
+                            },
+                            {
+                                "BR-PT": "Menos de 6.5 Gols na partida"
+                            },
+                            false,
+                            2,
+                            false,
+                            [
+                                "100",
+                                "2.00",
+                                "1/1",
+                                "1.00",
+                                "1.00",
+                                "1.00"
+                            ],
+                            0,
+                            0,
+                            {},
+                            "0QA680267493407059968",
+                            false,
+                            "680267493218316288",
+                            null,
+                            [],
+                            [
+                                null,
+                                0.09,
+                                200,
+                                0.09,
+                                100,
+                                100,
+                                false,
+                                true,
+                                false,
+                                false,
+                                0,
+                                0
+                            ],
+                            "9"
+                        ]
+                    ],
+                    false,
+                    false,
+                    null,
+                    false,
+                    "638758545861097079",
+                    null,
+                    true,
+                    [
+                        "672128621129093120"
+                    ]
+                ]
+            ],
+            "Monaco-vs-Reims",
+            "ApostaTudo-Specials",
+            "Brasil",
+            "Especiais",
+            9,
+            10000200,
+            "Outright",
+            1,
+            false,
+            null,
+            {
+                "IsBetBuilderEnabled": false,
+                "IsExposureEnabled": true,
+                "IsVIPExcludeEnabled": false,
+                "IsWBComboEnabled": false,
+                "IsWBSingleEnabled": false,
+                "MaxWinSingle": 0.7,
+                "EarlyPayout": null
+            },
+            "680052739065270272",
+            "8059",
+            {},
+            null,
+            null
+        ],
+        [
+            "680268230954446848",
+            "680052790583906304",
+            "ApostaTudo Specials",
+            "9",
+            "Especiais",
+            "29",
+            "BR",
+            "Brasil",
+            [
+                [
+                    "667379766282010624",
+                    {
+                        "BR-PT": "Não"
+                    },
+                    ""
+                ],
+                [
+                    "680270518896840704",
+                    {
+                        "BR-PT": "Raphinha para tocar na bola a qualquer momento"
+                    },
+                    ""
+                ]
+            ],
+            1,
+            "Barcelona vs Real Sociedad",
+            "2025-03-01T17:30:00.000Z",
+            [
+                "",
+                "",
+                null,
+                {}
+            ],
+            false,
+            false,
+            {
+                "ClockRunning": false,
+                "ClockDirection": 0,
+                "UpdateDate": "0001-01-01T00:00:00.000Z",
+                "GameTimeBFFGotAt": 1740258659945
+            },
+            false,
+            [],
+            "638758554234035479",
+            [
+                [
+                    "0QA680268231113732096",
+                    "Apostar no Vencedor",
+                    "Apostar no Vencedor",
+                    [
+                        "QA8",
+                        "Apostar no Vencedor",
+                        0
+                    ],
+                    "680268230954446848",
+                    "680052790583906304",
+                    "9",
+                    [
+                        [
+                            "0QA680268231113732096Q0Q0",
+                            {
+                                "BR-PT": "Não"
+                            },
+                            {
+                                "BR-PT": "Não"
+                            },
+                            false,
+                            0,
+                            false,
+                            [
+                                "0",
+                                "0.00",
+                                "1/0",
+                                "0.00",
+                                "0.00",
+                                "0.00"
+                            ],
+                            0,
+                            0,
+                            {},
+                            "0QA680268231113732096",
+                            true,
+                            "680268230954446848",
+                            null,
+                            [],
+                            [
+                                null,
+                                0.09,
+                                200,
+                                0.09,
+                                100,
+                                100,
+                                false,
+                                true,
+                                false,
+                                false,
+                                0,
+                                0
+                            ],
+                            "9"
+                        ],
+                        [
+                            "0QA680268231113732096Q0Q1",
+                            {
+                                "BR-PT": "Raphinha para tocar na bola a qualquer momento"
+                            },
+                            {
+                                "BR-PT": "Raphinha para tocar na bola a qualquer momento"
+                            },
+                            false,
+                            2,
+                            false,
+                            [
+                                "100",
+                                "2.00",
+                                "1/1",
+                                "1.00",
+                                "1.00",
+                                "1.00"
+                            ],
+                            0,
+                            0,
+                            {},
+                            "0QA680268231113732096",
+                            false,
+                            "680268230954446848",
+                            null,
+                            [],
+                            [
+                                null,
+                                0.09,
+                                200,
+                                0.09,
+                                100,
+                                100,
+                                false,
+                                true,
+                                false,
+                                false,
+                                0,
+                                0
+                            ],
+                            "9"
+                        ]
+                    ],
+                    false,
+                    false,
+                    null,
+                    false,
+                    "638758545861127671",
+                    null,
+                    true,
+                    [
+                        "672128621129093120"
+                    ]
+                ]
+            ],
+            "Barcelona-vs-Real-Sociedad",
+            "ApostaTudo-Specials",
+            "Brasil",
+            "Especiais",
+            9,
+            10000200,
+            "Outright",
+            1,
+            false,
+            null,
+            {
+                "IsBetBuilderEnabled": false,
+                "IsExposureEnabled": true,
+                "IsVIPExcludeEnabled": false,
+                "IsWBComboEnabled": false,
+                "IsWBSingleEnabled": false,
+                "MaxWinSingle": 0.7,
+                "EarlyPayout": null
+            },
+            "680052739065270272",
+            "8059",
+            {},
+            null,
+            null
+        ],
+        [
+            "680270852964765696",
+            "680052790583906304",
+            "ApostaTudo Specials",
+            "9",
+            "Especiais",
+            "29",
+            "BR",
+            "Brasil",
+            [
+                [
+                    "667379766282010624",
+                    {
+                        "BR-PT": "Não"
+                    },
+                    ""
+                ],
+                [
+                    "680253456229093376",
+                    {
+                        "BR-PT": "Menos de 6.5 Gols na partida"
+                    },
+                    ""
+                ]
+            ],
+            1,
+            "Manchester United vs Fulham",
+            "2025-03-02T16:30:00.000Z",
+            [
+                "",
+                "",
+                null,
+                {}
+            ],
+            false,
+            false,
+            {
+                "ClockRunning": false,
+                "ClockDirection": 0,
+                "UpdateDate": "0001-01-01T00:00:00.000Z",
+                "GameTimeBFFGotAt": 1740258659945
+            },
+            false,
+            [],
+            "638758554234146769",
+            [
+                [
+                    "0QA680270853157715968",
+                    "Apostar no Vencedor",
+                    "Apostar no Vencedor",
+                    [
+                        "QA8",
+                        "Apostar no Vencedor",
+                        0
+                    ],
+                    "680270852964765696",
+                    "680052790583906304",
+                    "9",
+                    [
+                        [
+                            "0QA680270853157715968Q0Q0",
+                            {
+                                "BR-PT": "Não"
+                            },
+                            {
+                                "BR-PT": "Não"
+                            },
+                            false,
+                            0,
+                            false,
+                            [
+                                "0",
+                                "0.00",
+                                "1/0",
+                                "0.00",
+                                "0.00",
+                                "0.00"
+                            ],
+                            0,
+                            0,
+                            {},
+                            "0QA680270853157715968",
+                            true,
+                            "680270852964765696",
+                            null,
+                            [],
+                            [
+                                null,
+                                0.09,
+                                200,
+                                0.09,
+                                100,
+                                100,
+                                false,
+                                true,
+                                false,
+                                false,
+                                0,
+                                0
+                            ],
+                            "9"
+                        ],
+                        [
+                            "0QA680270853157715968Q0Q1",
+                            {
+                                "BR-PT": "Menos de 6.5 Gols na partida"
+                            },
+                            {
+                                "BR-PT": "Menos de 6.5 Gols na partida"
+                            },
+                            false,
+                            2,
+                            false,
+                            [
+                                "100",
+                                "2.00",
+                                "1/1",
+                                "1.00",
+                                "1.00",
+                                "1.00"
+                            ],
+                            0,
+                            0,
+                            {},
+                            "0QA680270853157715968",
+                            false,
+                            "680270852964765696",
+                            null,
+                            [],
+                            [
+                                null,
+                                0.09,
+                                200,
+                                0.09,
+                                100,
+                                100,
+                                false,
+                                true,
+                                false,
+                                false,
+                                0,
+                                0
+                            ],
+                            "9"
+                        ]
+                    ],
+                    false,
+                    false,
+                    null,
+                    false,
+                    "638758545861163408",
+                    null,
+                    true,
+                    [
+                        "672128621129093120"
+                    ]
+                ]
+            ],
+            "Manchester-United-vs-Fulham",
+            "ApostaTudo-Specials",
+            "Brasil",
+            "Especiais",
+            9,
+            10000200,
+            "Outright",
+            1,
+            false,
+            null,
+            {
+                "IsBetBuilderEnabled": false,
+                "IsExposureEnabled": true,
+                "IsVIPExcludeEnabled": false,
+                "IsWBComboEnabled": false,
+                "IsWBSingleEnabled": false,
+                "MaxWinSingle": 0.7,
+                "EarlyPayout": null
+            },
+            "680052739065270272",
+            "8059",
+            {},
+            null,
+            null
+        ]
+    ]
+}
