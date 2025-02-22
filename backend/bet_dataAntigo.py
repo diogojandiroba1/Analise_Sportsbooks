@@ -1,109 +1,107 @@
 import pandas as pd
 import numpy as np
 import matplotlib as mpl
-import json
-
+from time import sleep
 
 def seteKBET():
     df = pd.read_json(r'data\data7KBET.json', encoding='utf-8')
     qtd = len(df["data"])
-    qtd
-    acc = 0
+    data = []
     print("\n7KBET\n")
     
-    while acc < qtd:
+    for acc in range(qtd):
         partida = df["data"][acc][10]
         odd = df["data"][acc][19][0][7][1][4]
         aposta = df["data"][acc][19][0][7][1][1]["BR-PT"]
-        print(partida)
-        print(aposta)
-        print(odd)
-        acc +=1
-        
+        data.append(['7KBET', partida, aposta, odd])
+
+    return data
+
+
 def apostaTudo():
     df = pd.read_json(r'data\dataAPOSTATUDO.json', encoding='utf-8')
     qtd = len(df["data"])
-    qtd
-    acc1 = 0
-    acc2 = 0
+    data = []
     print("\nAPOSTATUDO\n")
     
-    while acc1 < qtd:
+    for acc1 in range(qtd):
         partida = df["data"][acc1][10]
         odd = df["data"][acc1][19][0][7][0][4]
         aposta = df["data"][acc1][19][0][7][0][1]["BR-PT"]
-        if odd == 0 or aposta == "Não":
-            pass
-        else:
-            print(partida)    
-            print(aposta)
-            print(odd)
-        acc1 +=1
+        if odd != 0 and aposta != "Não":
+            data.append(['APOSTATUDO', partida, aposta, odd])
     
-    while acc2 < qtd:
+    for acc2 in range(qtd):
         partida = df["data"][acc2][10]
         odd = df["data"][acc2][19][0][7][1][4]
         aposta = df["data"][acc2][19][0][7][1][1]["BR-PT"]
-        if odd == 0 or aposta == "Não":
-            pass
-        else:
-            print(partida)     
-            print(aposta)
-            print(odd)
-        acc2 +=1
-      
+        if odd != 0 and aposta != "Não":
+            data.append(['APOSTATUDO', partida, aposta, odd])
+
+    return data
 
 
 def bateuBET():
     df = pd.read_json(r'data\dataBATEUBET.json', encoding='utf-8')
     qtd = len(df["data"])
-    qtd
-    acc = 0
+    data = []
     print("\nBATEUBET\n")
     
-    while acc < qtd:
+    for acc in range(qtd):
         partida = df["data"][acc][10]
         odd = df["data"][acc][19][0][7][1][4]
         aposta = df["data"][acc][19][0][7][1][1]["BR-PT"]
-        print(partida) 
-        print(aposta)
-        print(odd)
-        acc +=1
+        data.append(['BATEUBET', partida, aposta, odd])
+
+    return data
+
 
 def cassinoBET():
     df = pd.read_json(r'data\dataCASSINOBET.json', encoding='utf-8')
     qtd = len(df["data"])
-    qtd
-    acc = 0
+    data = []
     print("\nCASSINOBET\n")
     
-    while acc < qtd:
+    for acc in range(qtd):
         partida = df["data"][acc][10]
         odd = df["data"][acc][19][0][7][1][4]
         aposta = df["data"][acc][19][0][7][1][1]["BR-PT"]
-        print(partida) 
-        print(aposta)
-        print(odd)
-        acc +=1
+        data.append(['CASSINOBET', partida, aposta, odd])
+
+    return data
+
 
 def veraBET():
     df = pd.read_json(r'data\dataVERABET.json', encoding='utf-8')
     qtd = len(df["data"])
-    qtd
-    acc = 0
+    data = []
     print("\nVERABET\n")
     
-    while acc < qtd:
+    for acc in range(qtd):
         partida = df["data"][acc][10]
         odd = df["data"][acc][19][0][7][1][4]
         aposta = df["data"][acc][19][0][7][1][1]["BR-PT"]
-        print(partida) 
-        print(aposta)
-        print(odd)
-        acc +=1
-        
-seteKBET()
-apostaTudo()
-bateuBET()
-cassinoBET()
-veraBET()
+        data.append(['VERABET', partida, aposta, odd])
+
+    return data
+
+
+while True:
+
+    dados = []
+    dados += seteKBET()
+    dados += apostaTudo()
+    dados += bateuBET()
+    dados += cassinoBET()
+    dados += veraBET()
+
+
+    df_final = pd.DataFrame(dados, columns=['Casa de Apostas', 'Partida', 'Aposta', 'Odd'])
+
+
+    df_final.to_csv(r'data\dados_apostas.csv', index=False)
+
+    print("Dados salvos no arquivo 'dados_apostas.csv'")
+    
+    sleep(30)
+    
