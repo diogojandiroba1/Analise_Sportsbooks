@@ -8,7 +8,7 @@ import json
 #VERABET
 url = "https://prod20350-152319086.fssb.io/api/eventlist/eu/leagues/674990359025340416/outrights"
 
-caminho_arquivo = Path(r'C:\Users\Diogo\Documents\analise_sportsbook\data\dataVERABET.json')
+caminho_arquivo = 'data\dataBATEUBET.json'
 
 
 
@@ -50,9 +50,9 @@ except requests.exceptions.RequestException as e:
 
 
 
-url = "https://prod20350-152319086.fssb.io/api/eventlist/eu/leagues/674990359025340416/outrights"
+url = "https://prod20350-153962142.fssb.io/api/eventlist/eu/leagues/677951512097587200/outrights"
 
-caminho_arquivo = Path(r'C:\Users\Diogo\Documents\analise_sportsbook\data\dataTipo2.json')
+caminho_arquivo = 'data\dataBATEUBET.json'
 
 
 
