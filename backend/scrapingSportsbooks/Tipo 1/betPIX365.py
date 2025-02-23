@@ -3,9 +3,6 @@ import json
 from time import sleep
 
 
-
-
-
 while True:
 
     #BETPIX365
