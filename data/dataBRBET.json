@@ -1,0 +1,40 @@
+[
+    {
+        "_id": "67ba57e98fef320028be2cc3",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": true,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-02-23T21:30:00.000Z",
+        "country": "BRASIL",
+        "championship": "Super BrBet - SUPERBRBET",
+        "question": "Internacional de Limeira X Santos",
+        "group": "SUPERBRBET",
+        "title": "Super BrBet ",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [],
+                    "_id": "67ba57e98fef320028be2cc4",
+                    "answer": "Santos Vence a Partida / Neymar Para Marcar Gol",
+                    "value": 3.5,
+                    "old_value": 2.35
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    }
+]
