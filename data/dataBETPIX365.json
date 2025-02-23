@@ -1,0 +1,162 @@
+{
+    "success": true,
+    "responseCodes": [],
+    "data": [
+        {
+            "stId": 596,
+            "xid": "18",
+            "stN": "Super Cotações & Múltiplas Especiais",
+            "iconId": 18,
+            "pid": 2,
+            "mdt": 99,
+            "lvt": false,
+            "fCnt": 2,
+            "oCnt": 2,
+            "aCnt": 2,
+            "fCM": 2,
+            "oCM": 2,
+            "ord": 100,
+            "cs": [
+                {
+                    "cId": 10002809,
+                    "xid": "2~custom~10002809",
+                    "cN": "Futebol",
+                    "fCnt": 2,
+                    "oCnt": 2,
+                    "aCnt": 2,
+                    "fCM": 2,
+                    "oCM": 2,
+                    "ord": 50001,
+                    "sns": [
+                        {
+                            "sId": 803527,
+                            "lId": 987517,
+                            "seaN": "Super Cotações",
+                            "cshOut": false,
+                            "lord": 1,
+                            "ord": 1,
+                            "seaSURL": "super-odds",
+                            "lName": "Super Odds",
+                            "fCnt": 2,
+                            "oCnt": 2,
+                            "aCnt": 2,
+                            "fCM": 2,
+                            "oCM": 2,
+                            "fs": [
+                                {
+                                    "fId": 62537232,
+                                    "fsd": 1740319200000,
+                                    "cshOut": true,
+                                    "ante": true,
+                                    "afed": 1740319200000,
+                                    "hcN": "Newcastle - Nott Forest",
+                                    "xid": "62537232",
+                                    "lxid": "2~custom~987517",
+                                    "lbO": false,
+                                    "lSt": false,
+                                    "vld": true,
+                                    "frz": false,
+                                    "fDS": 1,
+                                    "mmp": 1,
+                                    "ce": true,
+                                    "spl": false,
+                                    "btgs": [
+                                        {
+                                            "btgId": 115020,
+                                            "btgN": " Para Vencer",
+                                            "mrkp": "_id=115020",
+                                            "btgNO": " Para Vencer",
+                                            "btgSpl": true,
+                                            "btgSiOn": true,
+                                            "btgCe": true,
+                                            "dt": [
+                                                1
+                                            ],
+                                            "prm": false,
+                                            "cshOut": false,
+                                            "fos": [
+                                                {
+                                                    "foId": 8260706752,
+                                                    "btId": 2408645,
+                                                    "btN": "Newcastle To Win",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": false,
+                                                    "lineItem": false,
+                                                    "hO": 3,
+                                                    "hSh": "Newcastle To Win",
+                                                    "tmId": 439251,
+                                                    "foCe": true,
+                                                    "btCe": true,
+                                                    "taCe": false
+                                                }
+                                            ],
+                                            "lineItem": false
+                                        }
+                                    ]
+                                },
+                                {
+                                    "fId": 62537233,
+                                    "fsd": 1740339900000,
+                                    "cshOut": true,
+                                    "ante": true,
+                                    "afed": 1740339900000,
+                                    "hcN": "Lyon - PSG",
+                                    "xid": "62537233",
+                                    "lxid": "2~custom~987517",
+                                    "lbO": false,
+                                    "lSt": false,
+                                    "vld": true,
+                                    "frz": false,
+                                    "fDS": 1,
+                                    "mmp": 1,
+                                    "ce": true,
+                                    "spl": false,
+                                    "btgs": [
+                                        {
+                                            "btgId": 115020,
+                                            "btgN": " Para Vencer",
+                                            "mrkp": "_id=115020",
+                                            "btgNO": " Para Vencer",
+                                            "btgSpl": true,
+                                            "btgSiOn": true,
+                                            "btgCe": true,
+                                            "dt": [
+                                                1
+                                            ],
+                                            "prm": false,
+                                            "cshOut": false,
+                                            "fos": [
+                                                {
+                                                    "foId": 8260706753,
+                                                    "btId": 2408646,
+                                                    "btN": "PSG Para Vencer",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": false,
+                                                    "lineItem": false,
+                                                    "hO": 3,
+                                                    "hSh": "PSG Para Vencer",
+                                                    "tmId": 439252,
+                                                    "foCe": true,
+                                                    "btCe": true,
+                                                    "taCe": false
+                                                }
+                                            ],
+                                            "lineItem": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "cSURL": "soccer"
+                }
+            ],
+            "stSURL": "super-odds-multi-specials-"
+        }
+    ],
+    "type": null
+}
