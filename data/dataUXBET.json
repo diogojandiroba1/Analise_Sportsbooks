@@ -1,0 +1,799 @@
+[
+    {
+        "_id": "67b764a921a9540028a6e1f2",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-02-23T14:00:00.000Z",
+        "country": "Inglaterra",
+        "championship": "SUPER_ODDS",
+        "question": "Newcastle x Nottingham Forest | Premier League",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "CHANCE DUPLA: Newcastle OU Nottingham Forest vencem",
+                        "Menos de 3.5 gols na partida"
+                    ],
+                    "_id": "67b764a921a9540028a6e1f3",
+                    "answer": "CHANCE DUPLA: Newcastle OU Nottingham Forest vencem + Menos de 3.5 gols na partida",
+                    "value": 2.1,
+                    "old_value": 1.84
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67b7650ca119d60029175aab",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-02-23T16:30:00.000Z",
+        "country": "Inglaterra",
+        "championship": "SUPER_ODDS",
+        "question": "Manchester City x Liverpool | Premier League",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "Manchester City vence",
+                        "Ambas equipes marcam"
+                    ],
+                    "_id": "67b7650ca119d60029175aac",
+                    "answer": "Manchester City vence + Ambas equipes marcam",
+                    "value": 4.15,
+                    "old_value": 3.59
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67b7656a0940c200287b6721",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-02-23T16:30:00.000Z",
+        "country": "Inglaterra",
+        "championship": "SUPER_ODDS",
+        "question": "Manchester City x Liverpool | Premier League",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "Liverpool vence",
+                        "Menos de 4.5 gols na partida"
+                    ],
+                    "_id": "67b7656a0940c200287b6722",
+                    "answer": "Liverpool vence + Menos de 4.5 gols na partida",
+                    "value": 3.4,
+                    "old_value": 2.97
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67b765d518cf34002819f6c6",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-02-23T16:30:00.000Z",
+        "country": "Inglaterra",
+        "championship": "SUPER_ODDS",
+        "question": "Manchester City x Liverpool | Premier League",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "Empate na partida"
+                    ],
+                    "_id": "67b765d518cf34002819f6c7",
+                    "answer": "Empate na partida",
+                    "value": 4.2,
+                    "old_value": 3.72
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67b7663d0940c200287b69e2",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-02-23T19:45:00.000Z",
+        "country": "França",
+        "championship": "SUPER_ODDS",
+        "question": "Lyon x PSG | Ligue 1",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "PSG vence",
+                        "Mais de 2.5 gols na partida"
+                    ],
+                    "_id": "67b7663d0940c200287b69e3",
+                    "answer": "PSG vence + Mais de 2.5 gols na partida",
+                    "value": 2.45,
+                    "old_value": 2.08
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67b7668b2d4bb90029a9a0f6",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-02-23T19:45:00.000Z",
+        "country": "França",
+        "championship": "SUPER_ODDS",
+        "question": "Lyon x PSG | Ligue 1",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "CHANCE DUPLA: Lyon ou Empate"
+                    ],
+                    "_id": "67b7668b2d4bb90029a9a0f7",
+                    "answer": "CHANCE DUPLA: Lyon ou Empate",
+                    "value": 2.15,
+                    "old_value": 1.81
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67b766e22d4bb90029a9a219",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-02-25T20:00:00.000Z",
+        "country": "Itália",
+        "championship": "SUPER_ODDS",
+        "question": "Inter de Milão x Lazio | Coppa Itália",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "Inter de Milão vence",
+                        "Inter de Milão marca o 1° gol da partida"
+                    ],
+                    "_id": "67b766e22d4bb90029a9a21a",
+                    "answer": "Inter de Milão vence + Inter de Milão marca o 1° gol da partida",
+                    "value": 1.9,
+                    "old_value": 1.66
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67b7671d067e370029a23e34",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-02-25T20:00:00.000Z",
+        "country": "Itália",
+        "championship": "SUPER_ODDS",
+        "question": "Inter de Milão x Lazio | Coppa Itália",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "Inter de Milão vence",
+                        "Mais de 1.5 gols na partida"
+                    ],
+                    "_id": "67b7671d067e370029a23e35",
+                    "answer": "Inter de Milão vence + Mais de 1.5 gols na partida",
+                    "value": 2,
+                    "old_value": 1.74
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67b7680e24c2280028ce1ca7",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-02-26T19:30:00.000Z",
+        "country": "Inglaterra",
+        "championship": "SUPER_ODDS",
+        "question": "Nottingham Forest x Arsenal | Premier League",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "Arsenal vence",
+                        "Menos de 3.5 gols na partida"
+                    ],
+                    "_id": "67b7680e24c2280028ce1ca8",
+                    "answer": "Arsenal vence + Menos de 3.5 gols na partida",
+                    "value": 2.55,
+                    "old_value": 2.24
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67b7684b9482ab002687f0d1",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-02-26T19:30:00.000Z",
+        "country": "Inglaterra",
+        "championship": "SUPER_ODDS",
+        "question": "Nottingham Forest x Arsenal | Premier League",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "CHANCE DUPLA: Nottingham Forest ou Empate",
+                        "Mais de 1.5 gols na partida"
+                    ],
+                    "_id": "67b7684b9482ab002687f0d2",
+                    "answer": "CHANCE DUPLA: Nottingham Forest ou Empate + Mais de 1.5 gols na partida",
+                    "value": 3.05,
+                    "old_value": 2.66
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67b768929482ab002687f147",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-02-26T19:30:00.000Z",
+        "country": "Inglaterra",
+        "championship": "SUPER_ODDS",
+        "question": "Tottenham x Manchester City | Premier League",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "Manchester City vence",
+                        "Manchester City marca o 1° gol da partida"
+                    ],
+                    "_id": "67b768929482ab002687f148",
+                    "answer": "Manchester City vence + Manchester City marca o 1° gol da partida",
+                    "value": 2.25,
+                    "old_value": 2.02
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67b768d624c2280028ce1e23",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-02-26T19:30:00.000Z",
+        "country": "Inglaterra",
+        "championship": "SUPER_ODDS",
+        "question": "Tottenham x Manchester City | Premier League",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "Tottenham vence",
+                        "Ambas equipes marcam"
+                    ],
+                    "_id": "67b768d624c2280028ce1e24",
+                    "answer": "Tottenham vence + Ambas equipes marcam",
+                    "value": 5.35,
+                    "old_value": 4.68
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67b76913d7e3fc00288eeb04",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-02-26T20:00:00.000Z",
+        "country": "Itália",
+        "championship": "SUPER_ODDS",
+        "question": "Juventus x Empoli | Coppa Itália",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "Juventus vence",
+                        "Mais de 1.5 gols na partida"
+                    ],
+                    "_id": "67b76913d7e3fc00288eeb05",
+                    "answer": "Juventus vence + Mais de 1.5 gols na partida",
+                    "value": 1.75,
+                    "old_value": 1.44
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67b76972a119d600291766ce",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-02-26T20:15:00.000Z",
+        "country": "Inglaterra",
+        "championship": "SUPER_ODDS",
+        "question": "Liverpool x Newcastle | Premier League",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "CHANCE DUPLA: Liverpool ou Newcastle vencem",
+                        "Mais de 2.5 gols na partida"
+                    ],
+                    "_id": "67b76972a119d600291766cf",
+                    "answer": "CHANCE DUPLA: Liverpool ou Newcastle vencem + Mais de 2.5 gols na partida",
+                    "value": 1.7,
+                    "old_value": 1.51
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67b769c224c2280028ce20d1",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-02-26T20:15:00.000Z",
+        "country": "Inglaterra",
+        "championship": "SUPER_ODDS",
+        "question": "Liverpool x Newcastle | Premier League",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "Liverpool vence",
+                        "Menos de 4.5 gols na partida"
+                    ],
+                    "_id": "67b769c224c2280028ce20d2",
+                    "answer": "Liverpool vence + Menos de 4.5 gols na partida",
+                    "value": 2.3,
+                    "old_value": 1.97
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67b76a08a119d60029176924",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-03-01T16:00:00.000Z",
+        "country": "França",
+        "championship": "SUPER_ODDS",
+        "question": "PSG x Lille | Ligue 1",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "PSG vence",
+                        "Mais de 2.5 gols na partida"
+                    ],
+                    "_id": "67b76a08a119d60029176925",
+                    "answer": "PSG vence + Mais de 2.5 gols na partida",
+                    "value": 2.05,
+                    "old_value": 1.78
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67b76a5b21a9540028a6f3b4",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-03-01T16:00:00.000Z",
+        "country": "França",
+        "championship": "SUPER_ODDS",
+        "question": "PSG x Lille | Ligue 1",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "PSG vence",
+                        "Ambas equipes marcam"
+                    ],
+                    "_id": "67b76a5b21a9540028a6f3b5",
+                    "answer": "PSG vence + Ambas equipes marcam",
+                    "value": 2.8,
+                    "old_value": 2.41
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67b76ab4d7e3fc00288eef87",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-03-02T15:15:00.000Z",
+        "country": "Espanha",
+        "championship": "SUPER_ODDS",
+        "question": "Real Betis x Real Madrid | La Liga",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "Real Madrid vence",
+                        "Real Madrid marca o 1° gol da partida"
+                    ],
+                    "_id": "67b76ab4d7e3fc00288eef88",
+                    "answer": "Real Madrid vence + Real Madrid marca o 1° gol da partida",
+                    "value": 2.05,
+                    "old_value": 1.78
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67b76ae871e0bd0028bc080d",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-03-02T15:15:00.000Z",
+        "country": "Espanha",
+        "championship": "SUPER_ODDS",
+        "question": "Real Betis x Real Madrid | La Liga",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "Real Madrid vence",
+                        "Menos de 3.5 gols na partida"
+                    ],
+                    "_id": "67b76ae971e0bd0028bc080e",
+                    "answer": "Real Madrid vence + Menos de 3.5 gols na partida",
+                    "value": 3,
+                    "old_value": 2.55
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67b8a4e621a9540028a9df5a",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-02-23T16:30:00.000Z",
+        "country": "Inglaterra",
+        "championship": "SUPER_ODDS",
+        "question": "Manchester City x Liverpool | Premier League",
+        "title": "MEGA SUPER ODDS",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "Ambas equipes marcam"
+                    ],
+                    "_id": "67b8a4e621a9540028a9df5b",
+                    "answer": "Ambas equipes marcam",
+                    "value": 2.5,
+                    "old_value": 1.36
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    }
+]
