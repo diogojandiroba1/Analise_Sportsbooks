@@ -1,18 +1,19 @@
-from flask import Flask, render_template
-import pandas as pd
+from telegram import Update
+from telegram.ext import Updater, MessageHandler, Filters, CallbackContext
 
-app = Flask(__name__)
+def obter_id_grupo(update: Update, context: CallbackContext):
+    chat_id = update.message.chat_id
+    print(f"ID do grupo: {chat_id}")
 
-@app.route('/')
-def index():
-    # Carregar o arquivo CSV com pandas
-    df = pd.read_csv(r'data/dados_apostas.csv')
+def main():
+    token = '7980433701:AAFeSQ5J2tCVdNDKfwwEjImx5NF2MIaK6zQ'  # Substitua pelo token do seu bot
+    updater = Updater(token)
 
-    # Converter o DataFrame para uma lista de dicionários para enviar ao HTML
-    data = df.to_dict(orient='records')
+    # Registrar um handler para capturar mensagens e obter o ID do grupo
+    updater.dispatcher.add_handler(MessageHandler(Filters.text, obter_id_grupo))
 
-    # Renderizar o template e passar os dados
-    return render_template('index.html', data=data)
+    updater.start_polling()
+    updater.idle()
 
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    main()
