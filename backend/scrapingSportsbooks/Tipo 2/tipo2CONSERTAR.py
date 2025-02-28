@@ -10,7 +10,7 @@ while True:
     #VERABET
     url = "https://prod20350-152319086.fssb.io/api/eventlist/eu/leagues/674990359025340416/outrights"
 
-    caminho_arquivo = 'data\\dataBATEUBET.json'
+    caminho_arquivo = 'data\\jsonCasas\\dataVERABET.json'
 
 
 
