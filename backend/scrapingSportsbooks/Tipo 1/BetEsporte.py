@@ -75,7 +75,7 @@ try:
         if not dados:
             return
 
-        caminho_csv = r'data\dados_apostas.csv'
+        caminho_csv = 'data\csvS\dados_apostas.csv'
 
         try:
             df_existente = pd.read_csv(caminho_csv)

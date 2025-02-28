@@ -23,7 +23,7 @@ while True:
     "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
 }
 
-    caminho_arquivo = "data\\dataBETPIX365.json"
+    caminho_arquivo = "data\\jsonCasas\\dataBETPIX365.json"
 
 
     try:
