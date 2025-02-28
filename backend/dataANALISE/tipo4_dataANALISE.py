@@ -1,12 +1,12 @@
 import pandas as pd
 import numpy as np
-import matplotlib as mpl
+import os
 from time import sleep
 from datetime import datetime
 
 
 def uxBET():
-    df = pd.read_json(r'data\dataUXBET.json', encoding='utf-8')
+    df = pd.read_json('data\\jsonCasas\\dataUXBET.json', encoding='utf-8')
     data = []
 
     for _, row in df.iterrows():
@@ -16,28 +16,22 @@ def uxBET():
         else:
             aposta, odd = None, None  
 
-        data.append(["UXBET", row.get("question", "Desconhecido"), aposta, odd])
+        data.append(["UXBET", row.get("question", "Desconhecido"), aposta, odd, datetime.now().strftime('%Y-%m-%d %H:%M:%S')])
 
     return data
 
 
 def salvar_dados(dados):
-    caminho_csv = r'data\dados_apostas.csv'
+    caminho_csv = 'data\\csvS\\dados_apostas.csv'
 
-    try:
-        df_existente = pd.read_csv(caminho_csv)
-    except FileNotFoundError:
-        df_existente = pd.DataFrame(columns=['Casa de Apostas', 'Partida', 'Aposta', 'Odd', 'Data de Adição'])
+    # Verifica se o arquivo já existe
+    existe = os.path.exists(caminho_csv)
 
-    df_novo = pd.DataFrame(dados, columns=['Casa de Apostas', 'Partida', 'Aposta', 'Odd'])
-    df_novo['Data de Adição'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    # Salva os dados sem sobrescrever os existentes
+    df_novo = pd.DataFrame(dados)
+    df_novo.to_csv(caminho_csv, mode='a', header=not existe, index=False)
 
-    # Verifica duplicatas antes de adicionar ao CSV
-    df_completo = pd.concat([df_existente, df_novo], ignore_index=True)
-    df_completo.drop_duplicates(subset=['Casa de Apostas', 'Partida', 'Aposta'], keep="first", inplace=True)
-
-    df_completo.to_csv(caminho_csv, index=False)
-    print(f"Dados salvos no arquivo '{caminho_csv}'")
+    print(f"Dados adicionados ao arquivo '{caminho_csv}'")
 
 
 # Loop para captura de dados a cada 30 segundos

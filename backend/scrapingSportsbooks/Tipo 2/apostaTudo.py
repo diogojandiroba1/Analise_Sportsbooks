@@ -60,7 +60,7 @@ def apostatudo():
                         aposta = aposta_element.inner_text().strip()
                         odd = odd_element.inner_text().strip()
                         data_hora = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                        casa_aposta = "Verabet"
+                        casa_aposta = "ApostaTudo"
                         
                         aposta_tuple = (casa_aposta, nome_partida, aposta, odd, data_hora)
                         aposta_identificador = (nome_partida, aposta, odd)

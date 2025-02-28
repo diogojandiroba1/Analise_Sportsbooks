@@ -20,7 +20,7 @@ while True:
         "origin": "https://www.ux.bet.br"
     }
 
-    caminho_arquivo = "data\\dataUXBET.json"
+    caminho_arquivo = "data\\jsonCasas\\dataUXBET.json"
 
 
     try:
