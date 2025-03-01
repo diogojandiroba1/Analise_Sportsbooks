@@ -1,1 +1,43 @@
-[]
+[
+    {
+        "_id": "67c21f09835b7700299ce5f5",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": true,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-03-02T19:45:00.000Z",
+        "country": "Itália ",
+        "championship": "Super BrBet - SUPERBRBET",
+        "question": "AC Milan X Lazio ",
+        "group": "SUPERBRBET",
+        "title": "Super BRBET",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [],
+                    "_id": "67c21f09835b7700299ce5f6",
+                    "answer": "Mais de 0,5 Cartões no  Primeiro Tempo ",
+                    "value": 1.8
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": [],
+        "user_created_at": {
+            "end": "2025-03-02T19:30:00.000Z",
+            "start": "2025-03-01T03:01:00.000Z"
+        }
+    }
+]

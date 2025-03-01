@@ -40,7 +40,7 @@ def faz1bet():
 
                 # Tenta abrir o arquivo CSV para leitura, para verificar apostas já registradas
                 try:
-                    with open('data\\csvS\\dados_apostas.csv', mode='r', newline='') as file:
+                    with open('data/CSVs/dados_apostas.csv', mode='r', newline='') as file:
                         reader = csv.reader(file)
                         for row in reader:
                             # Adiciona a combinação (partida, aposta, odd) ao set
@@ -87,7 +87,7 @@ def faz1bet():
 
         # Adiciona os dados no arquivo CSV sem escrever o cabeçalho
         if dados:
-            with open('data\\csvS\\dados_apostas.csv', mode='a', newline='') as file:
+            with open('data/CSVs/dados_apostas.csv', mode='a', newline='') as file:
                 writer = csv.writer(file)
                 writer.writerows(dados)  # Adiciona os dados extraídos
 

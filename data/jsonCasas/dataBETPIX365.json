@@ -1,0 +1,162 @@
+{
+    "success": true,
+    "responseCodes": [],
+    "data": [
+        {
+            "stId": 596,
+            "xid": "18",
+            "stN": "Super Cotações & Múltiplas Especiais",
+            "iconId": 18,
+            "pid": 2,
+            "mdt": 99,
+            "lvt": false,
+            "fCnt": 2,
+            "oCnt": 2,
+            "aCnt": 2,
+            "fCM": 2,
+            "oCM": 2,
+            "ord": 100,
+            "cs": [
+                {
+                    "cId": 10002809,
+                    "xid": "2~custom~10002809",
+                    "cN": "Futebol",
+                    "fCnt": 2,
+                    "oCnt": 2,
+                    "aCnt": 2,
+                    "fCM": 2,
+                    "oCM": 2,
+                    "ord": 50001,
+                    "sns": [
+                        {
+                            "sId": 803527,
+                            "lId": 987517,
+                            "seaN": "Super Cotações",
+                            "cshOut": false,
+                            "lord": 1,
+                            "ord": 1,
+                            "seaSURL": "super-odds",
+                            "lName": "Super Odds",
+                            "fCnt": 2,
+                            "oCnt": 2,
+                            "aCnt": 2,
+                            "fCM": 2,
+                            "oCM": 2,
+                            "fs": [
+                                {
+                                    "fId": 62872584,
+                                    "fsd": 1740932940000,
+                                    "cshOut": true,
+                                    "ante": true,
+                                    "afed": 1740933000000,
+                                    "hcN": "Man Utd - Fulham",
+                                    "xid": "62872584",
+                                    "lxid": "2~custom~987517",
+                                    "lbO": false,
+                                    "lSt": false,
+                                    "vld": true,
+                                    "frz": false,
+                                    "fDS": 1,
+                                    "mmp": 1,
+                                    "ce": true,
+                                    "spl": false,
+                                    "btgs": [
+                                        {
+                                            "btgId": 115011,
+                                            "btgN": "Para Ganhar",
+                                            "mrkp": "_id=115011",
+                                            "btgNO": "Para Ganhar",
+                                            "btgSpl": true,
+                                            "btgSiOn": true,
+                                            "btgCe": true,
+                                            "dt": [
+                                                1
+                                            ],
+                                            "prm": false,
+                                            "cshOut": false,
+                                            "fos": [
+                                                {
+                                                    "foId": 8305567327,
+                                                    "btId": 2409241,
+                                                    "btN": "Man Utd para vencer",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": false,
+                                                    "lineItem": false,
+                                                    "hO": 3,
+                                                    "hSh": "Man Utd para vencer",
+                                                    "tmId": 439689,
+                                                    "foCe": true,
+                                                    "btCe": true,
+                                                    "taCe": false
+                                                }
+                                            ],
+                                            "lineItem": false
+                                        }
+                                    ]
+                                },
+                                {
+                                    "fId": 62872583,
+                                    "fsd": 1740949200000,
+                                    "cshOut": true,
+                                    "ante": true,
+                                    "afed": 1740949200000,
+                                    "hcN": "Fluminense - Volta Redonda",
+                                    "xid": "62872583",
+                                    "lxid": "2~custom~987517",
+                                    "lbO": false,
+                                    "lSt": false,
+                                    "vld": true,
+                                    "frz": false,
+                                    "fDS": 1,
+                                    "mmp": 1,
+                                    "ce": true,
+                                    "spl": false,
+                                    "btgs": [
+                                        {
+                                            "btgId": 115141,
+                                            "btgN": "Both teams to score - yes",
+                                            "mrkp": "_id=115141",
+                                            "btgNO": "Both teams to score - yes",
+                                            "btgSpl": true,
+                                            "btgSiOn": true,
+                                            "btgCe": true,
+                                            "dt": [
+                                                3
+                                            ],
+                                            "prm": false,
+                                            "cshOut": false,
+                                            "fos": [
+                                                {
+                                                    "foId": 8305567326,
+                                                    "btId": 2409240,
+                                                    "btN": "Para ambas marcarem - sim",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": false,
+                                                    "lineItem": false,
+                                                    "hO": 3,
+                                                    "hSh": "Para ambas marcarem - sim",
+                                                    "tmId": 439688,
+                                                    "foCe": true,
+                                                    "btCe": true,
+                                                    "taCe": false
+                                                }
+                                            ],
+                                            "lineItem": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "cSURL": "soccer"
+                }
+            ],
+            "stSURL": "super-odds-multi-specials-"
+        }
+    ],
+    "type": null
+}

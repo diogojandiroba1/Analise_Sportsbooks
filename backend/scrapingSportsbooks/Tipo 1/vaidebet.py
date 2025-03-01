@@ -28,7 +28,7 @@ headers = {
 }
 
 # Caminho do arquivo JSON
-caminho_arquivo = "data\\jsonCasas\\dataVAIDEBET.json"
+caminho_arquivo = "data/jsonCasas/dataVAIDEBET.json"
 
 while True:
     try:

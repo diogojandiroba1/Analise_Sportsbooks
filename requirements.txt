@@ -1,0 +1,7 @@
+selenium
+playwright
+pandas
+numpy
+requests
+cloudscraper
+webdriver-manager

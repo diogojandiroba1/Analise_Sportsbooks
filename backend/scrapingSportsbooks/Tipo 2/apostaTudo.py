@@ -39,7 +39,7 @@ def apostatudo():
         dados = []
         apostas_registradas = set()
         try:
-            with open(r'data/csvS/dados_apostas.csv', mode='r', newline='') as file:
+            with open(r'data/CSVs/dados_apostas.csv', mode='r', newline='') as file:
                 reader = csv.reader(file)
                 for row in reader:
                     apostas_registradas.add(tuple(row[1:4]))
@@ -73,7 +73,7 @@ def apostatudo():
                     print("Nenhuma aposta encontrada para essa partida.")
 
         if dados:
-            with open(r'data/csvS/dados_apostas.csv', mode='a', newline='') as file:
+            with open(r'data/CSVs/dados_apostas.csv', mode='a', newline='') as file:
                 writer = csv.writer(file)
                 writer.writerows(dados)
             print(f"{len(dados)} novas apostas adicionadas ao arquivo 'dados_apostas.csv'.")

@@ -17,7 +17,7 @@ while True:
 
   response = requests.get(url, headers=headers)
 
-  caminho_arquivo = "data\\jsonCasas\\dataBRBET.json"
+  caminho_arquivo = "data/jsonCasas/dataBRBET.json"
 
 
   try:
