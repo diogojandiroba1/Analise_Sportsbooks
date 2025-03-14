@@ -1,45 +1,95 @@
-import requests
-import json
-from time import sleep
+import csv
+from datetime import datetime
+from playwright.sync_api import sync_playwright
+import os
 
+def uxbet():
+    with sync_playwright() as p:
+        # Inicia o navegador
+        browser = p.chromium.launch(headless=False)  # headless=False para ver o navegador
+        page = browser.new_page()
 
+        # Acessa a URL
+        page.goto('https://www.ux.bet.br/home/events-area/s/SUPER_ODDS')
 
+        # Aguarda o carregamento completo da página
+        try:
+            page.wait_for_selector('div.separatorRow', timeout=60000)  # Espera até 60 segundos
+        except Exception as e:
+            print(f"Erro ao esperar pelo seletor: {e}")
+            browser.close()
+            return
 
+        print("Div alvo encontrada!")
+        # Encontra todas as divs com a classe "separatorRow" que contém as apostas
+        divs_match_list = page.query_selector_all('div.separatorRow')
+        quantidade_divs = len(divs_match_list)
+        print(f"Quantidade de divs com a classe 'separatorRow': {quantidade_divs}")
 
-while True:
+        # Lista para armazenar os dados extraídos
+        dados = []
+        apostas_registradas = set()  # Usando um set para armazenar combinações únicas (Evento, Aposta, Odd)
 
-    #UXBET
+        # Verifica se o arquivo CSV já existe
+        arquivo_csv = 'data/csvS/dados_apostas.csv'
+        if os.path.exists(arquivo_csv):
+            # Lê o arquivo CSV existente para verificar apostas já registradas
+            with open(arquivo_csv, mode='r', newline='', encoding='utf-8') as file:
+                reader = csv.reader(file)
+                cabecalho = next(reader, None)  # Lê o cabeçalho
+                for row in reader:
+                    # Adiciona a combinação (Evento, Aposta, Odd) ao set
+                    apostas_registradas.add((row[1], row[2], row[3]))  # Combinação (Evento, Aposta, Odd)
+        else:
+            # Cria o arquivo CSV com o cabeçalho
+            with open(arquivo_csv, mode='w', newline='', encoding='utf-8') as file:
+                writer = csv.writer(file)
+                writer.writerow(['Casa', 'Evento', 'Aposta', 'Odd', 'Data'])  # Escreve o cabeçalho
 
-    url = "https://sb-vip8.ngx.bet/event?type=CHALLENGE&category=SUPER_ODDS&sub_type=SUPER_ODDS"
-    headers = {
-        "accept": "application/json, text/plain, */*",
-        "authorization": "Bearer a43d2dbf-08e3-4aaf-813c-081d27cd3d41",
-        "sec-ch-ua": "\"Not(A:Brand\";v=\"99\", \"Google Chrome\";v=\"133\", \"Chromium\";v=\"133\"",
-        "sec-ch-ua-mobile": "?0",
-        "sec-ch-ua-platform": "\"Windows\"",
-        "origin": "https://www.ux.bet.br"
-    }
+        # Itera sobre as divs
+        for i, div in enumerate(divs_match_list):
+            print(f"Processando div {i + 1}...")
 
-    caminho_arquivo = "data/jsonCasas/dataUXBET.json"
+            # Localiza as partidas, apostas e odds dentro da div
+            partida = div.query_selector('div.event-name span')  # Partida
+            aposta = div.query_selector('div.title.font_12.weight_400.ng-star-inserted')  # Aposta
+            odd = div.query_selector('div.odd.ng-star-inserted span')  # Odd
 
+            # Verifica se todos os elementos (partida, aposta e odd) existem
+            if partida and aposta and odd:
+                partida_texto = partida.inner_text().strip()
+                aposta_texto = aposta.inner_text().strip()
+                odd_texto = odd.inner_text().strip()
 
-    try:
-            response = requests.get(url, headers=headers) 
-            response.raise_for_status() 
-            
-            dados_json = response.json()
-            print("Dados obtidos com sucesso!")
-            
-            with open(caminho_arquivo,'w', encoding='utf-8') as arquivo:
-                json.dump(dados_json, arquivo, ensure_ascii=False, indent=4)
-                print("dados salvos")
-                
-    except requests.exceptions.SSLError as e:
-            print(f"Erro de SSL/TLS: {e}")
-            
-    except requests.exceptions.RequestException as e:
-            print(f"Erro na requisição: {e}")
-            
+                # Data e hora atual
+                data_hora = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    sleep(60)
-####################################################################################################################################################################################################
+                # Verificação de duplicatas
+                aposta_identificador = (partida_texto, aposta_texto, odd_texto)  # Combinação única para verificar duplicatas
+                if aposta_identificador not in apostas_registradas:
+                    # Adiciona os dados ao conjunto
+                    dados.append(("UxBet", partida_texto, aposta_texto, odd_texto, data_hora))
+                    apostas_registradas.add(aposta_identificador)  # Marca como registrada
+                else:
+                    print(f"Aposta já cadastrada: {aposta_identificador}")
+            else:
+                print(f"Div {i + 1} não contém todas as informações necessárias (partida, aposta, odd). Ignorando.")
+
+        # Adiciona os dados no arquivo CSV
+        if dados:
+            with open(arquivo_csv, mode='a', newline='', encoding='utf-8') as file:
+                writer = csv.writer(file)
+                writer.writerows(dados)  # Adiciona os dados extraídos
+
+            print(f"{len(dados)} dados adicionados ao arquivo 'dados_apostas.csv'.")
+        else:
+            print("Nenhuma aposta nova encontrada.")
+
+        # Mantém o navegador aberto até que o usuário pressione Enter
+        input("Pressione Enter para fechar o navegador...")
+
+        # Fecha o navegador
+        browser.close()
+
+# Executa a função
+uxbet()

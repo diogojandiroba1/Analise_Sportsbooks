@@ -2,8 +2,8 @@ import csv
 from datetime import datetime
 from playwright.sync_api import sync_playwright
 from time import sleep
+import os
 
-# Função principal
 def faz1bet():
     with sync_playwright() as p:
         # Inicia o navegador
@@ -36,35 +36,42 @@ def faz1bet():
 
                 # Lista para armazenar os dados extraídos
                 dados = []
-                apostas_registradas = set()  # Usando um set para armazenar combinações únicas (partida, aposta, odd)
+                apostas_registradas = set()  # Usando um set para armazenar combinações únicas (Evento, Aposta, Odd)
 
-                # Tenta abrir o arquivo CSV para leitura, para verificar apostas já registradas
-                try:
-                    with open('data/CSVs/dados_apostas.csv', mode='r', newline='') as file:
+                # Verifica se o arquivo CSV já existe
+                arquivo_csv = 'data/csvS/dados_apostas.csv'
+                if os.path.exists(arquivo_csv):
+                    # Lê o arquivo CSV existente para verificar apostas já registradas
+                    with open(arquivo_csv, mode='r', newline='', encoding='utf-8') as file:
                         reader = csv.reader(file)
+                        cabecalho = next(reader, None)  # Lê o cabeçalho
                         for row in reader:
-                            # Adiciona a combinação (partida, aposta, odd) ao set
-                            apostas_registradas.add(tuple(row[1:4]))  # Combinação (partida, aposta, odd)
-                except FileNotFoundError:
-                    pass  # Se o arquivo não existir, criamos um novo mais tarde
+                            # Adiciona a combinação (Evento, Aposta, Odd) ao set
+                            apostas_registradas.add((row[1], row[2], row[3]))  # Combinação (Evento, Aposta, Odd)
+                else:
+                    # Cria o arquivo CSV com o cabeçalho
+                    with open(arquivo_csv, mode='w', newline='', encoding='utf-8') as file:
+                        writer = csv.writer(file)
+                        writer.writerow(['Casa', 'Evento', 'Aposta', 'Odd', 'Data'])  # Escreve o cabeçalho
 
                 # Itera sobre as divs
                 for i, div in enumerate(divs_match_list):
                     print(f"Processando div {i + 1}...")
-                    # Localiza o <li> com a classe "outright-row" dentro da div atual
-                    li_outright_row = div.query_selector('li.outright-row')
-                    if li_outright_row:
-                        print(f"Clicando no <li> da div {i + 1}...")
-                        li_outright_row.click()
-                        sleep(1)  # Espera 1 segundo entre os cliques (ajuste conforme necessário)
-                        
-                        # Extração de dados após o clique
-                        casa_aposta = "Faz1Bet"  # Fixo
-                        partida = div.query_selector('p.dotted-hidden.team-name').inner_text().strip() if div.query_selector('p.dotted-hidden.team-name') else "N/A"
-                        aposta = div.query_selector('div.title').inner_text().strip() if div.query_selector('div.title') else "N/A"
+                    # Localiza todos os <li> com a classe "outright-row" dentro da div atual
+                    li_outright_rows = div.query_selector_all('li.outright-row')
+                    print(f"Encontrados {len(li_outright_rows)} elementos 'outright-row' na div {i + 1}.")
 
-                        # Pega a odd da aposta
-                        odds = div.query_selector_all('span:nth-child(2)')  # Pega todas as odds da aposta
+                    # Itera sobre todos os elementos "outright-row" dentro da div atual
+                    for j, li_outright_row in enumerate(li_outright_rows):
+                        print(f"Clicando no <li> {j + 1} da div {i + 1}...")
+                        li_outright_row.click()
+                        sleep(1)  # Espera 1 segundo para garantir que o conteúdo seja carregado
+
+                        # Extrai os dados APÓS o clique, diretamente do contexto da "li.outright-row" clicada
+                        casa_aposta = "Faz1Bet"  # Fixo
+                        partida = li_outright_row.query_selector('p.dotted-hidden.team-name').inner_text().strip() if li_outright_row.query_selector('p.dotted-hidden.team-name') else "N/A"
+                        aposta = li_outright_row.query_selector('div.title').inner_text().strip() if li_outright_row.query_selector('div.title') else "N/A"
+                        odds = li_outright_row.query_selector_all('span:nth-child(2)')  # Pega todas as odds da aposta
                         odds_text = [odd.inner_text().strip() for odd in odds if odd.inner_text().strip()]
 
                         # Data e hora atual
@@ -85,9 +92,9 @@ def faz1bet():
         else:
             print("Iframe NÃO encontrado.")
 
-        # Adiciona os dados no arquivo CSV sem escrever o cabeçalho
+        # Adiciona os dados no arquivo CSV
         if dados:
-            with open('data/CSVs/dados_apostas.csv', mode='a', newline='') as file:
+            with open(arquivo_csv, mode='a', newline='', encoding='utf-8') as file:
                 writer = csv.writer(file)
                 writer.writerows(dados)  # Adiciona os dados extraídos
 

@@ -1,1 +1,685 @@
-[]
+[
+    {
+        "_id": "67d0847952fc85002871d9f3",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-03-14T19:00:00.000Z",
+        "country": "Arábia Saudita",
+        "championship": "SUPER_ODDS",
+        "question": "Al-Nassr x Al-Kholood | Campeonato Saudita",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "Al-Nassr vence",
+                        "Cristiano Ronaldo marca a qualquer momento"
+                    ],
+                    "_id": "67d0847952fc85002871d9f4",
+                    "answer": "Al-Nassr vence + Cristiano Ronaldo marca a qualquer momento",
+                    "value": 1.8,
+                    "old_value": 1.53
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67d0853505035a0028460efa",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-03-14T19:00:00.000Z",
+        "country": "Arábia Saudita",
+        "championship": "SUPER_ODDS",
+        "question": "Al-Nassr x Al-Kholood | Campeonato Saudita",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "Al Nassr vence",
+                        "Ambos os times marcam "
+                    ],
+                    "_id": "67d0853505035a0028460efb",
+                    "answer": "Al Nassr Vence + Ambos os times marcam ",
+                    "value": 2.95,
+                    "old_value": 2.58
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67d085d31e3d3700287c4f7a",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-03-15T17:30:00.000Z",
+        "country": "Espanha",
+        "championship": "SUPER_ODDS",
+        "question": "Villarreal x Real Madrid | La Liga",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "Real Madrid vence",
+                        "Ambos marcam",
+                        "Mbappé marca a qualquer momento"
+                    ],
+                    "_id": "67d085d31e3d3700287c4f7b",
+                    "answer": " Real Madrid vence + Ambos marcam + Mbappé marca a qualquer momento",
+                    "value": 4.85,
+                    "old_value": 4.36
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67d086831e3d3700287c5344",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-03-15T17:30:00.000Z",
+        "country": "Espanha",
+        "championship": "SUPER_ODDS",
+        "question": "Villarreal x Real Madrid | La Liga",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "Mbappé marca a qualquer momento",
+                        "Vini Jr marca a qualquer momento",
+                        "Rodrygo marca a qualquer momento"
+                    ],
+                    "_id": "67d086831e3d3700287c5345",
+                    "answer": "Mbappé, Vini Jr e Rodrygo Marcam a qualquer momento da partida ",
+                    "value": 20.4,
+                    "old_value": 19.06
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67d08e0b4704b60028241943",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-03-16T21:29:00.000Z",
+        "country": "Brasil",
+        "championship": "SUPER_ODDS",
+        "question": "Palmeiras x Corinthians | Paulistão",
+        "title": "MEGA SUPER ODDS",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "Vitor Roque marca a qualquer momento"
+                    ],
+                    "_id": "67d08e0b4704b60028241944",
+                    "answer": "Vitor Roque marca a qualquer momento",
+                    "value": 3,
+                    "old_value": 2.44
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67d08e4805035a0028464675",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-03-16T21:30:00.000Z",
+        "country": "Brasil",
+        "championship": "SUPER_ODDS",
+        "question": "Palmeiras x Corinthians | Paulistão",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "Palmeiras vence",
+                        "Ambas equipes marcam"
+                    ],
+                    "_id": "67d08e4805035a0028464676",
+                    "answer": "Palmeiras vence + Ambas equipes marcam",
+                    "value": 4.4,
+                    "old_value": 3.97
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67d08e9fb61f9f0028131e3e",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-03-16T21:30:00.000Z",
+        "country": "Brasil",
+        "championship": "SUPER_ODDS",
+        "question": "Palmeiras x Corinthians | Paulistão",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "DUPLA CHANCE: Corinthians ou Empate",
+                        "Memphis marca ou dá assistência"
+                    ],
+                    "_id": "67d08e9fb61f9f0028131e3f",
+                    "answer": "DUPLA CHANCE: Corinthians ou Empate + Memphis marca ou dá assistência",
+                    "value": 4.15,
+                    "old_value": 3.62
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67d0a7d2d51d6a0028a84f7b",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-03-16T20:00:00.000Z",
+        "country": "Espanha",
+        "championship": "SUPER_ODDS",
+        "question": "Atlético de Madrid x Barcelona | La Liga",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "Ambas equipes marcam",
+                        "Julian Álvarez marca a qualquer momento"
+                    ],
+                    "_id": "67d0a7d2d51d6a0028a84f7c",
+                    "answer": "Ambas equipes marcam + Julian Álvarez marca a qualquer momento",
+                    "value": 3.75,
+                    "old_value": 3.36
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67d19136b61f9f0028168528",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-03-16T20:00:00.000Z",
+        "country": "Espanha",
+        "championship": "SUPER_ODDS",
+        "question": "Atlético de Madrid x Barcelona | La Liga",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "Barcelona vence",
+                        "Mais de 1.5 gols na partida"
+                    ],
+                    "_id": "67d19136b61f9f0028168529",
+                    "answer": "Barcelona vence + Mais de 1.5 gols na partida",
+                    "value": 2.8,
+                    "old_value": 2.45
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67d191bc52fc850028758a25",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-03-16T19:00:00.000Z",
+        "country": "Brasil",
+        "championship": "SUPER_ODDS",
+        "question": "Internacional x Grêmio | Gaúchão",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "Internacional vence a partida",
+                        "Mais de 1.5 gols na partida"
+                    ],
+                    "_id": "67d191bc52fc850028758a26",
+                    "answer": "Internacional vence a partida + Mais de 1.5 gols na partida",
+                    "value": 2.6,
+                    "old_value": 2.28
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67d192073e20300028137a06",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-03-16T19:00:00.000Z",
+        "country": "Brasil",
+        "championship": "SUPER_ODDS",
+        "question": "Internacional x Grêmio | Gaúchão",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "CHANCE DUPLA: Grêmio ou Empate",
+                        "Mais de 2.5 gols na partida"
+                    ],
+                    "_id": "67d192073e20300028137a07",
+                    "answer": "CHANCE DUPLA: Grêmio ou Empate + Mais de 2.5 gols na partida",
+                    "value": 6.2,
+                    "old_value": 5.55
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67d1925f1e3d3700287ff2da",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-03-16T19:00:00.000Z",
+        "country": "Brasil",
+        "championship": "SUPER_ODDS",
+        "question": "Flamengo x Fluminense | Carioca",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "Flamengo vence",
+                        "Mais de 1.5 gols na partida"
+                    ],
+                    "_id": "67d1925f1e3d3700287ff2db",
+                    "answer": "Flamengo vence + Mais de 1.5 gols na partida",
+                    "value": 2.95,
+                    "old_value": 2.59
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67d1929dd51d6a0028aafe59",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-03-16T19:00:00.000Z",
+        "country": "Brasil",
+        "championship": "SUPER_ODDS",
+        "question": "Flamengo x Fluminense | Carioca",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "CHANCE DUPLA: Fluminense ou Empate",
+                        "Ambas equipes marcam"
+                    ],
+                    "_id": "67d1929dd51d6a0028aafe5a",
+                    "answer": "CHANCE DUPLA: Fluminense ou Empate + Ambas equipes marcam",
+                    "value": 3.2,
+                    "old_value": 2.88
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67d1edbbd51d6a0028ac75d7",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-03-16T21:00:00.000Z",
+        "country": "Brasil",
+        "championship": "SUPER_ODDS",
+        "question": "Bahia x Vitória | Campeonato Baiano",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "Bahia vence",
+                        "Mais de 1.5 gols para Bahia"
+                    ],
+                    "_id": "67d1edbbd51d6a0028ac75d8",
+                    "answer": "Bahia vence + Mais de 1.5 gols para Bahia",
+                    "value": 2.5,
+                    "old_value": 2.17
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67d1ede905035a00284b3530",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-03-16T21:00:00.000Z",
+        "country": "Brasil",
+        "championship": "SUPER_ODDS",
+        "question": "Bahia x Vitória | Campeonato Baiano",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "CHANCE DUPLA: Vitória ou Empate",
+                        "Ambas equipes marcam"
+                    ],
+                    "_id": "67d1ede905035a00284b3531",
+                    "answer": "CHANCE DUPLA: Vitória ou Empate + Ambas equipes marcam",
+                    "value": 3.55,
+                    "old_value": 3.15
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67d449de3071940029555dc5",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-03-16T19:59:00.000Z",
+        "country": "Espanha",
+        "championship": "SUPER_ODDS",
+        "question": "Atlético de Madrid x Barcelona | La Liga",
+        "title": "Super Odds",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "Ambas equipes marcam"
+                    ],
+                    "_id": "67d449de3071940029555dc6",
+                    "answer": "Ambas equipes marcam",
+                    "value": 1.65,
+                    "old_value": 1.46
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    },
+    {
+        "_id": "67d44bd91e3d370028879199",
+        "custom_bet": {
+            "enable_live": true,
+            "enable_pre_match": true,
+            "enable_multi_events": true
+        },
+        "is_live": false,
+        "sub_type": "NONE",
+        "video_url": "",
+        "ts_uuid": "",
+        "status": "NOT_STARTED",
+        "highlight": true,
+        "block_bonus": false,
+        "only_client": false,
+        "booking_status": "UNKNOWN",
+        "__t": "Challenge",
+        "date": "2025-03-16T18:59:00.000Z",
+        "country": "Brasil",
+        "championship": "SUPER_ODDS",
+        "question": "Clássicos | Finais",
+        "title": "MEGA SUPER ODDS",
+        "odds": {
+            "answers": [
+                {
+                    "enable": true,
+                    "answer_list": [
+                        "Internacional x Grêmio (Campeonato Gaúcho) - Mais de 0.5 faltas na partida",
+                        "Flamengo x Fluminense (Campeonato Carioca) - Mais de 0.5 faltas na partida",
+                        "Vila Nova x Goiás (Campeonato Goiano) - Mais de 0.5 faltas na partida",
+                        "Bahia x Vitória (Campeonato Baiano) - Mais de 0.5 faltas na partida",
+                        "Palmeiras x Corinthians (Campeonato Paulista) - Mais de 0.5 faltas na partida"
+                    ],
+                    "_id": "67d44bd91e3d37002887919a",
+                    "answer": "Internacional x Grêmio (Campeonato Gaúcho), Flamengo x Fluminense (Campeonato Carioca), Vila Nova x Goiás (Campeonato Goiano), Bahia x Vitória (Campeonato Baiano), Palmeiras x Corinthians (Campeonato Paulista) - Mais de 0.5 faltas nas partidas",
+                    "value": 2,
+                    "old_value": 1.05
+                }
+            ]
+        },
+        "valid_odds": 1,
+        "widget_ids": []
+    }
+]
