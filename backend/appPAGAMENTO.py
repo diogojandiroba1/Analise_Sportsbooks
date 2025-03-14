@@ -1,42 +1,49 @@
 import logging
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler
+import requests
 
-# Token do seu bot (fornecido pelo BotFather)
+# 🔑 Substitua com seu TOKEN do BotFather
 TELEGRAM_API_TOKEN = '7980433701:AAFeSQ5J2tCVdNDKfwwEjImx5NF2MIaK6zQ'
 
-# Link gerado pelo Stripe para pagamento
-STRIPE_PAYMENT_LINK = 'https://buy.stripe.com/test_8wM2c2fB051VfW85kk'
+# 🔗 Substitua pelo seu link de pagamento gerado no Yampi
+YAMPI_PAYMENT_LINK = 'https://elite-das-bets.pay.yampi.com.br/r/KCXPZZ45WL'
 
 # Configuração do logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+# Dicionário para armazenar usuários pagos (simulação, use um banco de dados em produção)
+usuarios_pagos = {}
+
 # Função de iniciar o bot
 async def start(update, context):
     await update.message.reply_text(
-        "Olá! Para acessar o grupo pago, faça um pagamento clicando abaixo:",
+        "Olá! Para acessar o grupo pago, clique no botão abaixo e faça o pagamento:",
         reply_markup=InlineKeyboardMarkup([[
-            InlineKeyboardButton("Pagar agora", url=STRIPE_PAYMENT_LINK)
+            InlineKeyboardButton("💳 Pagar agora", url=YAMPI_PAYMENT_LINK)
         ]])
     )
 
-# Função para quando o usuário clicar no botão (sem necessidade de callback)
-async def payment(update, context):
-    await update.message.reply_text(
-        "Você será redirecionado para o Stripe para realizar o pagamento."
-    )
+# Função para verificar pagamento manualmente
+async def verificar_pagamento(update, context):
+    user_id = update.message.from_user.id
+    
+    if user_id in usuarios_pagos:
+        await update.message.reply_text("✅ Pagamento confirmado! Você já pode acessar o grupo.")
+    else:
+        await update.message.reply_text("⏳ Seu pagamento ainda não foi confirmado. Aguarde ou entre em contato.")
 
-# Função para configurar e iniciar o bot
+# Configuração do bot
 def main():
-    # Criar uma aplicação
     application = Application.builder().token(TELEGRAM_API_TOKEN).build()
 
-    # Adicionar manipuladores de comandos
+    # Adiciona comandos ao bot
     application.add_handler(CommandHandler("start", start))
+    application.add_handler(CommandHandler("verificar", verificar_pagamento))
 
-    # Iniciar o bot
+    # Inicia o bot
     application.run_polling()
 
 if __name__ == '__main__':
