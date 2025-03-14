@@ -15,14 +15,21 @@ except ImportError:
     os.system("pip install webdriver-manager")
     from webdriver_manager.chrome import ChromeDriverManager
 
+# Configuração do Chrome
 chrome_options = Options()
 chrome_options.add_argument("--no-sandbox")
 chrome_options.add_argument("--disable-dev-shm-usage")
+chrome_options.add_argument("--log-level=3")  # Oculta logs do Chrome
+chrome_options.add_argument("--disable-gpu")  # Corrige erro de renderização
+chrome_options.add_argument("--disable-software-rasterizer")  # Evita conflitos gráficos
+chrome_options.add_argument("--mute-audio")  # Evita áudio de anúncios indesejados
+
 service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service, options=chrome_options)
 
 try:
     def verificar_eventos():
+        """Verifica se há eventos disponíveis na página."""
         try:
             mensagem = driver.find_element(By.XPATH, '//*[@id="bets"]/app-sport-league-desktop/div/div/p').text
             if "No momento não existem eventos disponíveis." in mensagem:
@@ -32,6 +39,7 @@ try:
         return True
 
     def betesporte():
+        """Coleta as odds e apostas do site."""
         dados = []
 
         # Verifica Risco Zero
@@ -41,14 +49,19 @@ try:
 
         if verificar_eventos():
             wait = WebDriverWait(driver, 30)
-            aposta_riscoZero = wait.until(EC.presence_of_all_elements_located(
-                (By.XPATH, '//*[@id="bets"]/app-sport-league-desktop/div/div[3]/app-new-event-list-pre/section/div/div[2]/div[2]/div/div[2]')))
-            odds_elements = wait.until(EC.presence_of_all_elements_located(
-                (By.XPATH, '//*[@id="bets"]/app-sport-league-desktop/div/div[3]/app-new-event-list-pre/section/div/div[2]/div[4]/div/app-odd/div/div')))
+            event_blocks = wait.until(EC.presence_of_all_elements_located(
+                (By.XPATH, '//*[@id="bets"]/app-sport-league-desktop/div/div[3]/app-new-event-list-pre/section/div/div')))
 
-            for index, element in enumerate(odds_elements, start=1):
-                print(f'Odd Risco Zero: {element.text} para {aposta_riscoZero[index-1].text}')
-                dados.append(['BETESPORTE', 'risco0', aposta_riscoZero[index-1].text, element.text])
+            for block in event_blocks:
+                try:
+                    apostas = block.find_elements(By.XPATH, './/div[2]/div/div[2]')
+                    odds = block.find_elements(By.XPATH, './/div[4]/div/app-odd/div/div')
+
+                    for aposta, odd in zip(apostas, odds):
+                        print(f'Odd Risco Zero: {odd.text} para {aposta.text}')
+                        dados.append(['BETESPORTE', 'risco0', aposta.text, odd.text])
+                except Exception as e:
+                    print(f"Erro ao processar um bloco de apostas: {e}")
 
         # Verifica Super Odd
         url_super_odd = "https://betesporte.bet.br/sports/desktop/sport-league/999/4200000001"
@@ -57,14 +70,19 @@ try:
 
         if verificar_eventos():
             wait = WebDriverWait(driver, 30)
-            aposta_superOdd = wait.until(EC.presence_of_all_elements_located(
-                (By.XPATH, '//*[@id="bets"]/app-sport-league-desktop/div/div[3]/app-new-event-list-pre/section/div/div[2]/div[2]/div/div[2]')))
-            odds_elements = wait.until(EC.presence_of_all_elements_located(
-                (By.XPATH, '//*[@id="bets"]/app-sport-league-desktop/div/div[3]/app-new-event-list-pre/section/div/div[2]/div[4]/div/app-odd/div/div')))
+            event_blocks = wait.until(EC.presence_of_all_elements_located(
+                (By.XPATH, '//*[@id="bets"]/app-sport-league-desktop/div/div[3]/app-new-event-list-pre/section/div/div')))
 
-            for index, element in enumerate(odds_elements, start=1):
-                print(f'Super Odd: {element.text} para {aposta_superOdd[index-1].text}')
-                dados.append(['BETESPORTE', 'SUPERodd', aposta_superOdd[index-1].text, element.text])
+            for block in event_blocks:
+                try:
+                    apostas = block.find_elements(By.XPATH, './/div[2]/div/div[2]')
+                    odds = block.find_elements(By.XPATH, './/div[4]/div/app-odd/div/div')
+
+                    for aposta, odd in zip(apostas, odds):
+                        print(f'Super Odd: {odd.text} para {aposta.text}')
+                        dados.append(['BETESPORTE', 'SUPERodd', aposta.text, odd.text])
+                except Exception as e:
+                    print(f"Erro ao processar um bloco de apostas: {e}")
 
         if not dados:
             print("Nenhuma aposta disponível no momento.")
@@ -72,24 +90,23 @@ try:
         return dados
 
     def salvar_dados(dados):
+        """Salva os dados coletados em um arquivo CSV."""
         if not dados:
             return
 
         caminho_csv = 'data/csvS/dados_apostas.csv'
 
         try:
-            df_existente = pd.read_csv(caminho_csv)
-        except FileNotFoundError:
-            df_existente = pd.DataFrame(columns=['Casa de Apostas', 'Partida', 'Aposta', 'Odd', 'Data de Adição'])
+            df_existente = pd.read_csv(caminho_csv, usecols=[0, 1, 2, 3, 4])  # Garante 5 colunas
+        except (FileNotFoundError, pd.errors.ParserError):
+            df_existente = pd.DataFrame(columns=['Casa', 'Evento', 'Aposta', 'Odd', 'Data'])
 
-        df_novo = pd.DataFrame(dados)
+        df_novo = pd.DataFrame(dados, columns=['Casa', 'Evento', 'Aposta', 'Odd'])
+        df_novo['Data'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
-        data_atual = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        df_novo['Data de Adição'] = data_atual
-
-        # Verifica duplicatas e remove
-        df_novo = df_novo[~df_novo.apply(lambda row: ((df_existente['Casa de Apostas'] == row[0]) &
-                                                       (df_existente['Partida'] == row[1]) &
+        # Remove duplicatas
+        df_novo = df_novo[~df_novo.apply(lambda row: ((df_existente['Casa'] == row[0]) &
+                                                       (df_existente['Evento'] == row[1]) &
                                                        (df_existente['Aposta'] == row[2])).any(), axis=1)]
 
         df_completo = pd.concat([df_existente, df_novo], ignore_index=True)
