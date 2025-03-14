@@ -12,75 +12,80 @@ def betfast():
 
         # Acessa a URL
         page.goto('https://betfast.bet.br/br/sportsbook/prematch#/prematch/197')
-        page.wait_for_load_state('networkidle')  # Espera até que a rede esteja inativa (carregamento completo)
-        page.wait_for_selector('body')  # Garante que o corpo da página foi carregado
+        page.wait_for_load_state('networkidle')
+        page.wait_for_selector('body')
 
         # Acessa o iframe
         iframe = page.query_selector('xpath=/html/body/main/iframe')
 
         if iframe:
             iframe_content = iframe.content_frame()
-            sections = iframe_content.query_selector_all('section.prematch-matches.outright-champ')
-            print(f"{len(sections)} seções encontradas.")
-
             dados = []
-            apostas_registradas = set()
 
-            # Lê o arquivo CSV existente para verificar apostas já registradas
+            # Caminho do arquivo CSV
             arquivo_csv = 'data/csvS/dados_apostas.csv'
-            if os.path.exists(arquivo_csv):
-                with open(arquivo_csv, mode='r', newline='', encoding='utf-8') as file:
-                    reader = csv.reader(file)
-                    for row in reader:
-                        apostas_registradas.add(tuple(row[1:4]))  # Adiciona a combinação (Evento, Aposta, Odd)
-            else:
-                # Cria o arquivo CSV com o cabeçalho, se não existir
+
+            # Verifica se o arquivo já existe
+            if not os.path.exists(arquivo_csv):
                 with open(arquivo_csv, mode='w', newline='', encoding='utf-8') as file:
                     writer = csv.writer(file)
                     writer.writerow(['Casa', 'Evento', 'Aposta', 'Odd', 'Data'])  # Escreve o cabeçalho
 
             # Itera sobre as seções
-            for i, section in enumerate(sections):
-                print(f"Clicando na seção {i + 1}...")
+            sections = iframe_content.query_selector_all('section.prematch-matches.outright-champ')
+            for section_idx, section in enumerate(sections):
+                print(f"Processando seção {section_idx + 1}...")
                 section.click()
-                sleep(1)
+                sleep(2)
 
-                match_divs = section.query_selector_all('div.match-name')
-                print(f"{len(match_divs)} partidas encontradas na seção {i + 1}.")
+                # Encontra todas as partidas
+                partidas = section.query_selector_all('ul > li')
+                print(f"{len(partidas)} partidas encontradas na seção {section_idx + 1}.")
 
-                # Itera sobre as partidas
-                for match in match_divs:
-                    match.click()
+                # Expande cada partida
+                for partida in partidas:
+                    print(f"Expandindo partida: {partida.inner_text().strip()}...")
+                    partida.click()
                     sleep(1)
 
-                    market_group = iframe_content.query_selector('div.market-group.with-max-bet')
-                    if market_group:
-                        aposta_divs = market_group.query_selector_all('div.title')
-                        odds_divs = market_group.query_selector_all('span.coef')
+                # Aguarda carregamento completo
+                sleep(2)
 
-                        if aposta_divs and odds_divs:
-                            for aposta_div, odd_div in zip(aposta_divs, odds_divs):
-                                aposta = aposta_div.inner_text().strip()
-                                odd = odd_div.inner_text().strip()
-                                partida = match.inner_text().strip()
-                                data_hora = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                                casa_aposta = "BetFast"
+                # Itera sobre as partidas para extrair apostas
+                for partida_idx, partida in enumerate(partidas):
+                    partida_nome = partida.query_selector('div.match-name').inner_text().strip()
 
-                                aposta_tuple = (casa_aposta, partida, aposta, odd, data_hora)
-                                aposta_identificador = (partida, aposta, odd)
+                    # XPath dinâmico para encontrar a aposta
+                    xpath_aposta = f'//*[@id="prematch-events-new"]/div[1]/div/section/section[{section_idx + 1}]/ul/li[{partida_idx + 1}]/div[4]/div[1]/div/div/div/div[1]'
+                    aposta_element = iframe_content.query_selector(f'xpath={xpath_aposta}')
 
-                                # Verifica duplicatas e adiciona os dados
-                                if aposta_identificador not in apostas_registradas:
-                                    dados.append(aposta_tuple)
-                                    apostas_registradas.add(aposta_identificador)
-                                else:
-                                    print(f"Aposta já cadastrada: {aposta_tuple}")
+                    if aposta_element:
+                        aposta = aposta_element.inner_text().strip()
+                        odd_element = partida.query_selector('span.coef')
+                        odd = odd_element.inner_text().strip() if odd_element else "N/A"
+                        data_hora = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                        casa_aposta = "BetFast"
+
+                        aposta_tuple = (casa_aposta, partida_nome, aposta, odd, data_hora)
+
+                        # Verifica duplicatas diretamente no CSV
+                        with open(arquivo_csv, mode='r', newline='', encoding='utf-8') as file:
+                            reader = csv.reader(file)
+                            next(reader)  # Pula o cabeçalho
+                            if any(row[:4] == [casa_aposta, partida_nome, aposta, odd] for row in reader):
+                                print(f"Aposta já cadastrada: {aposta_tuple}")
+                                continue  # Pula a inserção se já existir
+
+                        # Adiciona ao CSV
+                        dados.append(aposta_tuple)
+                        print(f"Nova aposta registrada: {aposta_tuple}")
                     else:
-                        print("Nenhum mercado de aposta encontrado.")
+                        print(f"Nenhuma aposta encontrada para a partida: {partida_nome}.")
+
         else:
             print("Iframe NÃO encontrado.")
 
-        # Adiciona os dados no arquivo CSV
+        # Salva novas apostas no CSV
         if dados:
             with open(arquivo_csv, mode='a', newline='', encoding='utf-8') as file:
                 writer = csv.writer(file)
@@ -90,7 +95,7 @@ def betfast():
             print("Nenhuma aposta nova encontrada.")
 
         # Mantém o navegador aberto até que o usuário pressione Enter
-        input("Pressione Enter para fechar o navegador...")  # Não fecha imediatamente
+        input("Pressione Enter para fechar o navegador...")
         browser.close()
 
 # Executa a função
