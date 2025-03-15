@@ -10,22 +10,22 @@
             "pid": 2,
             "mdt": 99,
             "lvt": false,
-            "fCnt": 2,
-            "oCnt": 2,
-            "aCnt": 2,
-            "fCM": 2,
-            "oCM": 2,
+            "fCnt": 4,
+            "oCnt": 4,
+            "aCnt": 4,
+            "fCM": 4,
+            "oCM": 4,
             "ord": 100,
             "cs": [
                 {
                     "cId": 10002809,
                     "xid": "2~custom~10002809",
                     "cN": "Futebol",
-                    "fCnt": 2,
-                    "oCnt": 2,
-                    "aCnt": 2,
-                    "fCM": 2,
-                    "oCM": 2,
+                    "fCnt": 4,
+                    "oCnt": 4,
+                    "aCnt": 4,
+                    "fCM": 4,
+                    "oCM": 4,
                     "ord": 50001,
                     "sns": [
                         {
@@ -37,73 +37,20 @@
                             "ord": 1,
                             "seaSURL": "super-odds",
                             "lName": "Super Odds",
-                            "fCnt": 2,
-                            "oCnt": 2,
-                            "aCnt": 2,
-                            "fCM": 2,
-                            "oCM": 2,
+                            "fCnt": 4,
+                            "oCnt": 4,
+                            "aCnt": 4,
+                            "fCM": 4,
+                            "oCM": 4,
                             "fs": [
                                 {
-                                    "fId": 63096622,
-                                    "fsd": 1742050800000,
+                                    "fId": 63096625,
+                                    "fsd": 1742131800000,
                                     "cshOut": true,
                                     "ante": true,
-                                    "afed": 1742050800000,
-                                    "hcN": "Man City - Brighton",
-                                    "xid": "63096622",
-                                    "lxid": "2~custom~987517",
-                                    "lbO": false,
-                                    "lSt": false,
-                                    "vld": true,
-                                    "frz": false,
-                                    "fDS": 1,
-                                    "mmp": 1,
-                                    "ce": true,
-                                    "spl": true,
-                                    "btgs": [
-                                        {
-                                            "btgId": 115144,
-                                            "btgN": "Total Gols",
-                                            "mrkp": "_id=115144",
-                                            "btgNO": "Total Gols",
-                                            "btgSpl": true,
-                                            "btgSiOn": true,
-                                            "btgCe": true,
-                                            "dt": [
-                                                1
-                                            ],
-                                            "prm": false,
-                                            "cshOut": false,
-                                            "fos": [
-                                                {
-                                                    "foId": 8335648011,
-                                                    "btId": 2410841,
-                                                    "btN": "Mais de 3.5 Gols",
-                                                    "valid": true,
-                                                    "tvalid": true,
-                                                    "freeze": false,
-                                                    "prm": false,
-                                                    "lineItem": false,
-                                                    "hO": 3,
-                                                    "hSh": "Mais de 3.5 Gols",
-                                                    "tmId": 440811,
-                                                    "foCe": true,
-                                                    "btCe": true,
-                                                    "taCe": false
-                                                }
-                                            ],
-                                            "lineItem": false
-                                        }
-                                    ]
-                                },
-                                {
-                                    "fId": 63096623,
-                                    "fsd": 1742067000000,
-                                    "cshOut": true,
-                                    "ante": true,
-                                    "afed": 1742067000000,
-                                    "hcN": "América MG - Atlético MG",
-                                    "xid": "63096623",
+                                    "afed": 1742131800000,
+                                    "hcN": "Fulham - Tottenham",
+                                    "xid": "63096625",
                                     "lxid": "2~custom~987517",
                                     "lbO": false,
                                     "lSt": false,
@@ -129,17 +76,176 @@
                                             "cshOut": false,
                                             "fos": [
                                                 {
-                                                    "foId": 8335648012,
-                                                    "btId": 2410842,
-                                                    "btN": "Atlético MG para vencer",
+                                                    "foId": 8335648014,
+                                                    "btId": 2411159,
+                                                    "btN": "Fulham para vencer",
                                                     "valid": true,
                                                     "tvalid": true,
                                                     "freeze": false,
                                                     "prm": false,
                                                     "lineItem": false,
                                                     "hO": 3,
-                                                    "hSh": "Atlético MG para vencer",
-                                                    "tmId": 440812,
+                                                    "hSh": "Fulham para vencer",
+                                                    "tmId": 441009,
+                                                    "foCe": true,
+                                                    "btCe": true,
+                                                    "taCe": false
+                                                }
+                                            ],
+                                            "lineItem": false
+                                        }
+                                    ]
+                                },
+                                {
+                                    "fId": 63096629,
+                                    "fsd": 1742151600000,
+                                    "cshOut": true,
+                                    "ante": true,
+                                    "afed": 1742151660000,
+                                    "hcN": "Internacional - Gremio",
+                                    "xid": "63096629",
+                                    "lxid": "2~custom~987517",
+                                    "lbO": false,
+                                    "lSt": false,
+                                    "vld": true,
+                                    "frz": false,
+                                    "fDS": 1,
+                                    "mmp": 1,
+                                    "ce": true,
+                                    "spl": true,
+                                    "btgs": [
+                                        {
+                                            "btgId": 115141,
+                                            "btgN": "Para ambas marcarem",
+                                            "mrkp": "_id=115141",
+                                            "btgNO": "Para ambas marcarem",
+                                            "btgSpl": true,
+                                            "btgSiOn": true,
+                                            "btgCe": true,
+                                            "dt": [
+                                                1
+                                            ],
+                                            "prm": false,
+                                            "cshOut": false,
+                                            "fos": [
+                                                {
+                                                    "foId": 8335648017,
+                                                    "btId": 2411162,
+                                                    "btN": "Para ambas marcarem - sim",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": false,
+                                                    "lineItem": false,
+                                                    "hO": 3,
+                                                    "hSh": "Para ambas marcarem - sim",
+                                                    "tmId": 441012,
+                                                    "foCe": true,
+                                                    "btCe": true,
+                                                    "taCe": false
+                                                }
+                                            ],
+                                            "lineItem": false
+                                        }
+                                    ]
+                                },
+                                {
+                                    "fId": 63096631,
+                                    "fsd": 1742151600000,
+                                    "cshOut": true,
+                                    "ante": true,
+                                    "afed": 1742151600000,
+                                    "hcN": "Flamengo - Fluminense",
+                                    "xid": "63096631",
+                                    "lxid": "2~custom~987517",
+                                    "lbO": false,
+                                    "lSt": false,
+                                    "vld": true,
+                                    "frz": false,
+                                    "fDS": 1,
+                                    "mmp": 1,
+                                    "ce": true,
+                                    "spl": true,
+                                    "btgs": [
+                                        {
+                                            "btgId": 115141,
+                                            "btgN": "Para ambas marcarem",
+                                            "mrkp": "_id=115141",
+                                            "btgNO": "Para ambas marcarem",
+                                            "btgSpl": true,
+                                            "btgSiOn": true,
+                                            "btgCe": true,
+                                            "dt": [
+                                                1
+                                            ],
+                                            "prm": false,
+                                            "cshOut": false,
+                                            "fos": [
+                                                {
+                                                    "foId": 8335648019,
+                                                    "btId": 2411164,
+                                                    "btN": "Para ambas marcarem - sim",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": false,
+                                                    "lineItem": false,
+                                                    "hO": 3,
+                                                    "hSh": "Para ambas marcarem - sim",
+                                                    "tmId": 441014,
+                                                    "foCe": true,
+                                                    "btCe": true,
+                                                    "taCe": false
+                                                }
+                                            ],
+                                            "lineItem": false
+                                        }
+                                    ]
+                                },
+                                {
+                                    "fId": 63096627,
+                                    "fsd": 1742155200000,
+                                    "cshOut": true,
+                                    "ante": true,
+                                    "afed": 1742155260000,
+                                    "hcN": "Atl. Madrid - Barcelona",
+                                    "xid": "63096627",
+                                    "lxid": "2~custom~987517",
+                                    "lbO": false,
+                                    "lSt": false,
+                                    "vld": true,
+                                    "frz": false,
+                                    "fDS": 1,
+                                    "mmp": 1,
+                                    "ce": true,
+                                    "spl": true,
+                                    "btgs": [
+                                        {
+                                            "btgId": 115011,
+                                            "btgN": "Para Ganhar",
+                                            "mrkp": "_id=115011",
+                                            "btgNO": "Para Ganhar",
+                                            "btgSpl": true,
+                                            "btgSiOn": true,
+                                            "btgCe": true,
+                                            "dt": [
+                                                1
+                                            ],
+                                            "prm": false,
+                                            "cshOut": false,
+                                            "fos": [
+                                                {
+                                                    "foId": 8335648015,
+                                                    "btId": 2411160,
+                                                    "btN": "Barcelona para ganhar",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": false,
+                                                    "lineItem": false,
+                                                    "hO": 3,
+                                                    "hSh": "Barcelona para ganhar",
+                                                    "tmId": 441010,
                                                     "foCe": true,
                                                     "btCe": true,
                                                     "taCe": false

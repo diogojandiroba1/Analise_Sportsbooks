@@ -4,7 +4,9 @@ from telegram import Bot
 
 # Substitua pelo seu token do Telegram
 TOKEN = '7980433701:AAFeSQ5J2tCVdNDKfwwEjImx5NF2MIaK6zQ'
-CHAT_ID = '-1002343785289'  # Substitua pelo seu chat_id
+CHAT_ID = '-1002343785289'  # ID do grupo
+TOPIC_ID = 191  # ID do tópico
+DELAY = 2  # Atraso em segundos entre cada envio de mensagem
 
 # Função para carregar apostas já enviadas em um set
 def carregar_apostas_enviadas():
@@ -54,12 +56,20 @@ async def enviar_apostas():
             # Verificar se a aposta já foi enviada
             aposta_tuple = tuple(row)  # Converte a linha em uma tupla para comparação
             if aposta_tuple not in apostas_enviadas:
-                # Enviar a mensagem para o Telegram
-                await bot.send_message(chat_id=CHAT_ID, text=aposta, parse_mode='Markdown')
+                # Enviar a mensagem para o Telegram no tópico específico
+                await bot.send_message(
+                    chat_id=CHAT_ID,
+                    text=aposta,
+                    parse_mode='Markdown',
+                    message_thread_id=TOPIC_ID  # Especifica o ID do tópico
+                )
                 # Registrar a aposta como enviada
                 registrar_aposta(aposta_tuple)
                 # Adicionar a aposta ao set de apostas enviadas
                 apostas_enviadas.add(aposta_tuple)
+
+                # Adicionar um atraso entre cada envio
+                await asyncio.sleep(DELAY)
             else:
                 print(f"Aposta já enviada: {aposta}")
 
