@@ -86,7 +86,6 @@ def uxbet():
             print("Nenhuma aposta nova encontrada.")
 
         # Mantém o navegador aberto até que o usuário pressione Enter
-        input("Pressione Enter para fechar o navegador...")
 
         # Fecha o navegador
         browser.close()
