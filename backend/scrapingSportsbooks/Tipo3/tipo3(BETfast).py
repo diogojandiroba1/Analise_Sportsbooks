@@ -95,7 +95,6 @@ def betfast():
             print("Nenhuma aposta nova encontrada.")
 
         # Mantém o navegador aberto até que o usuário pressione Enter
-        input("Pressione Enter para fechar o navegador...")
         browser.close()
 
 # Executa a função

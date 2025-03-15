@@ -1,37 +1,60 @@
 from datetime import datetime
-from playwright.sync_api import sync_playwright
-import os
 import importlib.util
 import time
+import logging
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# Função para executar outro arquivo .py com caminho completo ou relativo
+# Configuração de logs
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.FileHandler("execution_log.log", encoding='utf-8'),
+        logging.StreamHandler()
+    ]
+)
+
+# Função para executar um arquivo Python
 def execute_python_file(file_path):
     try:
-        # Carrega o módulo dinamicamente
         spec = importlib.util.spec_from_file_location("module_name", file_path)
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
-        print(f"Script {file_path} executado com sucesso.")
+        logging.info(f"Script {file_path} executado com sucesso.")
+        return True
     except Exception as e:
-        print(f"Erro ao executar o script {file_path}: {e}")
+        logging.error(f"Erro ao executar {file_path}: {e}")
+        return False
 
-# Função para executar scripts em um intervalo de tempo
-def execute_scripts_repeatedly(scripts, interval_minutes, repetitions):
+# Função para executar um conjunto de scripts com múltiplas repetições
+def execute_scripts(scripts, repetitions, interval_minutes):
     for _ in range(repetitions):
-        for script in scripts:
-            execute_python_file(script)
-        print(f"Aguardando {interval_minutes} minutos para a próxima execução...")
-        time.sleep(interval_minutes * 60)  # Converte minutos para segundos
+        with ThreadPoolExecutor() as executor:
+            futures = [executor.submit(execute_python_file, script) for script in scripts]
+            for future in as_completed(futures):
+                future.result()
+        logging.info(f"Aguardando {interval_minutes} minutos para a próxima execução...")
+        time.sleep(interval_minutes * 60)
 
-# Executando vários arquivos .py (com caminho completo ou relativo)
-if __name__ == "__main__":
-    # BOTS ATIVOS // EXECUÇÃO 24/7
+# Função para executar scripts compostos com delay de 30s entre scraping e conversão
+def execute_composta(execucao_composta):
+    for scraping_script, conversion_script in execucao_composta:
+        logging.info(f"Executando scraping: {scraping_script}")
+        if execute_python_file(scraping_script):
+            logging.info("Aguardando 30 segundos antes da conversão...")
+            time.sleep(30)
+            logging.info(f"Executando conversão: {conversion_script}")
+            execute_python_file(conversion_script)
+        else:
+            logging.error(f"Falha em {scraping_script}, conversão não será executada.")
+
+# Função principal
+def main():
     bots_ativos = [
         r'backend\CalculadoraDutching\dutching.py',
         r'backend\CalculadoraEV\calculadoraEV.py'
     ]
 
-    # CSV DIRETO // EXECUTAR 3 VEZES A CADA 15 MINUTOS
     csv_direto = [
         r'backend\scrapingSportsbooks\Tipo4\tipo4(UXBET).py',
         r'backend\scrapingSportsbooks\Tipo3\tipo3(FAZ1BET).py',
@@ -40,38 +63,45 @@ if __name__ == "__main__":
         r'backend\scrapingSportsbooks\Tipo1\BetEsporte.py'
     ]
 
-    # EXECUÇÃO COMPOSTA // EXECUTAR 3 VEZES A CADA 15 MINUTOS
     execucao_composta = [
         (r'backend\scrapingSportsbooks\Tipo1\betPIX365.py', r'backend\convertoresJsonCSV\convertorBETPIX365.py'),
         (r'backend\scrapingSportsbooks\Tipo1\brbet.py', r'backend\convertoresJsonCSV\convertorBRBET.py'),
         (r'backend\scrapingSportsbooks\Tipo1\vaidebet.py', r'backend\convertoresJsonCSV\convertorVAIDEBET.py')
     ]
 
-    # EXECUÇÃO PRINTS // EXECUÇÃO A CADA HORA
     execucao_prints = [
         r'backend\scrapingSportsbooks\Tipo1\ApostaGanha.py'
     ]
 
-    # EXECUÇÃO DO ENVIO DAS APOSTAS QUE ESTÃO NO CSV, A CADA 15 MINUTOS APÓS TODAS EXECUÇÕES ACIMA
-    envio_csv = [
-        r'backend\envioCSV.py'
-    ]
+    envio_csv = r'backend\envioCSV.py'
 
-    # Execução dos BOTS ATIVOS (24/7)
-    for bot in bots_ativos:
-        execute_python_file(bot)
+    logging.info("Iniciando BOTS ATIVOS (24/7)...")
+    with ThreadPoolExecutor() as executor:
+        for bot in bots_ativos:
+            executor.submit(execute_python_file, bot)
 
-    # Execução dos scripts CSV DIRETO (3 vezes a cada 15 minutos)
-    execute_scripts_repeatedly(csv_direto, interval_minutes=15, repetitions=3)
+    while True:
+        try:
+            logging.info("Executando scripts COMPOSTOS...")
+            execute_composta(execucao_composta)
+            
+            logging.info("Executando scripts CSV DIRETO...")
+            execute_scripts(csv_direto, repetitions=3, interval_minutes=15)
 
-    # Execução dos scripts EXECUÇÃO COMPOSTA (3 vezes a cada 15 minutos)
-    for script_pair in execucao_composta:
-        for script in script_pair:
-            execute_python_file(script)
-    execute_scripts_repeatedly([script[0] for script in execucao_composta], interval_minutes=15, repetitions=3)
+            logging.info("Executando scripts PRINTS...")
+            execute_scripts(execucao_prints, repetitions=1, interval_minutes=60)
 
-    # Execução dos scripts EXECUÇÃO PRINTS (a cada hora)
-    execute_scripts_repeatedly(execucao_prints, interval_minutes=60, repetitions=1)
+            logging.info("Executando envio CSV...")
+            execute_python_file(envio_csv)
 
-    # Execução do script ENVIO CSV (a cada 15 minutos após todas as execuções acima)
-    execute_scripts_repeatedly(envio_csv, interval_minutes=15, repetitions=1)
+            logging.info("Aguardando 15 minutos para o próximo ciclo...")
+            time.sleep(15 * 60)
+
+        except Exception as e:
+            logging.error(f"Erro no loop principal: {e}")
+            logging.info("Aguardando 5 minutos antes de reiniciar...")
+            time.sleep(300)
+
+if __name__ == "__main__":
+    logging.info("Iniciando script principal...")
+    main()

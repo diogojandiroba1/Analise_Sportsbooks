@@ -39,16 +39,16 @@ def salvar_dados_sem_duplicatas(novos_dados, caminho_csv):
         df_existente = pd.read_csv(caminho_csv)
     else:
         # Cria um DataFrame vazio se o arquivo não existir
-        df_existente = pd.DataFrame(columns=['Casa de Apostas', 'Partida', 'Aposta', 'Odd', 'Data'])
+        df_existente = pd.DataFrame(columns=['Casa', 'Evento', 'Aposta', 'Odd', 'Data'])
     
     # Converte os novos dados para DataFrame
-    df_novos = pd.DataFrame(novos_dados, columns=['Casa de Apostas', 'Partida', 'Aposta', 'Odd', 'Data'])
+    df_novos = pd.DataFrame(novos_dados, columns=['Casa', 'Evento', 'Aposta', 'Odd', 'Data'])
     
     # Concatena os dados existentes com os novos
     df_final = pd.concat([df_existente, df_novos], ignore_index=True)
     
     # Remove duplicatas (considerando 'Partida', 'Aposta' e 'Odd' como chave única)
-    df_final.drop_duplicates(subset=['Partida', 'Aposta', 'Odd'], keep='last', inplace=True)
+    df_final.drop_duplicates(subset=['Evento', 'Aposta', 'Odd'], keep='last', inplace=True)
     
     # Salva o DataFrame final no arquivo CSV
     df_final.to_csv(caminho_csv, index=False)

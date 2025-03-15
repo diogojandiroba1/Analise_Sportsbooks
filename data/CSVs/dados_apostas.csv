@@ -1,23 +1,65 @@
-Casa de Apostas,Partida,Aposta,Odd,Data
-VAIDEBET,Arsenal - Chelsea,Arsenal para ganhar,3,2025-03-15 18:26:25
-VAIDEBET,Leicester - Man Utd,Man Utd para ganhar,3,2025-03-15 18:26:25
-VAIDEBET,Flamengo - Fluminense,Mais de 2.5 Gols,3,2025-03-15 18:26:25
-VAIDEBET,Palmeiras - Corinthians,Mais de 2.5 Gols,3,2025-03-15 18:26:25
-BETPIX365,Fulham - Tottenham,Fulham para vencer,3,2025-03-15 18:27:27
-BETPIX365,Internacional - Gremio,Para ambas marcarem - sim,3,2025-03-15 18:27:27
-BETPIX365,Flamengo - Fluminense,Para ambas marcarem - sim,3,2025-03-15 18:27:27
-BETPIX365,Atl. Madrid - Barcelona,Barcelona para ganhar,3,2025-03-15 18:27:27
-BRBET,Atl. Madrid - Barcelona,Mais de 0.5 Faltas na Partida,2,2025-03-15 18:33:19
-UxBet,Clássicos | Finais,"Internacional x Grêmio (Campeonato Gaúcho), Flamengo x Fluminense (Campeonato Carioca), Vila Nova x Goiás (Campeonato Goiano), Bahia x Vitória (Campeonato Baiano), Palmeiras x Corinthians (Campeonato Paulista) - Mais de 0.5 faltas nas partidas",2.00,2025-03-15 19:39:59
-UxBet,Internacional x Grêmio | Gaúchão,Internacional vence a partida + Mais de 1.5 gols na partida,2.60,2025-03-15 19:39:59
-UxBet,Internacional x Grêmio | Gaúchão,CHANCE DUPLA: Grêmio ou Empate + Mais de 2.5 gols na partida,6.20,2025-03-15 19:39:59
-UxBet,Flamengo x Fluminense | Carioca,Flamengo vence + Mais de 1.5 gols na partida,2.95,2025-03-15 19:39:59
-UxBet,Flamengo x Fluminense | Carioca,CHANCE DUPLA: Fluminense ou Empate + Ambas equipes marcam,3.20,2025-03-15 19:39:59
-UxBet,Bahia x Vitória | Campeonato Baiano,Bahia vence + Mais de 1.5 gols para Bahia,2.50,2025-03-15 19:39:59
-UxBet,Bahia x Vitória | Campeonato Baiano,CHANCE DUPLA: Vitória ou Empate + Ambas equipes marcam,3.55,2025-03-15 19:39:59
-UxBet,Palmeiras x Corinthians | Paulistão,Vitor Roque marca a qualquer momento,3.00,2025-03-15 19:39:59
-UxBet,Palmeiras x Corinthians | Paulistão,Palmeiras vence + Ambas equipes marcam,4.40,2025-03-15 19:39:59
-UxBet,Palmeiras x Corinthians | Paulistão,DUPLA CHANCE: Corinthians ou Empate + Memphis marca ou dá assistência,4.15,2025-03-15 19:39:59
-UxBet,Atlético de Madrid x Barcelona | La Liga,Ambas equipes marcam,1.65,2025-03-15 19:39:59
-UxBet,Atlético de Madrid x Barcelona | La Liga,Ambas equipes marcam + Julian Álvarez marca a qualquer momento,3.75,2025-03-15 19:39:59
-UxBet,Atlético de Madrid x Barcelona | La Liga,Barcelona vence + Mais de 1.5 gols na partida,2.80,2025-03-15 19:39:59
+Casa,Evento,Aposta,Odd,Data
+UxBet,Clássicos | Finais,"Internacional x Grêmio (Campeonato Gaúcho), Flamengo x Fluminense (Campeonato Carioca), Vila Nova x Goiás (Campeonato Goiano), Bahia x Vitória (Campeonato Baiano), Palmeiras x Corinthians (Campeonato Paulista) - Mais de 0.5 faltas nas partidas",2.0,2025-03-15 20:43:37
+UxBet,Internacional x Grêmio | Gaúchão,Internacional vence a partida + Mais de 1.5 gols na partida,2.6,2025-03-15 20:43:38
+UxBet,Internacional x Grêmio | Gaúchão,CHANCE DUPLA: Grêmio ou Empate + Mais de 2.5 gols na partida,6.2,2025-03-15 20:43:38
+UxBet,Flamengo x Fluminense | Carioca,Flamengo vence + Mais de 1.5 gols na partida,2.95,2025-03-15 20:43:39
+UxBet,Flamengo x Fluminense | Carioca,CHANCE DUPLA: Fluminense ou Empate + Ambas equipes marcam,3.2,2025-03-15 20:43:40
+UxBet,Bahia x Vitória | Campeonato Baiano,Bahia vence + Mais de 1.5 gols para Bahia,2.5,2025-03-15 20:43:41
+UxBet,Bahia x Vitória | Campeonato Baiano,CHANCE DUPLA: Vitória ou Empate + Ambas equipes marcam,3.55,2025-03-15 20:43:41
+UxBet,Palmeiras x Corinthians | Paulistão,Vitor Roque marca a qualquer momento,3.0,2025-03-15 20:43:41
+UxBet,Palmeiras x Corinthians | Paulistão,Palmeiras vence + Ambas equipes marcam,4.4,2025-03-15 20:43:41
+UxBet,Palmeiras x Corinthians | Paulistão,DUPLA CHANCE: Corinthians ou Empate + Memphis marca ou dá assistência,4.15,2025-03-15 20:43:42
+UxBet,Atlético de Madrid x Barcelona | La Liga,Ambas equipes marcam,1.65,2025-03-15 20:43:43
+UxBet,Atlético de Madrid x Barcelona | La Liga,Ambas equipes marcam + Julian Álvarez marca a qualquer momento,3.75,2025-03-15 20:43:43
+UxBet,Atlético de Madrid x Barcelona | La Liga,Barcelona vence + Mais de 1.5 gols na partida,2.8,2025-03-15 20:43:44
+BETESPORTE,SUPERodd,NBA: Warriors para vencer o NY Knicks e Jimmy Bluter para fazer + de 7 Assistências e Stephen Curry marcar + de 30 Pontos,,2025-03-15 20:43:59
+Faz1Bet,Palmeiras - Corinthians SP,Resultado: Palmeiras / Mais de 2.5 gols na partida / Palmeiras tem o maior número de escanteios.,4.25,2025-03-15 20:43:41
+Faz1Bet,Palmeiras - Corinthians SP,Resultado: Corinthians / Yuri Alberto e Memphis Depay têm mais de 0.5 chutes ao gol cada.,10.0,2025-03-15 20:43:43
+Faz1Bet,Palmeiras - Corinthians SP,Resultado: Palmeiras / Vitor Roque e Raphael Veiga têm mais de 1.5 chutes ao gol cada.,10.0,2025-03-15 20:43:45
+Faz1Bet,Arsenal - Chelsea,Resultado: Arsenal /Cole Palmer e Gabriel Martinelli Mais de 0.5 chutes ao gol cada,6.5,2025-03-15 20:43:46
+Faz1Bet,Arsenal - Chelsea,Mais de 2.5 escanteios primeiro tempo para o Arsenal/ Maior numero de escanteios na partida: Arsenal/ Resultado: Arsenal ou empate,3.0,2025-03-15 20:43:48
+Faz1Bet,Leicester - Manchester United,Jamie Vardy e Bruno Fernandes Mais de 0.5 chutes ao cada/ Manchester United ou empate,3.4,2025-03-15 20:43:49
+Faz1Bet,Atalanta - Inter Milan,ambos marcam e ambas equipes recebem 2 ou mais cartões na partida,3.5,2025-03-15 20:43:51
+Faz1Bet,Atalanta - Inter Milan,Atalanta ou empate / Lookman e Lautaro Martinez Mais de 0.5 chutes ao gol cada um,3.25,2025-03-15 20:43:52
+Faz1Bet,Atletico Madrid - Barcelona,"Mais de 3.5 Chutes ao gol pelo trio de ataque do Barcelona (Lamine Yamal, Raphinha e Robert Lewandowki)",1.8,2025-03-15 20:43:53
+Faz1Bet,Atletico Madrid - Barcelona,"Menos de 3.5 Chutes ao gol pelo trio de ataque do Barcelona (Lamine Yamal, Raphinha e Robert Lewandowki)",1.8,2025-03-15 20:43:55
+Faz1Bet,Atletico Madrid - Barcelona,"Mais de 9.5 Finalizações pelo trio de ataque do Barcelona (Lamine Yamal, Raphinha e Robert Lewandowki)",1.8,2025-03-15 20:43:56
+Faz1Bet,Atletico Madrid - Barcelona,"Menos de 9.5 Finalizações pelo trio de ataque do Barcelona (Lamine Yamal, Raphinha e Robert Lewandowki)",1.8,2025-03-15 20:43:57
+Faz1Bet,Atletico Madrid - Barcelona,Julian Alvarez e Raphinha mais de 0.5 chutes ao gol cada/ ambos times recebem 2 ou mais cartões,3.25,2025-03-15 20:43:58
+Faz1Bet,Atletico Madrid - Barcelona,Atletico de Madrid ou empate/ Mais finalizações: Barcelona / Mais escanteios : Barcelona,4.25,2025-03-15 20:44:00
+Faz1Bet,PSG - Marseille,"Mais de 4.5 Chutes ao gol pelo trio de ataque do PSG (Ousmane Dembélé, Khvicha e Bradley Barcola)",1.8,2025-03-15 20:44:01
+Faz1Bet,PSG - Marseille,"Menos de 4.5 Chutes ao gol pelo trio de ataque do PSG (Ousmane Dembélé, Khvicha e Bradley Barcola)",1.8,2025-03-15 20:44:02
+Faz1Bet,PSG - Marseille,"Mais de 7.5 Finalizações pelo trio de ataque do PSG (Ousmane Dembélé, Khvicha e Bradley Barcola)",1.8,2025-03-15 20:44:03
+Faz1Bet,PSG - Marseille,"Menos de 7.5 Finalizações pelo trio de ataque do PSG (Ousmane Dembélé, Khvicha e Bradley Barcola)",1.8,2025-03-15 20:44:04
+Faz1Bet,Flamengo RJ - Fluminense RJ,Resultado: Flamengo / Ambos os times marcam / Mais escanteios: Flamengo,6.5,2025-03-15 20:44:06
+Faz1Bet,Flamengo RJ - Fluminense RJ,Resultado: Empate ou Fluminense / Ambos os times recebem mais de 1.5 cartões cada.,3.2,2025-03-15 20:44:07
+BetFast,Palmeiras - Corinthians SP,Mais de 0.5 cartões vermelhos na partida.,3.5,2025-03-15 20:43:51
+BetFast,Palmeiras - Corinthians SP,Resultado: Empate e Mais de 9.5 escanteios na partida.,6.0,2025-03-15 20:43:52
+BetFast,Palmeiras - Corinthians SP,Resultado: Empate ou Corinthians vence / Estevão e Yuri Alberto têm mais de 0.5 chutes ao gol cada.,4.5,2025-03-15 20:43:52
+BetFast,Palmeiras - Corinthians SP,Resultado: Palmeiras / Mais de 2.5 gols na partida / Palmeiras tem o maior número de escanteios.,4.25,2025-03-15 20:43:52
+BetFast,Palmeiras - Corinthians SP,Palmeiras marca em ambos os tempos / Jose Flaco Lopez e Facundo Torres têm mais de 0.5 chutes ao gol cada.,4.5,2025-03-15 20:43:52
+BetFast,Flamengo RJ - Fluminense RJ,Resultado: Flamengo / Ambas marcam / Ambas as equipes recebem mais de 1.5 cartões cada.,5.25,2025-03-15 20:43:59
+BetFast,Flamengo RJ - Fluminense RJ,Resultado: Empate ou Fluminense / Mais de 0.5 Gol para o Fluminense.,2.8,2025-03-15 20:43:59
+BetFast,Atletico Madrid - Barcelona,"Mais de 3.5 Chutes ao gol pelo trio de ataque do Barcelona (Lamine Yamal, Raphinha e Robert Lewandowki)",1.8,2025-03-15 20:44:11
+BetFast,Atletico Madrid - Barcelona,"Menos de 3.5 Chutes ao gol pelo trio de ataque do Barcelona (Lamine Yamal, Raphinha e Robert Lewandowki)",1.8,2025-03-15 20:44:11
+BetFast,Atletico Madrid - Barcelona,"Mais de 9.5 Finalizações pelo trio de ataque do Barcelona (Lamine Yamal, Raphinha e Robert Lewandowki)",1.8,2025-03-15 20:44:12
+BetFast,Atletico Madrid - Barcelona,"Menos de 9.5 Finalizações pelo trio de ataque do Barcelona (Lamine Yamal, Raphinha e Robert Lewandowki)",1.8,2025-03-15 20:44:12
+BetFast,Atletico Madrid - Barcelona,Julian Alvarez e Raphinha mais de 0.5 chutes ao gol cada/ ambos times recebem 2 ou mais cartões,3.25,2025-03-15 20:44:12
+BetFast,Atletico Madrid - Barcelona,Atletico de Madrid ou empate/ Mais finalizações: Barcelona / Mais escanteios : Barcelona,4.25,2025-03-15 20:44:12
+BetFast,Atletico Madrid - Barcelona,Resultado: Atletico de Madrid / Julian Alvarez Mais de 1.5 chutes ao gol,8.5,2025-03-15 20:44:12
+BetFast,Atletico Madrid - Barcelona,Ambos goleiros Mais de 2.5 defesas cada um,3.5,2025-03-15 20:44:12
+BetFast,Arsenal - Chelsea,Resultado: Arsenal /Cole Palmer e Gabriel Martinelli Mais de 0.5 chutes ao gol cada,6.5,2025-03-15 20:44:19
+BetFast,Fulham - Tottenham Hotspur,Ambos times marcam e ambos times recebem 2 ou mais cartões na partida,3.1,2025-03-15 20:44:19
+BetFast,Leicester - Manchester United,Mais de 3.5 defesas do Goleiro do Leicester e Mais de 1.5 faltas do Bruno fernandes,7.0,2025-03-15 20:44:19
+BetFast,Atalanta - Inter Milan,Resultado: Inter de Milão / Mais Finalizações : Inter de Milão,6.0,2025-03-15 20:44:26
+BetFast,Atalanta - Inter Milan,inter de milão ou empate / Calhanoglu Mais de 0.5 chutes ao gol,3.25,2025-03-15 20:44:26
+BetFast,PSG - Marseille,"Mais de 4.5 Chutes ao gol pelo trio de ataque do PSG (Ousmane Dembélé, Khvicha e Bradley Barcola)",1.8,2025-03-15 20:44:34
+BetFast,PSG - Marseille,"Menos de 4.5 Chutes ao gol pelo trio de ataque do PSG (Ousmane Dembélé, Khvicha e Bradley Barcola)",1.8,2025-03-15 20:44:34
+BetFast,PSG - Marseille,"Mais de 7.5 Finalizações pelo trio de ataque do PSG (Ousmane Dembélé, Khvicha e Bradley Barcola)",1.8,2025-03-15 20:44:34
+BetFast,PSG - Marseille,"Menos de 7.5 Finalizações pelo trio de ataque do PSG (Ousmane Dembélé, Khvicha e Bradley Barcola)",1.8,2025-03-15 20:44:34
+BetFast,Liverpool - Newcastle,"Mais de 3.5 Chutes ao gol pelo trio de ataque do Liverpool (Mohamed Salah, Darwin Núñez e Luis Diaz)",1.8,2025-03-15 20:44:45
+BetFast,Liverpool - Newcastle,"Menos de 3.5 Chutes ao gol pelo trio de ataque do Liverpool (Mohamed Salah, Darwin Núñez e Luis Diaz)",1.8,2025-03-15 20:44:45
+BetFast,Liverpool - Newcastle,"Over 5.5Mais de 5.5 Finalizações pelo trio de ataque do Liverpool (Mohamed Salah, Darwin Núñez e Luis Diaz)total shots by Liverpool's attacking trio (Mohamed Salah, Darwin Núñez, and Luis Diaz).",1.8,2025-03-15 20:44:45
+BetFast,Liverpool - Newcastle,"Menos de 5.5 Finalizações pelo trio de ataque do Liverpool (Mohamed Salah, Darwin Núñez e Luis Diaz)",1.8,2025-03-15 20:44:45
+BetFast,Liverpool - Newcastle,Resultado Liverpool / Mais de 9.5 escanteios/ Mais de 2.5 gols,4.25,2025-03-15 20:44:45
+BetFast,Liverpool - Newcastle,Empate ou Newcastle / ambos times recebem 2 ou mais cartões na partida,4.25,2025-03-15 20:44:45

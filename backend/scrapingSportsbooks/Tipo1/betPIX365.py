@@ -2,14 +2,11 @@ import requests
 import json
 from time import sleep
 
+# BETPIX365 API URL
+url = "https://betpix365.com/api-v2/fixture/category-details/d/23/betpix365/null/false/ante/20/super-odds-multi-specials-/soccer/super-odds"
 
-while True:
-
-    #BETPIX365
-
-    url = "https://betpix365.com/api-v2/fixture/category-details/d/23/betpix365/null/false/ante/20/super-odds-multi-specials-/soccer/super-odds"
-    
-    headers = {
+# Headers for the request
+headers = {
     "accept": "application/json, text/plain, */*",
     "bragiurl": "https://bragi.sportingtech.com/",
     "customorigin": "https://betpix365.com",
@@ -23,26 +20,31 @@ while True:
     "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
 }
 
-    caminho_arquivo = "data/jsonCasas/dataBETPIX365.json"
+# Path to save the JSON file
+caminho_arquivo = "data/jsonCasas/dataBETPIX365.json"
 
+try:
+    # Make the GET request
+    response = requests.get(url, headers=headers)
+    response.raise_for_status()  # Raise an error for bad status codes
+    
+    # Parse the JSON response
+    dados_json = response.json()
+    print("Dados obtidos com sucesso!")
+    
+    # Save the JSON data to a file
+    with open(caminho_arquivo, 'w', encoding='utf-8') as arquivo:
+        json.dump(dados_json, arquivo, ensure_ascii=False, indent=4)
+        print("Dados salvos com sucesso!")
+        
+except requests.exceptions.SSLError as e:
+    print(f"Erro de SSL/TLS: {e}")
+    
+except requests.exceptions.RequestException as e:
+    print(f"Erro na requisição: {e}")
+    
+except json.JSONDecodeError as e:
+    print(f"Erro ao decodificar JSON: {e}")
 
-    try:
-            response = requests.get(url, headers=headers) 
-            response.raise_for_status() 
-            
-            dados_json = response.json()
-            print("Dados obtidos com sucesso!")
-            
-            with open(caminho_arquivo,'w', encoding='utf-8') as arquivo:
-                json.dump(dados_json, arquivo, ensure_ascii=False, indent=4)
-                print("dados salvos")
-                
-    except requests.exceptions.SSLError as e:
-            print(f"Erro de SSL/TLS: {e}")
-            
-    except requests.exceptions.RequestException as e:
-            print(f"Erro na requisição: {e}")
-            
-
-    sleep(60)
-####################################################################################################################################################################################################
+# Optional: Add a delay if needed
+# sleep(5)  # Sleep for 5 seconds
