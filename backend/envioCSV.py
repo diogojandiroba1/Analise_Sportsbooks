@@ -12,7 +12,7 @@ INTERVALO_ENVIO = 1200  # 20 minutos em segundos
 # Função para carregar apostas já enviadas em um set
 def carregar_apostas_enviadas():
     try:
-        with open("data\\csvS\\apostas_enviadas.csv", mode='r', encoding="utf-8") as file:
+        with open(r"/home/diogojandiroba/Analise_Sportsbooks/data/csvS/apostas_enviadas.csv", mode='r', encoding="utf-8") as file:
             leitor = csv.reader(file)
             # Armazenar as apostas enviadas com base em "casa", "partida" e "aposta", ignorando "odd"
             return {tuple(map(str.strip, row[:3])) for row in leitor}  # Considera apenas as 3 primeiras colunas
@@ -48,7 +48,7 @@ def normalizar_dados_apostas(arquivo_csv):
 
 # Função assíncrona para enviar apostas
 async def enviar_apostas(bot):
-    arquivo_csv = "data\\csvS\\dados_apostas.csv"
+    arquivo_csv = r"/home/diogojandiroba/Analise_Sportsbooks/data/csvS/dados_apostas.csv"
     apostas_enviadas = carregar_apostas_enviadas()
 
     # Normaliza os dados de apostas antes de prosseguir
