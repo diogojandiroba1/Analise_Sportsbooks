@@ -47,23 +47,19 @@ def execute_scripts(scripts):
 
 # Função principal
 def main():
-
     csv_direto = [
-        r'backend\scrapingSportsbooks\Tipo4\tipo4(UXBET).py',
-        r'backend\scrapingSportsbooks\Tipo3\tipo3(FAZ1BET).py',
-        r'backend\scrapingSportsbooks\Tipo3\tipo3(BETfast).py',
-        r'backend\scrapingSportsbooks\Tipo1\BetEsporte.py'
+        r'backend/scrapingSportsbooks/Tipo4/tipo4(UXBET).py',
+        r'backend/scrapingSportsbooks/Tipo3/tipo3(FAZ1BET).py',
+        r'backend/scrapingSportsbooks/Tipo3/tipo3(BETfast).py',
+        r'backend/scrapingSportsbooks/Tipo1/BetEsporte.py'
     ]
 
     execucao_composta = [
-        (r'backend\scrapingSportsbooks\Tipo1\betPIX365.py', r'backend\convertoresJsonCSV\convertorBETPIX365.py'),
-        (r'backend\scrapingSportsbooks\Tipo1\brbet.py', r'backend\convertoresJsonCSV\convertorBRBET.py'),
-        (r'backend\scrapingSportsbooks\Tipo1\vaidebet.py', r'backend\convertoresJsonCSV\convertorVAIDEBET.py'),
-        (r'backend\convertoresJsonCSV\convertorESTRELABET.py', r'backend\convertoresJsonCSV\convertorESTRELABET.py')
+        (r'backend/scrapingSportsbooks/Tipo1/betPIX365.py', r'backend/convertoresJsonCSV/convertorBETPIX365.py'),
+        (r'backend/scrapingSportsbooks/Tipo1/brbet.py', r'backend/convertoresJsonCSV/convertorBRBET.py'),
+        (r'backend/scrapingSportsbooks/Tipo1/vaidebet.py', r'backend/convertoresJsonCSV/convertorVAIDEBET.py'),
+        (r'backend/convertoresJsonCSV/convertorESTRELABET.py', r'backend/convertoresJsonCSV/convertorESTRELABET.py')
     ]
-
-
-    ultimo_prints = 0  # Timestamp da última execução dos prints
 
     while True:
         try:
@@ -76,7 +72,7 @@ def main():
                 execute_scripts(csv_direto)
 
             logging.info("Aguardando 15 minutos para o próximo ciclo de COMPOSTOS e CSV DIRETO...")
-            time.sleep(6 * 60)
+            time.sleep(15 * 60)
 
         except Exception as e:
             logging.error(f"Erro no loop principal: {e}")
