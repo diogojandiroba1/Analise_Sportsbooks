@@ -32,7 +32,7 @@ def faz1bet():
 
         dados = []
         apostas_registradas = set()
-        arquivo_csv = 'data/csvS/dados_apostas.csv'
+        arquivo_csv = r'/home/diogojandiroba/Analise_Sportsbooks/data/csvS/dados_apostas.csv'
 
         if os.path.exists(arquivo_csv):
             with open(arquivo_csv, mode='r', newline='', encoding='utf-8') as file:

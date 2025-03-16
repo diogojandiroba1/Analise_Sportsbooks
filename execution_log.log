@@ -2154,3 +2154,59 @@ Call log:
 2025-03-16 13:10:35,069 - INFO - Script backend\scrapingSportsbooks\Tipo1\BetEsporte.py executado com sucesso.
 2025-03-16 13:11:29,510 - INFO - Script backend\scrapingSportsbooks\Tipo3\tipo3(BETfast).py executado com sucesso.
 2025-03-16 13:11:29,511 - INFO - Aguardando 15 minutos para o próximo ciclo de COMPOSTOS e CSV DIRETO...
+2025-03-16 13:16:50,226 - INFO - Iniciando script principal...
+2025-03-16 13:16:50,227 - INFO - Executando scripts COMPOSTOS...
+2025-03-16 13:16:50,227 - INFO - Executando scraping: /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/betPIX365.py
+2025-03-16 13:16:50,227 - ERROR - Erro ao executar /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/betPIX365.py: [Errno 2] No such file or directory: 'C:\\home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/betPIX365.py'
+2025-03-16 13:16:50,228 - ERROR - Falha em /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/betPIX365.py, conversão não será executada.
+2025-03-16 13:16:50,228 - INFO - Executando scraping: /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/brbet.py
+2025-03-16 13:16:50,228 - ERROR - Erro ao executar /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/brbet.py: [Errno 2] No such file or directory: 'C:\\home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/brbet.py'
+2025-03-16 13:16:50,228 - ERROR - Falha em /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/brbet.py, conversão não será executada.
+2025-03-16 13:16:50,228 - INFO - Executando scraping: /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/vaidebet.py
+2025-03-16 13:16:50,229 - ERROR - Erro ao executar /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/vaidebet.py: [Errno 2] No such file or directory: 'C:\\home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/vaidebet.py'
+2025-03-16 13:16:50,229 - ERROR - Falha em /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/vaidebet.py, conversão não será executada.
+2025-03-16 13:16:50,229 - INFO - Executando scraping: /home/diogojandiroba/Analise_Sportsbooks/backend/convertoresJsonCSV/convertorESTRELABET.py
+2025-03-16 13:16:50,229 - ERROR - Erro ao executar /home/diogojandiroba/Analise_Sportsbooks/backend/convertoresJsonCSV/convertorESTRELABET.py: [Errno 2] No such file or directory: 'C:\\home/diogojandiroba/Analise_Sportsbooks/backend/convertoresJsonCSV/convertorESTRELABET.py'
+2025-03-16 13:16:50,230 - ERROR - Falha em /home/diogojandiroba/Analise_Sportsbooks/backend/convertoresJsonCSV/convertorESTRELABET.py, conversão não será executada.
+2025-03-16 13:16:50,230 - INFO - Executando scripts CSV DIRETO...
+2025-03-16 13:16:50,231 - ERROR - Erro ao executar /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo4/tipo4(UXBET).py: [Errno 2] No such file or directory: 'C:\\home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo4/tipo4(UXBET).py'
+2025-03-16 13:16:50,231 - ERROR - Erro ao executar /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo3/tipo3(FAZ1BET).py: [Errno 2] No such file or directory: 'C:\\home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo3/tipo3(FAZ1BET).py'
+2025-03-16 13:16:50,231 - ERROR - Erro ao executar /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo3/tipo3(BETfast).py: [Errno 2] No such file or directory: 'C:\\home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo3/tipo3(BETfast).py'
+2025-03-16 13:16:50,231 - ERROR - Erro ao executar /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/BetEsporte.py: [Errno 2] No such file or directory: 'C:\\home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/BetEsporte.py'
+2025-03-16 13:16:50,232 - INFO - Executando scripts COMPOSTOS...
+2025-03-16 13:16:50,232 - INFO - Executando scraping: /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/betPIX365.py
+2025-03-16 13:16:50,233 - ERROR - Erro ao executar /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/betPIX365.py: [Errno 2] No such file or directory: 'C:\\home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/betPIX365.py'
+2025-03-16 13:16:50,233 - ERROR - Falha em /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/betPIX365.py, conversão não será executada.
+2025-03-16 13:16:50,234 - INFO - Executando scraping: /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/brbet.py
+2025-03-16 13:16:50,234 - ERROR - Erro ao executar /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/brbet.py: [Errno 2] No such file or directory: 'C:\\home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/brbet.py'
+2025-03-16 13:16:50,234 - ERROR - Falha em /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/brbet.py, conversão não será executada.
+2025-03-16 13:16:50,235 - INFO - Executando scraping: /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/vaidebet.py
+2025-03-16 13:16:50,235 - ERROR - Erro ao executar /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/vaidebet.py: [Errno 2] No such file or directory: 'C:\\home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/vaidebet.py'
+2025-03-16 13:16:50,235 - ERROR - Falha em /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/vaidebet.py, conversão não será executada.
+2025-03-16 13:16:50,235 - INFO - Executando scraping: /home/diogojandiroba/Analise_Sportsbooks/backend/convertoresJsonCSV/convertorESTRELABET.py
+2025-03-16 13:16:50,236 - ERROR - Erro ao executar /home/diogojandiroba/Analise_Sportsbooks/backend/convertoresJsonCSV/convertorESTRELABET.py: [Errno 2] No such file or directory: 'C:\\home/diogojandiroba/Analise_Sportsbooks/backend/convertoresJsonCSV/convertorESTRELABET.py'
+2025-03-16 13:16:50,236 - ERROR - Falha em /home/diogojandiroba/Analise_Sportsbooks/backend/convertoresJsonCSV/convertorESTRELABET.py, conversão não será executada.
+2025-03-16 13:16:50,237 - INFO - Executando scripts CSV DIRETO...
+2025-03-16 13:16:50,238 - ERROR - Erro ao executar /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo4/tipo4(UXBET).py: [Errno 2] No such file or directory: 'C:\\home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo4/tipo4(UXBET).py'
+2025-03-16 13:16:50,238 - ERROR - Erro ao executar /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo3/tipo3(FAZ1BET).py: [Errno 2] No such file or directory: 'C:\\home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo3/tipo3(FAZ1BET).py'
+2025-03-16 13:16:50,239 - ERROR - Erro ao executar /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo3/tipo3(BETfast).py: [Errno 2] No such file or directory: 'C:\\home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo3/tipo3(BETfast).py'
+2025-03-16 13:16:50,239 - ERROR - Erro ao executar /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/BetEsporte.py: [Errno 2] No such file or directory: 'C:\\home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/BetEsporte.py'
+2025-03-16 13:16:50,240 - INFO - Executando scripts COMPOSTOS...
+2025-03-16 13:16:50,240 - INFO - Executando scraping: /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/betPIX365.py
+2025-03-16 13:16:50,241 - ERROR - Erro ao executar /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/betPIX365.py: [Errno 2] No such file or directory: 'C:\\home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/betPIX365.py'
+2025-03-16 13:16:50,241 - ERROR - Falha em /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/betPIX365.py, conversão não será executada.
+2025-03-16 13:16:50,241 - INFO - Executando scraping: /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/brbet.py
+2025-03-16 13:16:50,242 - ERROR - Erro ao executar /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/brbet.py: [Errno 2] No such file or directory: 'C:\\home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/brbet.py'
+2025-03-16 13:16:50,242 - ERROR - Falha em /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/brbet.py, conversão não será executada.
+2025-03-16 13:16:50,242 - INFO - Executando scraping: /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/vaidebet.py
+2025-03-16 13:16:50,242 - ERROR - Erro ao executar /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/vaidebet.py: [Errno 2] No such file or directory: 'C:\\home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/vaidebet.py'
+2025-03-16 13:16:50,242 - ERROR - Falha em /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/vaidebet.py, conversão não será executada.
+2025-03-16 13:16:50,243 - INFO - Executando scraping: /home/diogojandiroba/Analise_Sportsbooks/backend/convertoresJsonCSV/convertorESTRELABET.py
+2025-03-16 13:16:50,243 - ERROR - Erro ao executar /home/diogojandiroba/Analise_Sportsbooks/backend/convertoresJsonCSV/convertorESTRELABET.py: [Errno 2] No such file or directory: 'C:\\home/diogojandiroba/Analise_Sportsbooks/backend/convertoresJsonCSV/convertorESTRELABET.py'
+2025-03-16 13:16:50,243 - ERROR - Falha em /home/diogojandiroba/Analise_Sportsbooks/backend/convertoresJsonCSV/convertorESTRELABET.py, conversão não será executada.
+2025-03-16 13:16:50,243 - INFO - Executando scripts CSV DIRETO...
+2025-03-16 13:16:50,244 - ERROR - Erro ao executar /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo4/tipo4(UXBET).py: [Errno 2] No such file or directory: 'C:\\home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo4/tipo4(UXBET).py'
+2025-03-16 13:16:50,244 - ERROR - Erro ao executar /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo3/tipo3(BETfast).py: [Errno 2] No such file or directory: 'C:\\home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo3/tipo3(BETfast).py'
+2025-03-16 13:16:50,244 - ERROR - Erro ao executar /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo3/tipo3(FAZ1BET).py: [Errno 2] No such file or directory: 'C:\\home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo3/tipo3(FAZ1BET).py'
+2025-03-16 13:16:50,244 - ERROR - Erro ao executar /home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/BetEsporte.py: [Errno 2] No such file or directory: 'C:\\home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/BetEsporte.py'
+2025-03-16 13:16:50,245 - INFO - Aguardando 15 minutos para o próximo ciclo de COMPOSTOS e CSV DIRETO...

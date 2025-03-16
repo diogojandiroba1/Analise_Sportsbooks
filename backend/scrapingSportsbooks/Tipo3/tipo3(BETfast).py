@@ -20,7 +20,7 @@ def betfast():
 
         iframe_content = iframe.content_frame()
         dados = []
-        arquivo_csv = 'data/csvS/dados_apostas.csv'
+        arquivo_csv = r'/home/diogojandiroba/Analise_Sportsbooks/data/csvS/dados_apostas.csv'
         apostas_registradas = set()
 
         if os.path.exists(arquivo_csv):

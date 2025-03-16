@@ -28,7 +28,7 @@ headers = {
 }
 
 # Caminho do arquivo JSON
-caminho_arquivo = "data/jsonCasas/dataVAIDEBET.json"
+caminho_arquivo = r"/home/diogojandiroba/Analise_Sportsbooks/data/jsonCasas/dataVAIDEBET.json"
 
 try:
     # Faz a requisição GET

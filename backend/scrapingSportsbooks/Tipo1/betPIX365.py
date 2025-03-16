@@ -21,7 +21,7 @@ headers = {
 }
 
 # Path to save the JSON file
-caminho_arquivo = "data/jsonCasas/dataBETPIX365.json"
+caminho_arquivo = r"/home/diogojandiroba/Analise_Sportsbooks/data/jsonCasas/dataBETPIX365.json"
 
 try:
     # Make the GET request
