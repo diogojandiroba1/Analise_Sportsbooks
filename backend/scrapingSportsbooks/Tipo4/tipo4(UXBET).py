@@ -6,7 +6,7 @@ import os
 def uxbet():
     with sync_playwright() as p:
         # Inicia o navegador
-        browser = p.chromium.launch(headless=False)  # headless=False para ver o navegador
+        browser = p.chromium.launch(headless=True)  # headless=False para ver o navegador
         page = browser.new_page()
 
         # Acessa a URL

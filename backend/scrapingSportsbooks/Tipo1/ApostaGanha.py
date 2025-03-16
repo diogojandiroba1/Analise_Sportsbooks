@@ -1,6 +1,4 @@
-from PIL import Image, ImageChops
 import os
-import time
 from datetime import datetime
 from playwright.sync_api import sync_playwright
 import requests
@@ -85,31 +83,28 @@ with sync_playwright() as p:
     # Encontra todas as divs com a classe "container regular"
     containers = page.query_selector_all('div.container.regular')
 
-    # Itera sobre os containers e começa a tirar prints apenas dos últimos três containers
+    # Itera sobre os containers e começa a tirar prints de todos eles
     for i, container in enumerate(containers):
-        if i < len(containers) - 3:  # Pula os primeiros containers, não tira print deles
-            container.click()
-            # Aguarda 3 segundos para garantir que o conteúdo foi carregado após o clique
-            page.wait_for_timeout(3000)
-        else:
-            container.click()  # Para os últimos três containers, tira os prints
-            # Aguarda 2 segundos para garantir que o conteúdo foi carregado após o clique
-            page.wait_for_timeout(3000)
+        print(f'Clicando no container {i+1} e tirando o print...')
 
-            # Tirar o print de todas as sections
-            sections = page.query_selector_all('section.card-highlight-bet.card-highlight-bet-odd-suprema.default')
+        # Clica no container
+        container.click()
+        page.wait_for_timeout(3000)  # Aguarda 3 segundos para garantir que o conteúdo foi carregado após o clique
+
+        # Tirar o print de todas as sections dentro do container
+        sections = page.query_selector_all('section.card-highlight-bet.card-highlight-bet-odd-suprema.default')
+        
+        for j, section in enumerate(sections):
+            section_path = generate_unique_filename(f'section_{i+1}_print_{j+1}')
+            section.screenshot(path=section_path)
+            print(f'Nova imagem salva: {section_path}')
+            saved_images.append(section_path)
             
-            for j, section in enumerate(sections):
-                section_path = generate_unique_filename(f'section_{i+1}_print_{j+1}')
-                section.screenshot(path=section_path)
-                print(f'Nova imagem salva: {section_path}')
-                saved_images.append(section_path)
-                
-                # Envia a imagem para o Telegram (Tópico 3)
-                send_image_to_telegram(bot_token, chat_id, topic_id, section_path)
+            # Envia a imagem para o Telegram (Tópico 3)
+            send_image_to_telegram(bot_token, chat_id, topic_id, section_path)
 
-                # Aguarda 2 segundos após cada screenshot para garantir estabilidade
-                page.wait_for_timeout(2000)
+            # Aguarda 2 segundos após cada screenshot para garantir estabilidade
+            page.wait_for_timeout(2000)
 
         # Aguarda 3 segundos entre os cliques para não sobrecarregar a página
         page.wait_for_timeout(3000)

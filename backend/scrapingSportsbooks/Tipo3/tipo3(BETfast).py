@@ -6,7 +6,7 @@ import os
 
 def betfast():
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch(headless=True)
         page = browser.new_page()
         page.goto('https://betfast.bet.br/br/sportsbook/prematch#/prematch/197')
         page.wait_for_load_state('networkidle')

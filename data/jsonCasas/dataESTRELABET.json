@@ -1,0 +1,79 @@
+{
+    "outrightGroups": [],
+    "markets": [
+        {
+            "oddIds": [
+                2274909579
+            ],
+            "typeId": 535,
+            "isMB": false,
+            "sportMarketId": 71407,
+            "id": 957414618,
+            "name": "Finais Estaduais: Para ter ao menos um escanteio em cada jogo das finais do Cariocão e Paulistão deste Domingo 16/03."
+        }
+    ],
+    "odds": [
+        {
+            "typeId": -1,
+            "price": 2.0,
+            "isMB": false,
+            "oddStatus": 0,
+            "id": 2274909579,
+            "name": "Sim"
+        }
+    ],
+    "events": [
+        {
+            "marketIds": [
+                957414618
+            ],
+            "isBooked": false,
+            "isParlay": false,
+            "hasStream": false,
+            "extId": "fp4_12088587",
+            "sc": 1,
+            "rc": false,
+            "pId": 4,
+            "et": 1,
+            "competitorIds": [],
+            "sportId": 90,
+            "catId": 1325,
+            "champId": 45350,
+            "status": 0,
+            "startDate": "2025-03-16T19:00:00Z",
+            "id": 12088587,
+            "name": "Finais Estaduais: Para ter ao menos um escanteio em cada jogo das finais do Cariocão e Paulistão deste Domingo 16/03."
+        }
+    ],
+    "sports": [
+        {
+            "catIds": [
+                1325
+            ],
+            "typeId": 90,
+            "iconName": "specials",
+            "hasLiveEvents": false,
+            "id": 90,
+            "name": "Especiais"
+        }
+    ],
+    "categories": [
+        {
+            "champIds": [
+                45350
+            ],
+            "iso": "BSO",
+            "hasLiveEvents": false,
+            "id": 1325,
+            "name": "Esportes"
+        }
+    ],
+    "champs": [
+        {
+            "hasLiveEvents": false,
+            "id": 45350,
+            "name": "Especiais da Estrelabet"
+        }
+    ],
+    "competitors": []
+}

@@ -16,7 +16,7 @@ except ImportError:
 
 # Configuração do Chrome
 chrome_options = Options()
-#chrome_options.add_argument("--headless")  # Executa sem abrir a janela do navegador
+chrome_options.add_argument("--headless")  # Executa sem abrir a janela do navegador
 chrome_options.add_argument("--no-sandbox")
 chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--log-level=3")
