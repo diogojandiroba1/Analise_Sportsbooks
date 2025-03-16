@@ -48,17 +48,17 @@ def execute_scripts(scripts):
 # Função principal
 def main():
     csv_direto = [
-        r'backend/scrapingSportsbooks/Tipo4/tipo4(UXBET).py',
-        r'backend/scrapingSportsbooks/Tipo3/tipo3(FAZ1BET).py',
-        r'backend/scrapingSportsbooks/Tipo3/tipo3(BETfast).py',
-        r'backend/scrapingSportsbooks/Tipo1/BetEsporte.py'
+        r'/home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo4/tipo4(UXBET).py',
+        r'/home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo3/tipo3(FAZ1BET).py',
+        r'/home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo3/tipo3(BETfast).py',
+        r'/home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/BetEsporte.py'
     ]
 
     execucao_composta = [
-        (r'backend/scrapingSportsbooks/Tipo1/betPIX365.py', r'backend/convertoresJsonCSV/convertorBETPIX365.py'),
-        (r'backend/scrapingSportsbooks/Tipo1/brbet.py', r'backend/convertoresJsonCSV/convertorBRBET.py'),
-        (r'backend/scrapingSportsbooks/Tipo1/vaidebet.py', r'backend/convertoresJsonCSV/convertorVAIDEBET.py'),
-        (r'backend/convertoresJsonCSV/convertorESTRELABET.py', r'backend/convertoresJsonCSV/convertorESTRELABET.py')
+        (r'/home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/betPIX365.py', r'/home/diogojandiroba/Analise_Sportsbooks/backend/convertoresJsonCSV/convertorBETPIX365.py'),
+        (r'/home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/brbet.py', r'/home/diogojandiroba/Analise_Sportsbooks/backend/convertoresJsonCSV/convertorBRBET.py'),
+        (r'/home/diogojandiroba/Analise_Sportsbooks/backend/scrapingSportsbooks/Tipo1/vaidebet.py', r'/home/diogojandiroba/Analise_Sportsbooks/backend/convertoresJsonCSV/convertorVAIDEBET.py'),
+        (r'/home/diogojandiroba/Analise_Sportsbooks/backend/convertoresJsonCSV/convertorESTRELABET.py', r'/home/diogojandiroba/Analise_Sportsbooks/backend/convertoresJsonCSV/convertorESTRELABET.py')
     ]
 
     while True:
