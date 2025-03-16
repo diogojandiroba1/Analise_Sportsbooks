@@ -7,7 +7,7 @@ import os
 def brbet():
     try:
         # Carregue o JSON manualmente
-        with open(r'data\jsonCasas\dataBRBET.json', 'r', encoding='utf-8') as f:
+        with open(r'/home/diogojandiroba/Analise_Sportsbooks/data/jsonCasas/dataBRBET.json', 'r', encoding='utf-8') as f:
             data = json.load(f)
         
         dados = []
@@ -70,7 +70,7 @@ def salvar_dados_sem_duplicatas(novos_dados, caminho_csv):
 dados = brbet()
 
 if dados:
-    salvar_dados_sem_duplicatas(dados, r'data\csvS\dados_apostas.csv')
+    salvar_dados_sem_duplicatas(dados, r'/home/diogojandiroba/Analise_Sportsbooks/data/csvS/dados_apostas.csv')
 else:
     print("Nenhum dado foi coletado.")
 
