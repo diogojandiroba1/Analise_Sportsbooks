@@ -10,7 +10,7 @@ url = "https://sb2frontend-altenar2.biahosted.com/api/widget/GetOutrightEvents?c
 
 
 # Caminho do arquivo JSON onde os dados serão salvos
-caminho_arquivo = r"/home/diogojandiroba/Analise_Sportsbooks/data/jsonCasas/dataESTRELABET.json"
+caminho_arquivo = r"data\\jsonCasas\\dataESTRELABET.json"
 
 while True:
     try:

@@ -17,7 +17,7 @@ headers = {
 }
 
 # Path to save the JSON file
-caminho_arquivo = r"/home/diogojandiroba/Analise_Sportsbooks/data/jsonCasas/dataBRBET.json"
+caminho_arquivo = r"data\\jsonCasas\\dataBRBET.json"
 
 try:
     # Make the GET request

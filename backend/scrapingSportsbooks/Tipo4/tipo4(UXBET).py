@@ -30,7 +30,7 @@ def uxbet():
         apostas_registradas = set()
 
         # Caminho do arquivo CSV
-        arquivo_csv = 'data/csvS/dados_apostas.csv'
+        arquivo_csv = r'data\\csvS\\dados_apostas.csv'
 
         # Verifica se o arquivo CSV já existe e carrega apostas registradas
         if os.path.exists(arquivo_csv):
@@ -77,5 +77,5 @@ def uxbet():
 
         browser.close()
 
-# Executa a função
+# Executa a função  
 uxbet()

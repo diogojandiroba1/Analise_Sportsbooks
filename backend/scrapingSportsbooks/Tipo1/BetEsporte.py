@@ -76,7 +76,7 @@ def salvar_dados(dados):
         print("Nenhuma aposta coletada.")
         return
 
-    caminho_csv = r'/home/diogojandiroba/Analise_Sportsbooks/data/csvS/dados_apostas.csv'
+    caminho_csv = r'data\\csvS\\dados_apostas.csv'
     os.makedirs(os.path.dirname(caminho_csv), exist_ok=True)
 
     try:
