@@ -6,14 +6,15 @@ from telegram import Bot
 TOKEN = '7980433701:AAFeSQ5J2tCVdNDKfwwEjImx5NF2MIaK6zQ'
 CHAT_ID = '-1002343785289'  # ID do grupo
 TOPIC_ID = 191  # ID do tópico
-DELAY = 2  # Atraso em segundos entre cada envio de mensagem
+DELAY = 4  # Atraso entre cada mensagem
+INTERVALO_ENVIO = 1200  # 20 minutos em segundos
 
 # Função para carregar apostas já enviadas em um set
 def carregar_apostas_enviadas():
     try:
         with open("data\\csvS\\apostas_enviadas.csv", mode='r', encoding="utf-8") as file:
             leitor = csv.reader(file)
-            # Retorna um set com todas as apostas já enviadas
+            # Armazenar as apostas enviadas como tuplas
             return {tuple(row) for row in leitor}
     except FileNotFoundError:
         # Se o arquivo não existir, retorna um set vazio
@@ -25,58 +26,61 @@ def registrar_aposta(aposta):
         writer = csv.writer(file)
         writer.writerow(aposta)
 
-# Função assíncrona para enviar cada linha do CSV
-async def enviar_apostas():
-    arquivo_csv = "data\\csvS\\dados_apostas.csv"  # Caminho do arquivo original com as apostas
-
-    # Crie uma instância do bot
-    bot = Bot(token=TOKEN)
-
-    # Carregar apostas já enviadas
+# Função assíncrona para enviar apostas
+async def enviar_apostas(bot):
+    arquivo_csv = "data\\csvS\\dados_apostas.csv"
     apostas_enviadas = carregar_apostas_enviadas()
 
-    # Abrir o arquivo CSV com as apostas
+    novas_apostas = False  # Flag para verificar se há novas apostas
+
     with open(arquivo_csv, mode='r', encoding='utf-8') as file:
         leitor = csv.reader(file)
+        next(leitor)  # Pular cabeçalho
 
-        # Pular o cabeçalho se existir
-        next(leitor)
-
-        # Enviar cada linha do CSV como mensagem
         for row in leitor:
             aposta = (
-                f"*🏠 Casa:* {str(row[0])}\n"
-                f"*📅 Evento:* {str(row[1])}\n"
-                f"*🎯 Aposta:* {str(row[2])}\n"
-                f"*⚽ Odd:* {str(row[3])}\n"
-                f"*🕒 Data:* {str(row[4])}\n"
+                f"*🏠 Casa:* {row[0]}\n"
+                f"*📅 Evento:* {row[1]}\n"
+                f"*🎯 Aposta:* {row[2]}\n"
+                f"*⚽ Odd:* {row[3]}\n"
+                f"*🕒 Data:* {row[4]}\n"
                 "\n*🔥 Boa sorte e aproveite as apostas! 🔥*"
             )
 
-            # Verificar se a aposta já foi enviada
-            aposta_tuple = tuple(row)  # Converte a linha em uma tupla para comparação
+            aposta_tuple = tuple(row)  # Converte a linha para uma tupla para verificação
+
+            # Verifica se a aposta já foi enviada
             if aposta_tuple not in apostas_enviadas:
-                # Enviar a mensagem para o Telegram no tópico específico
                 await bot.send_message(
                     chat_id=CHAT_ID,
                     text=aposta,
                     parse_mode='Markdown',
-                    message_thread_id=TOPIC_ID  # Especifica o ID do tópico
+                    message_thread_id=TOPIC_ID
                 )
-                # Registrar a aposta como enviada
-                registrar_aposta(aposta_tuple)
-                # Adicionar a aposta ao set de apostas enviadas
-                apostas_enviadas.add(aposta_tuple)
+                registrar_aposta(aposta_tuple)  # Registra a aposta como enviada
+                apostas_enviadas.add(aposta_tuple)  # Adiciona a aposta ao set
+                novas_apostas = True  # Marca que houve ao menos uma aposta enviada
+                await asyncio.sleep(DELAY)  # Pequeno atraso entre mensagens
 
-                # Adicionar um atraso entre cada envio
-                await asyncio.sleep(DELAY)
-            else:
-                print(f"Aposta já enviada: {aposta}")
+    return novas_apostas  # Retorna se houve novas apostas
 
-# Função principal para executar o envio de apostas
+# Função principal que executa o envio a cada 20 minutos
 async def main():
-    await enviar_apostas()
+    bot = Bot(token=TOKEN)
 
-# Rodar o bot com asyncio
+    while True:
+        print("🔄 Enviando novas apostas...")
+
+        novas_apostas = await enviar_apostas(bot)
+
+        if novas_apostas:
+            print("✔️ Novas apostas enviadas!")
+        else:
+            print("❌ Nenhuma nova aposta para enviar.")
+
+        print(f"⏳ Aguardando {INTERVALO_ENVIO // 60} minutos para o próximo envio...")
+        await asyncio.sleep(INTERVALO_ENVIO)
+
+# Executar o bot
 if __name__ == "__main__":
     asyncio.run(main())

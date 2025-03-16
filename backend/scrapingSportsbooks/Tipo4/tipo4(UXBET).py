@@ -23,71 +23,58 @@ def uxbet():
         print("Div alvo encontrada!")
         # Encontra todas as divs com a classe "separatorRow" que contém as apostas
         divs_match_list = page.query_selector_all('div.separatorRow')
-        quantidade_divs = len(divs_match_list)
-        print(f"Quantidade de divs com a classe 'separatorRow': {quantidade_divs}")
+        print(f"Quantidade de divs com a classe 'separatorRow': {len(divs_match_list)}")
 
         # Lista para armazenar os dados extraídos
         dados = []
-        apostas_registradas = set()  # Usando um set para armazenar combinações únicas (Evento, Aposta, Odd)
+        apostas_registradas = set()
 
-        # Verifica se o arquivo CSV já existe
+        # Caminho do arquivo CSV
         arquivo_csv = 'data/csvS/dados_apostas.csv'
+
+        # Verifica se o arquivo CSV já existe e carrega apostas registradas
         if os.path.exists(arquivo_csv):
-            # Lê o arquivo CSV existente para verificar apostas já registradas
             with open(arquivo_csv, mode='r', newline='', encoding='utf-8') as file:
                 reader = csv.reader(file)
-                cabecalho = next(reader, None)  # Lê o cabeçalho
+                next(reader, None)  # Pula o cabeçalho
                 for row in reader:
-                    # Adiciona a combinação (Evento, Aposta, Odd) ao set
-                    apostas_registradas.add((row[1], row[2], row[3]))  # Combinação (Evento, Aposta, Odd)
+                    apostas_registradas.add(tuple(row[:4]))  # Adiciona a combinação única (Casa, Evento, Aposta, Odd)
         else:
-            # Cria o arquivo CSV com o cabeçalho
             with open(arquivo_csv, mode='w', newline='', encoding='utf-8') as file:
                 writer = csv.writer(file)
-                writer.writerow(['Casa', 'Evento', 'Aposta', 'Odd', 'Data'])  # Escreve o cabeçalho
+                writer.writerow(['Casa', 'Evento', 'Aposta', 'Odd', 'Data'])
 
         # Itera sobre as divs
-        for i, div in enumerate(divs_match_list):
-            print(f"Processando div {i + 1}...")
+        for div in divs_match_list:
+            partida = div.query_selector('div.event-name span')
+            aposta = div.query_selector('div.title.font_12.weight_400.ng-star-inserted')
+            odd = div.query_selector('div.odd.ng-star-inserted span')
 
-            # Localiza as partidas, apostas e odds dentro da div
-            partida = div.query_selector('div.event-name span')  # Partida
-            aposta = div.query_selector('div.title.font_12.weight_400.ng-star-inserted')  # Aposta
-            odd = div.query_selector('div.odd.ng-star-inserted span')  # Odd
-
-            # Verifica se todos os elementos (partida, aposta e odd) existem
             if partida and aposta and odd:
                 partida_texto = partida.inner_text().strip()
                 aposta_texto = aposta.inner_text().strip()
                 odd_texto = odd.inner_text().strip()
-
-                # Data e hora atual
                 data_hora = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                aposta_tuple = ("UxBet", partida_texto, aposta_texto, odd_texto, data_hora)
+                aposta_identificador = ("UxBet", partida_texto, aposta_texto, odd_texto)
 
-                # Verificação de duplicatas
-                aposta_identificador = (partida_texto, aposta_texto, odd_texto)  # Combinação única para verificar duplicatas
                 if aposta_identificador not in apostas_registradas:
-                    # Adiciona os dados ao conjunto
-                    dados.append(("UxBet", partida_texto, aposta_texto, odd_texto, data_hora))
-                    apostas_registradas.add(aposta_identificador)  # Marca como registrada
+                    dados.append(aposta_tuple)
+                    apostas_registradas.add(aposta_identificador)
                 else:
                     print(f"Aposta já cadastrada: {aposta_identificador}")
             else:
-                print(f"Div {i + 1} não contém todas as informações necessárias (partida, aposta, odd). Ignorando.")
+                print("Informações incompletas, ignorando aposta.")
 
-        # Adiciona os dados no arquivo CSV
+        # Adiciona os dados ao arquivo CSV
         if dados:
             with open(arquivo_csv, mode='a', newline='', encoding='utf-8') as file:
                 writer = csv.writer(file)
-                writer.writerows(dados)  # Adiciona os dados extraídos
-
-            print(f"{len(dados)} dados adicionados ao arquivo 'dados_apostas.csv'.")
+                writer.writerows(dados)
+            print(f"{len(dados)} novas apostas adicionadas ao arquivo 'dados_apostas.csv'.")
         else:
             print("Nenhuma aposta nova encontrada.")
 
-        # Mantém o navegador aberto até que o usuário pressione Enter
-
-        # Fecha o navegador
         browser.close()
 
 # Executa a função

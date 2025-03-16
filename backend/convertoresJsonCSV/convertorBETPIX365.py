@@ -54,12 +54,10 @@ def salvar_dados_sem_duplicatas(novos_dados, caminho_csv):
     df_final.to_csv(caminho_csv, index=False)
     print(f"Dados salvos no arquivo '{caminho_csv}'")
 
-while True:
-    dados = betpix365()
 
-    if dados:
-        salvar_dados_sem_duplicatas(dados, r'data\csvS\dados_apostas.csv')
-    else:
-        print("Nenhum dado foi coletado.")
+dados = betpix365()
 
-    sleep(30)
+if dados:
+    salvar_dados_sem_duplicatas(dados, r'data\csvS\dados_apostas.csv')
+else:
+    print("Nenhum dado foi coletado.")

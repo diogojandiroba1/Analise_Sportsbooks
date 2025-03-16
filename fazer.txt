@@ -1,0 +1,3 @@
+separar execução do scrapping e envio das odds
+achar uma forma de colocar na nuvem 4 consoles
+envio se der erro, executar novamente

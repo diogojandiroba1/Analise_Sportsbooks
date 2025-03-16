@@ -30,28 +30,33 @@ headers = {
 # Caminho do arquivo JSON
 caminho_arquivo = "data/jsonCasas/dataVAIDEBET.json"
 
-while True:
+try:
+    # Faz a requisição GET
+    response = requests.get(url, headers=headers)
+    response.raise_for_status()  # Verifica se a requisição foi bem-sucedida
+
     try:
-        response = requests.get(url, headers=headers)
+        # Tenta decodificar o JSON da resposta
+        dados_json = response.json()
+        print("Dados obtidos com sucesso!")
 
-        # Verifica o status da resposta
-        if response.status_code == 200:
-            try:
-                dados_json = response.json()
-                print("Dados obtidos com sucesso!")
+        # Salva os dados em um arquivo JSON
+        with open(caminho_arquivo, 'w', encoding='utf-8') as arquivo:
+            json.dump(dados_json, arquivo, ensure_ascii=False, indent=4)
+            print("Dados salvos com sucesso!")
 
-                with open(caminho_arquivo, 'w', encoding='utf-8') as arquivo:
-                    json.dump(dados_json, arquivo, ensure_ascii=False, indent=4)
-                    print("Dados salvos!")
+    except json.JSONDecodeError:
+        # Se a resposta não for um JSON válido
+        print("Erro: A resposta não está no formato JSON.")
+        print("Conteúdo da resposta:", response.text)  # Mostra o conteúdo da resposta
 
-            except json.JSONDecodeError:
-                print("Erro: A resposta não está no formato JSON.")
-                print("Conteúdo da resposta:", response.text)  # Mostra o que a API retornou
+except requests.exceptions.HTTPError as e:
+    # Erros HTTP (4xx, 5xx)
+    print(f"Erro HTTP: {e}")
 
-        else:
-            print(f"Erro HTTP {response.status_code}: {response.text}")
+except requests.exceptions.RequestException as e:
+    # Outros erros de requisição
+    print(f"Erro na requisição: {e}")
 
-    except requests.exceptions.RequestException as e:
-        print(f"Erro na requisição: {e}")
-
-    sleep(60)
+# Opcional: Adicionar um delay se necessário
+# sleep(5)  # Aguarda 5 segundos

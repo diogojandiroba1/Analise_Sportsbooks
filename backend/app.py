@@ -1,107 +1,86 @@
-from datetime import datetime
-import importlib.util
-import time
-import logging
-from concurrent.futures import ThreadPoolExecutor, as_completed
+import csv
+import asyncio
+from telegram import Bot
 
-# Configuração de logs
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.FileHandler("execution_log.log", encoding='utf-8'),
-        logging.StreamHandler()
-    ]
-)
+# Substitua pelo seu token do Telegram
+TOKEN = '7980433701:AAFeSQ5J2tCVdNDKfwwEjImx5NF2MIaK6zQ'
+CHAT_ID = '-1002343785289'  # ID do grupo
+TOPIC_ID = 191  # ID do tópico
+DELAY = 4  # Atraso entre cada mensagem
+INTERVALO_ENVIO = 1200  # 20 minutos em segundos
 
-# Função para executar um arquivo Python
-def execute_python_file(file_path):
+# Função para carregar apostas já enviadas em um set
+def carregar_apostas_enviadas():
     try:
-        spec = importlib.util.spec_from_file_location("module_name", file_path)
-        module = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(module)
-        logging.info(f"Script {file_path} executado com sucesso.")
-        return True
-    except Exception as e:
-        logging.error(f"Erro ao executar {file_path}: {e}")
-        return False
+        with open("data\\csvS\\apostas_enviadas.csv", mode='r', encoding="utf-8") as file:
+            leitor = csv.reader(file)
+            # Armazenar as apostas enviadas como tuplas
+            return {tuple(row) for row in leitor}
+    except FileNotFoundError:
+        # Se o arquivo não existir, retorna um set vazio
+        return set()
 
-# Função para executar um conjunto de scripts com múltiplas repetições
-def execute_scripts(scripts, repetitions, interval_minutes):
-    for _ in range(repetitions):
-        with ThreadPoolExecutor() as executor:
-            futures = [executor.submit(execute_python_file, script) for script in scripts]
-            for future in as_completed(futures):
-                future.result()
-        logging.info(f"Aguardando {interval_minutes} minutos para a próxima execução...")
-        time.sleep(interval_minutes * 60)
+# Função para registrar uma nova aposta no arquivo CSV
+def registrar_aposta(aposta):
+    with open("data\\csvS\\apostas_enviadas.csv", mode='a', encoding="utf-8", newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(aposta)
 
-# Função para executar scripts compostos com delay de 30s entre scraping e conversão
-def execute_composta(execucao_composta):
-    for scraping_script, conversion_script in execucao_composta:
-        logging.info(f"Executando scraping: {scraping_script}")
-        if execute_python_file(scraping_script):
-            logging.info("Aguardando 30 segundos antes da conversão...")
-            time.sleep(30)
-            logging.info(f"Executando conversão: {conversion_script}")
-            execute_python_file(conversion_script)
-        else:
-            logging.error(f"Falha em {scraping_script}, conversão não será executada.")
+# Função assíncrona para enviar apostas
+async def enviar_apostas(bot):
+    arquivo_csv = "data\\csvS\\dados_apostas.csv"
+    apostas_enviadas = carregar_apostas_enviadas()
 
-# Função principal
-def main():
-    bots_ativos = [
-        r'backend\CalculadoraDutching\dutching.py',
-        r'backend\CalculadoraEV\calculadoraEV.py'
-    ]
+    novas_apostas = False  # Flag para verificar se há novas apostas
 
-    csv_direto = [
-        r'backend\scrapingSportsbooks\Tipo4\tipo4(UXBET).py',
-        r'backend\scrapingSportsbooks\Tipo3\tipo3(FAZ1BET).py',
-        r'backend\scrapingSportsbooks\Tipo3\tipo3(BETfast).py',
-        r'backend\scrapingSportsbooks\Tipo2\apostaTudo.py',
-        r'backend\scrapingSportsbooks\Tipo1\BetEsporte.py'
-    ]
+    with open(arquivo_csv, mode='r', encoding='utf-8') as file:
+        leitor = csv.reader(file)
+        next(leitor)  # Pular cabeçalho
 
-    execucao_composta = [
-        (r'backend\scrapingSportsbooks\Tipo1\betPIX365.py', r'backend\convertoresJsonCSV\convertorBETPIX365.py'),
-        (r'backend\scrapingSportsbooks\Tipo1\brbet.py', r'backend\convertoresJsonCSV\convertorBRBET.py'),
-        (r'backend\scrapingSportsbooks\Tipo1\vaidebet.py', r'backend\convertoresJsonCSV\convertorVAIDEBET.py')
-    ]
+        for row in leitor:
+            aposta = (
+                f"*🏠 Casa:* {row[0]}\n"
+                f"*📅 Evento:* {row[1]}\n"
+                f"*🎯 Aposta:* {row[2]}\n"
+                f"*⚽ Odd:* {row[3]}\n"
+                f"*🕒 Data:* {row[4]}\n"
+                "\n*🔥 Boa sorte e aproveite as apostas! 🔥*"
+            )
 
-    execucao_prints = [
-        r'backend\scrapingSportsbooks\Tipo1\ApostaGanha.py'
-    ]
+            aposta_tuple = tuple(row)  # Converte a linha para uma tupla para verificação
 
-    envio_csv = r'backend\envioCSV.py'
+            # Verifica se a aposta já foi enviada
+            if aposta_tuple not in apostas_enviadas:
+                await bot.send_message(
+                    chat_id=CHAT_ID,
+                    text=aposta,
+                    parse_mode='Markdown',
+                    message_thread_id=TOPIC_ID
+                )
+                registrar_aposta(aposta_tuple)  # Registra a aposta como enviada
+                apostas_enviadas.add(aposta_tuple)  # Adiciona a aposta ao set
+                novas_apostas = True  # Marca que houve ao menos uma aposta enviada
+                await asyncio.sleep(DELAY)  # Pequeno atraso entre mensagens
 
-    logging.info("Iniciando BOTS ATIVOS (24/7)...")
-    with ThreadPoolExecutor() as executor:
-        for bot in bots_ativos:
-            executor.submit(execute_python_file, bot)
+    return novas_apostas  # Retorna se houve novas apostas
+
+# Função principal que executa o envio a cada 20 minutos
+async def main():
+    bot = Bot(token=TOKEN)
 
     while True:
-        try:
-            logging.info("Executando scripts COMPOSTOS...")
-            execute_composta(execucao_composta)
-            
-            logging.info("Executando scripts CSV DIRETO...")
-            execute_scripts(csv_direto, repetitions=3, interval_minutes=15)
+        print("🔄 Enviando novas apostas...")
 
-            logging.info("Executando scripts PRINTS...")
-            execute_scripts(execucao_prints, repetitions=1, interval_minutes=60)
+        novas_apostas = await enviar_apostas(bot)
 
-            logging.info("Executando envio CSV...")
-            execute_python_file(envio_csv)
+        if novas_apostas:
+            print("✔️ Novas apostas enviadas!")
+        else:
+            print("❌ Nenhuma nova aposta para enviar.")
 
-            logging.info("Aguardando 15 minutos para o próximo ciclo...")
-            time.sleep(15 * 60)
+        print(f"⏳ Aguardando {INTERVALO_ENVIO // 60} minutos para o próximo envio...")
+        await asyncio.sleep(INTERVALO_ENVIO)
 
-        except Exception as e:
-            logging.error(f"Erro no loop principal: {e}")
-            logging.info("Aguardando 5 minutos antes de reiniciar...")
-            time.sleep(300)
-
+# Executar o bot
 if __name__ == "__main__":
-    logging.info("Iniciando script principal...")
-    main()
+    asyncio.run(main())
