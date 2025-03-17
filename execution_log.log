@@ -1,0 +1,78 @@
+2025-03-17 02:29:41,805 - INFO - Executando scripts COMPOSTOS...
+2025-03-17 02:29:41,805 - INFO - 📸 Executando scripts do TipoFotos...
+2025-03-17 02:29:41,805 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\betPIX365.py
+2025-03-17 02:29:43,395 - INFO - Script backend\\scrapingSportsbooks\\Tipo1\\betPIX365.py executado com sucesso.
+2025-03-17 02:29:43,395 - INFO - Aguardando 5 segundos antes da conversão...
+2025-03-17 02:29:48,396 - INFO - Executando conversão: backend\\convertoresJsonCSV\\convertorBETPIX365.py
+2025-03-17 02:29:51,833 - INFO - ⏳ Aguardando 120 segundos antes de iniciar o envio de apostas...
+2025-03-17 02:29:52,386 - INFO - Script backend\\convertoresJsonCSV\\convertorBETPIX365.py executado com sucesso.
+2025-03-17 02:29:52,387 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\brbet.py
+2025-03-17 02:29:52,716 - INFO - Script backend\\scrapingSportsbooks\\Tipo1\\brbet.py executado com sucesso.
+2025-03-17 02:29:52,716 - INFO - Aguardando 5 segundos antes da conversão...
+2025-03-17 02:29:57,718 - INFO - Executando conversão: backend\\convertoresJsonCSV\\convertorBRBET.py
+2025-03-17 02:29:57,721 - INFO - Script backend\\convertoresJsonCSV\\convertorBRBET.py executado com sucesso.
+2025-03-17 02:29:57,722 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\vaidebet.py
+2025-03-17 02:29:58,131 - INFO - Script backend\\scrapingSportsbooks\\Tipo1\\vaidebet.py executado com sucesso.
+2025-03-17 02:29:58,132 - INFO - Aguardando 5 segundos antes da conversão...
+2025-03-17 02:30:03,133 - INFO - Executando conversão: backend\\convertoresJsonCSV\\convertorVAIDEBET.py
+2025-03-17 02:30:03,138 - INFO - Script backend\\convertoresJsonCSV\\convertorVAIDEBET.py executado com sucesso.
+2025-03-17 02:30:03,138 - INFO - Executando scraping: backend\\convertoresJsonCSV\\convertorESTRELABET.py
+2025-03-17 02:30:03,214 - INFO - Script backend\\convertoresJsonCSV\\convertorESTRELABET.py executado com sucesso.
+2025-03-17 02:30:03,215 - INFO - Aguardando 5 segundos antes da conversão...
+2025-03-17 02:30:08,216 - INFO - Executando conversão: backend\\convertoresJsonCSV\\convertorESTRELABET.py
+2025-03-17 02:30:08,235 - INFO - Script backend\\convertoresJsonCSV\\convertorESTRELABET.py executado com sucesso.
+2025-03-17 02:30:08,236 - INFO - Executando scripts CSV DIRETO...
+2025-03-17 02:30:08,581 - INFO - ====== WebDriver manager ======
+2025-03-17 02:30:09,523 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-17 02:30:09,715 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-17 02:30:09,788 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-17 02:30:09,976 - INFO - WebDriver version 134.0.6998.88 selected
+2025-03-17 02:30:09,980 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/134.0.6998.88/win32/chromedriver-win32.zip
+2025-03-17 02:30:09,980 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/134.0.6998.88/win32/chromedriver-win32.zip
+2025-03-17 02:30:10,189 - INFO - Driver downloading response is 200
+2025-03-17 02:30:10,611 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-17 02:30:11,112 - INFO - Driver has been saved in cache [C:\Users\Diogo\.wdm\drivers\chromedriver\win64\134.0.6998.88]
+2025-03-17 02:30:26,868 - INFO - Script backend\\scrapingSportsbooks\\Tipo3\\tipo3(FAZ1BET).py executado com sucesso.
+2025-03-17 02:30:27,136 - ERROR - ❌ Erro ao executar backend/scrapingSportsbooks/TipoFotos/ApostaGanha.py: Locator.screenshot: Error: strict mode violation: locator("section.card-highlight-bet.card-highlight-bet-odd-suprema.default") resolved to 2 elements:
+    1) <section _ngcontent-ng-c3213865410="" class="card-highlight-bet card-highlight-bet-odd-suprema default">…</section> aka locator("ag-highlight-bets-card").filter(has_text="18/03 - 19:00Náutico x Amé").locator("section")
+    2) <section _ngcontent-ng-c3213865410="" class="card-highlight-bet card-highlight-bet-odd-suprema default">…</section> aka locator("ag-highlight-bets-card").filter(has_text="18/03 - 21:30CRB x Ferroviá").locator("section")
+
+Call log:
+  - waiting for locator("section.card-highlight-bet.card-highlight-bet-odd-suprema.default")
+
+2025-03-17 02:30:29,773 - INFO - Script backend\\scrapingSportsbooks\\Tipo3\\tipo3(BETfast).py executado com sucesso.
+2025-03-17 02:30:45,079 - INFO - ✅ Script backend/scrapingSportsbooks/TipoFotos/EsportivaBet.py executado com sucesso.
+2025-03-17 02:30:45,079 - INFO - ⏳ Aguardando 24 horas antes da próxima execução de TipoFotos...
+2025-03-17 02:31:02,449 - INFO - Script backend\\scrapingSportsbooks\\Tipo1\\BetEsporte.py executado com sucesso.
+2025-03-17 02:31:17,882 - INFO - Script backend\\scrapingSportsbooks\\Tipo4\\tipo4(UXBET).py executado com sucesso.
+2025-03-17 02:31:17,883 - INFO - Executando scripts COMPOSTOS...
+2025-03-17 02:31:17,883 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\betPIX365.py
+2025-03-17 02:31:18,135 - INFO - Script backend\\scrapingSportsbooks\\Tipo1\\betPIX365.py executado com sucesso.
+2025-03-17 02:31:18,135 - INFO - Aguardando 5 segundos antes da conversão...
+2025-03-17 02:31:23,136 - INFO - Executando conversão: backend\\convertoresJsonCSV\\convertorBETPIX365.py
+2025-03-17 02:31:23,138 - INFO - Script backend\\convertoresJsonCSV\\convertorBETPIX365.py executado com sucesso.
+2025-03-17 02:31:23,139 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\brbet.py
+2025-03-17 02:31:23,568 - INFO - Script backend\\scrapingSportsbooks\\Tipo1\\brbet.py executado com sucesso.
+2025-03-17 02:31:23,569 - INFO - Aguardando 5 segundos antes da conversão...
+2025-03-17 02:31:28,570 - INFO - Executando conversão: backend\\convertoresJsonCSV\\convertorBRBET.py
+2025-03-17 02:31:28,572 - INFO - Script backend\\convertoresJsonCSV\\convertorBRBET.py executado com sucesso.
+2025-03-17 02:31:28,572 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\vaidebet.py
+2025-03-17 02:31:28,694 - INFO - Script backend\\scrapingSportsbooks\\Tipo1\\vaidebet.py executado com sucesso.
+2025-03-17 02:31:28,695 - INFO - Aguardando 5 segundos antes da conversão...
+2025-03-17 02:31:33,696 - INFO - Executando conversão: backend\\convertoresJsonCSV\\convertorVAIDEBET.py
+2025-03-17 02:31:33,698 - INFO - Script backend\\convertoresJsonCSV\\convertorVAIDEBET.py executado com sucesso.
+2025-03-17 02:31:33,699 - INFO - Executando scraping: backend\\convertoresJsonCSV\\convertorESTRELABET.py
+2025-03-17 02:31:33,704 - INFO - Script backend\\convertoresJsonCSV\\convertorESTRELABET.py executado com sucesso.
+2025-03-17 02:31:33,705 - INFO - Aguardando 5 segundos antes da conversão...
+2025-03-17 02:31:38,706 - INFO - Executando conversão: backend\\convertoresJsonCSV\\convertorESTRELABET.py
+2025-03-17 02:31:38,717 - INFO - Script backend\\convertoresJsonCSV\\convertorESTRELABET.py executado com sucesso.
+2025-03-17 02:31:38,718 - INFO - Executando scripts CSV DIRETO...
+2025-03-17 02:31:38,722 - INFO - ====== WebDriver manager ======
+2025-03-17 02:31:40,248 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-17 02:31:40,329 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-17 02:31:40,401 - INFO - Driver [C:\Users\Diogo\.wdm\drivers\chromedriver\win64\134.0.6998.88\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-17 02:32:00,229 - INFO - Script backend\\scrapingSportsbooks\\Tipo3\\tipo3(BETfast).py executado com sucesso.
+2025-03-17 02:32:00,229 - INFO - Script backend\\scrapingSportsbooks\\Tipo3\\tipo3(FAZ1BET).py executado com sucesso.
+2025-03-17 02:32:02,631 - INFO - Script backend\\scrapingSportsbooks\\Tipo4\\tipo4(UXBET).py executado com sucesso.
+2025-03-17 02:32:06,968 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000256EDE87890>: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/52d9247bdc82915057f99f19ad319f32/elements
+2025-03-17 02:32:11,045 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000256EF251950>: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/52d9247bdc82915057f99f19ad319f32/elements
