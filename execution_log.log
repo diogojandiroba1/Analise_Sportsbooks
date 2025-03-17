@@ -76,3 +76,118 @@ Call log:
 2025-03-17 02:32:02,631 - INFO - Script backend\\scrapingSportsbooks\\Tipo4\\tipo4(UXBET).py executado com sucesso.
 2025-03-17 02:32:06,968 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000256EDE87890>: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/52d9247bdc82915057f99f19ad319f32/elements
 2025-03-17 02:32:11,045 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000256EF251950>: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/52d9247bdc82915057f99f19ad319f32/elements
+2025-03-17 02:50:38,493 - INFO - Executando scripts COMPOSTOS...
+2025-03-17 02:50:38,493 - INFO - 📸 Executando scripts do TipoFotos...
+2025-03-17 02:50:38,493 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\betPIX365.py
+2025-03-17 02:50:39,923 - INFO - Script backend\\scrapingSportsbooks\\Tipo1\\betPIX365.py executado com sucesso.
+2025-03-17 02:50:39,924 - INFO - Aguardando 5 segundos antes da conversão...
+2025-03-17 02:50:44,926 - INFO - Executando conversão: backend\\convertoresJsonCSV\\convertorBETPIX365.py
+2025-03-17 02:50:45,434 - INFO - Script backend\\convertoresJsonCSV\\convertorBETPIX365.py executado com sucesso.
+2025-03-17 02:50:45,434 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\brbet.py
+2025-03-17 02:50:45,847 - INFO - Script backend\\scrapingSportsbooks\\Tipo1\\brbet.py executado com sucesso.
+2025-03-17 02:50:45,848 - INFO - Aguardando 5 segundos antes da conversão...
+2025-03-17 02:50:48,494 - INFO - ⏳ Aguardando 120 segundos antes de iniciar o envio de apostas...
+2025-03-17 02:50:50,849 - INFO - Executando conversão: backend\\convertoresJsonCSV\\convertorBRBET.py
+2025-03-17 02:50:50,851 - INFO - Script backend\\convertoresJsonCSV\\convertorBRBET.py executado com sucesso.
+2025-03-17 02:50:50,851 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\vaidebet.py
+2025-03-17 02:50:51,253 - INFO - Script backend\\scrapingSportsbooks\\Tipo1\\vaidebet.py executado com sucesso.
+2025-03-17 02:50:51,253 - INFO - Aguardando 5 segundos antes da conversão...
+2025-03-17 02:50:56,254 - INFO - Executando conversão: backend\\convertoresJsonCSV\\convertorVAIDEBET.py
+2025-03-17 02:50:56,256 - INFO - Script backend\\convertoresJsonCSV\\convertorVAIDEBET.py executado com sucesso.
+2025-03-17 02:50:56,257 - INFO - Executando scraping: backend\\convertoresJsonCSV\\convertorESTRELABET.py
+2025-03-17 02:50:56,266 - INFO - Script backend\\convertoresJsonCSV\\convertorESTRELABET.py executado com sucesso.
+2025-03-17 02:50:56,266 - INFO - Aguardando 5 segundos antes da conversão...
+2025-03-17 02:51:01,267 - INFO - Executando conversão: backend\\convertoresJsonCSV\\convertorESTRELABET.py
+2025-03-17 02:51:01,279 - INFO - Script backend\\convertoresJsonCSV\\convertorESTRELABET.py executado com sucesso.
+2025-03-17 02:51:01,280 - INFO - Executando scripts CSV DIRETO...
+2025-03-17 02:51:01,815 - INFO - ====== WebDriver manager ======
+2025-03-17 02:51:03,407 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-17 02:51:03,479 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-17 02:51:03,553 - INFO - Driver [C:\Users\Diogo\.wdm\drivers\chromedriver\win64\134.0.6998.88\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-17 02:51:16,769 - INFO - Script backend\\scrapingSportsbooks\\Tipo3\\tipo3(FAZ1BET).py executado com sucesso.
+2025-03-17 02:51:16,938 - INFO - Script backend\\scrapingSportsbooks\\Tipo3\\tipo3(BETfast).py executado com sucesso.
+2025-03-17 02:51:58,292 - INFO - Executando scripts COMPOSTOS...
+2025-03-17 02:51:58,292 - INFO - 📸 Executando scripts do TipoFotos...
+2025-03-17 02:51:58,293 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\betPIX365.py
+2025-03-17 02:51:59,011 - INFO - Script backend\\scrapingSportsbooks\\Tipo1\\betPIX365.py executado com sucesso.
+2025-03-17 02:51:59,012 - INFO - Aguardando 5 segundos antes da conversão...
+2025-03-17 02:52:04,013 - INFO - Executando conversão: backend\\convertoresJsonCSV\\convertorBETPIX365.py
+2025-03-17 02:52:04,418 - INFO - Script backend\\convertoresJsonCSV\\convertorBETPIX365.py executado com sucesso.
+2025-03-17 02:52:04,418 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\brbet.py
+2025-03-17 02:52:04,691 - INFO - Script backend\\scrapingSportsbooks\\Tipo1\\brbet.py executado com sucesso.
+2025-03-17 02:52:04,691 - INFO - Aguardando 5 segundos antes da conversão...
+2025-03-17 02:52:08,294 - INFO - ⏳ Aguardando 120 segundos antes de iniciar o envio de apostas...
+2025-03-17 02:52:09,693 - INFO - Executando conversão: backend\\convertoresJsonCSV\\convertorBRBET.py
+2025-03-17 02:52:09,694 - INFO - Script backend\\convertoresJsonCSV\\convertorBRBET.py executado com sucesso.
+2025-03-17 02:52:09,695 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\vaidebet.py
+2025-03-17 02:52:09,812 - INFO - Script backend\\scrapingSportsbooks\\Tipo1\\vaidebet.py executado com sucesso.
+2025-03-17 02:52:09,812 - INFO - Aguardando 5 segundos antes da conversão...
+2025-03-17 02:52:14,813 - INFO - Executando conversão: backend\\convertoresJsonCSV\\convertorVAIDEBET.py
+2025-03-17 02:52:14,816 - INFO - Script backend\\convertoresJsonCSV\\convertorVAIDEBET.py executado com sucesso.
+2025-03-17 02:52:14,816 - INFO - Executando scraping: backend\\convertoresJsonCSV\\convertorESTRELABET.py
+2025-03-17 02:52:14,825 - INFO - Script backend\\convertoresJsonCSV\\convertorESTRELABET.py executado com sucesso.
+2025-03-17 02:52:14,826 - INFO - Aguardando 5 segundos antes da conversão...
+2025-03-17 02:52:19,827 - INFO - Executando conversão: backend\\convertoresJsonCSV\\convertorESTRELABET.py
+2025-03-17 02:52:19,840 - INFO - Script backend\\convertoresJsonCSV\\convertorESTRELABET.py executado com sucesso.
+2025-03-17 02:52:19,840 - INFO - Executando scripts CSV DIRETO...
+2025-03-17 02:52:20,520 - INFO - ====== WebDriver manager ======
+2025-03-17 02:52:22,377 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-17 02:52:22,446 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-17 02:52:22,522 - INFO - Driver [C:\Users\Diogo\.wdm\drivers\chromedriver\win64\134.0.6998.88\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-17 02:52:36,129 - INFO - Script backend\\scrapingSportsbooks\\Tipo3\\tipo3(BETfast).py executado com sucesso.
+2025-03-17 02:52:36,143 - INFO - Script backend\\scrapingSportsbooks\\Tipo3\\tipo3(FAZ1BET).py executado com sucesso.
+2025-03-17 02:52:55,912 - INFO - Script backend\\scrapingSportsbooks\\Tipo1\\BetEsporte.py executado com sucesso.
+2025-03-17 02:53:01,495 - INFO - ✅ Script backend/scrapingSportsbooks/TipoFotos/ApostaGanha.py executado com sucesso.
+2025-03-17 02:53:17,262 - INFO - ✅ Script backend/scrapingSportsbooks/TipoFotos/EsportivaBet.py executado com sucesso.
+2025-03-17 02:53:17,263 - INFO - ⏳ Aguardando 24 horas antes da próxima execução de TipoFotos...
+2025-03-17 02:53:23,407 - INFO - Script backend\\scrapingSportsbooks\\Tipo4\\tipo4(UXBET).py executado com sucesso.
+2025-03-17 02:53:23,408 - INFO - Executando scripts COMPOSTOS...
+2025-03-17 02:53:23,408 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\betPIX365.py
+2025-03-17 02:53:23,750 - INFO - Script backend\\scrapingSportsbooks\\Tipo1\\betPIX365.py executado com sucesso.
+2025-03-17 02:53:23,750 - INFO - Aguardando 5 segundos antes da conversão...
+2025-03-17 02:53:28,752 - INFO - Executando conversão: backend\\convertoresJsonCSV\\convertorBETPIX365.py
+2025-03-17 02:53:28,754 - INFO - Script backend\\convertoresJsonCSV\\convertorBETPIX365.py executado com sucesso.
+2025-03-17 02:53:28,754 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\brbet.py
+2025-03-17 02:53:29,154 - INFO - Script backend\\scrapingSportsbooks\\Tipo1\\brbet.py executado com sucesso.
+2025-03-17 02:53:29,155 - INFO - Aguardando 5 segundos antes da conversão...
+2025-03-17 02:53:34,155 - INFO - Executando conversão: backend\\convertoresJsonCSV\\convertorBRBET.py
+2025-03-17 02:53:34,157 - INFO - Script backend\\convertoresJsonCSV\\convertorBRBET.py executado com sucesso.
+2025-03-17 02:53:34,157 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\vaidebet.py
+2025-03-17 02:53:34,265 - INFO - Script backend\\scrapingSportsbooks\\Tipo1\\vaidebet.py executado com sucesso.
+2025-03-17 02:53:34,265 - INFO - Aguardando 5 segundos antes da conversão...
+2025-03-17 02:53:39,266 - INFO - Executando conversão: backend\\convertoresJsonCSV\\convertorVAIDEBET.py
+2025-03-17 02:53:39,270 - INFO - Script backend\\convertoresJsonCSV\\convertorVAIDEBET.py executado com sucesso.
+2025-03-17 02:53:39,271 - INFO - Executando scraping: backend\\convertoresJsonCSV\\convertorESTRELABET.py
+2025-03-17 02:53:39,277 - INFO - Script backend\\convertoresJsonCSV\\convertorESTRELABET.py executado com sucesso.
+2025-03-17 02:53:39,278 - INFO - Aguardando 5 segundos antes da conversão...
+2025-03-17 02:53:44,278 - INFO - Executando conversão: backend\\convertoresJsonCSV\\convertorESTRELABET.py
+2025-03-17 02:53:44,283 - INFO - Script backend\\convertoresJsonCSV\\convertorESTRELABET.py executado com sucesso.
+2025-03-17 02:53:44,283 - INFO - Executando scripts CSV DIRETO...
+2025-03-17 02:53:44,287 - INFO - ====== WebDriver manager ======
+2025-03-17 02:53:45,624 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-17 02:53:45,697 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-17 02:53:45,765 - INFO - Driver [C:\Users\Diogo\.wdm\drivers\chromedriver\win64\134.0.6998.88\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-17 02:53:54,420 - INFO - Script backend\\scrapingSportsbooks\\Tipo3\\tipo3(FAZ1BET).py executado com sucesso.
+2025-03-17 02:53:56,247 - INFO - Script backend\\scrapingSportsbooks\\Tipo3\\tipo3(BETfast).py executado com sucesso.
+2025-03-17 02:54:09,975 - INFO - HTTP Request: POST https://api.telegram.org/bot7980433701:AAFeSQ5J2tCVdNDKfwwEjImx5NF2MIaK6zQ/sendMessage "HTTP/1.1 200 OK"
+2025-03-17 02:54:13,316 - INFO - Script backend\\scrapingSportsbooks\\Tipo1\\BetEsporte.py executado com sucesso.
+2025-03-17 02:54:51,942 - INFO - Script backend\\scrapingSportsbooks\\Tipo4\\tipo4(UXBET).py executado com sucesso.
+2025-03-17 02:54:51,942 - INFO - Executando scripts COMPOSTOS...
+2025-03-17 02:54:51,942 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\betPIX365.py
+2025-03-17 02:54:52,282 - INFO - Script backend\\scrapingSportsbooks\\Tipo1\\betPIX365.py executado com sucesso.
+2025-03-17 02:54:52,282 - INFO - Aguardando 5 segundos antes da conversão...
+2025-03-17 02:54:57,283 - INFO - Executando conversão: backend\\convertoresJsonCSV\\convertorBETPIX365.py
+2025-03-17 02:54:57,286 - INFO - Script backend\\convertoresJsonCSV\\convertorBETPIX365.py executado com sucesso.
+2025-03-17 02:54:57,286 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\brbet.py
+2025-03-17 02:54:57,548 - INFO - Script backend\\scrapingSportsbooks\\Tipo1\\brbet.py executado com sucesso.
+2025-03-17 02:54:57,548 - INFO - Aguardando 5 segundos antes da conversão...
+2025-03-17 02:55:02,549 - INFO - Executando conversão: backend\\convertoresJsonCSV\\convertorBRBET.py
+2025-03-17 02:55:02,550 - INFO - Script backend\\convertoresJsonCSV\\convertorBRBET.py executado com sucesso.
+2025-03-17 02:55:02,550 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\vaidebet.py
+2025-03-17 02:55:02,751 - INFO - Script backend\\scrapingSportsbooks\\Tipo1\\vaidebet.py executado com sucesso.
+2025-03-17 02:55:02,751 - INFO - Aguardando 5 segundos antes da conversão...
+2025-03-17 02:55:07,752 - INFO - Executando conversão: backend\\convertoresJsonCSV\\convertorVAIDEBET.py
+2025-03-17 02:55:07,755 - INFO - Script backend\\convertoresJsonCSV\\convertorVAIDEBET.py executado com sucesso.
+2025-03-17 02:55:07,756 - INFO - Executando scraping: backend\\convertoresJsonCSV\\convertorESTRELABET.py
+2025-03-17 02:55:07,761 - INFO - Script backend\\convertoresJsonCSV\\convertorESTRELABET.py executado com sucesso.
+2025-03-17 02:55:07,761 - INFO - Aguardando 5 segundos antes da conversão...

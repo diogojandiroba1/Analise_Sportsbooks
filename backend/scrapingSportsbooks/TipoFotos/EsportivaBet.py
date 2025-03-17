@@ -27,7 +27,7 @@ def enviar_imagem_para_telegram(bot_token, chat_id, photo_path, message_thread_i
 
 def esportivabet():
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)  
+        browser = p.chromium.launch(headless=True)  
         page = browser.new_page()
         page.goto('https://esportiva.bet.br/sports')
         page.wait_for_selector('body')

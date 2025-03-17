@@ -34,7 +34,7 @@ chat_id = '-1002647595950'  # Substitua pelo ID do grupo
 topic_id = 3  # ID do tópico correto
 
 with sync_playwright() as p:
-    browser = p.chromium.launch(headless=False)
+    browser = p.chromium.launch(headless=True)
     page = browser.new_page()
 
     # Acesse a URL
