@@ -31,7 +31,7 @@ def tirar_print_completo(driver, bot_token, chat_id, topic_id):
     
     while scroll_pos < total_altura:
         driver.execute_script(f"window.scrollTo(0, {scroll_pos});")
-        sleep(1)  # Aguardar a rolagem
+        sleep(3)  # Aguardar a rolagem
         
         # Capturar a tela
         imagem_bytes = driver.get_screenshot_as_png()
@@ -43,7 +43,7 @@ def tirar_print_completo(driver, bot_token, chat_id, topic_id):
         # Rolagem pela metade da altura da janela
         scroll_pos += viewport_altura / 2
         contador += 1
-        sleep(2)  # Tempo de espera entre os envios para evitar erros
+        sleep(3)  # Tempo de espera entre os envios para evitar erros
 
 # Função principal para acessar as URLs e tirar prints
 def mcgames():
@@ -61,12 +61,12 @@ def mcgames():
     
     for i, url in enumerate(urls):
         driver.get(url)
-        sleep(5)  # Aguardar carregamento inicial
+        sleep(50)  # Aguardar carregamento inicial
         
         if i == 0:
             try:
                 driver.find_element(By.XPATH, "/html/body/div[5]/div[1]/div[2]/div[2]/button[2]").click()
-                sleep(11)  # Esperar carregamento
+                sleep(40)  # Esperar carregamento
             except:
                 pass
         
@@ -81,7 +81,7 @@ if __name__ == "__main__":
     topic_id = 380  # ID do tópico correto (se necessário para agrupamento de posts)
     
     # Executar o processo 5 vezes
-    for _ in range(5):
+    for _ in range(2):
         print("Iniciando nova execução...")
         mcgames()
         sleep(5)  # Aguardar antes de iniciar a próxima execução
