@@ -1,7 +1,7 @@
 import threading
 import time
-import appScrapping
-import envioCSV
+import backend.appScrapping as appScrapping
+import backend.envioCSV as  envioCSV
 import asyncio
 import importlib.util
 import logging
