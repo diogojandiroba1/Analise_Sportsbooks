@@ -51,14 +51,16 @@ def main():
         r'backend\\scrapingSportsbooks\\Tipo4\\tipo4(UXBET).py',
         r'backend\\scrapingSportsbooks\\Tipo3\\tipo3(FAZ1BET).py',
         r'backend\\scrapingSportsbooks\\Tipo3\\tipo3(BETfast).py',
-        r'backend\\scrapingSportsbooks\\Tipo1\\BetEsporte.py'
+        r'backend\\scrapingSportsbooks\\Tipo1\\BetEsporte.py',
+        r'backend\\scrapingSportsbooks\\Tipo4\\brasilDasorte.py',
+        r'backend\\scrapingSportsbooks\\Tipo4\\sportingbet.py'
     ]
 
     execucao_composta = [
         (r'backend\\scrapingSportsbooks\\Tipo1\\betPIX365.py', r'backend\\convertoresJsonCSV\\convertorBETPIX365.py'),
         (r'backend\\scrapingSportsbooks\\Tipo1\\brbet.py', r'backend\\convertoresJsonCSV\\convertorBRBET.py'),
         (r'backend\\scrapingSportsbooks\\Tipo1\\vaidebet.py', r'backend\\convertoresJsonCSV\\convertorVAIDEBET.py'),
-        (r'backend\\convertoresJsonCSV\\convertorESTRELABET.py', r'backend\\convertoresJsonCSV\\convertorESTRELABET.py')
+        (r'backend\\scrapingSportsbooks\\Tipo1\\estrelabet.py', r'backend\\convertoresJsonCSV\\convertorESTRELABET.py')
     ]
 
     while True:
