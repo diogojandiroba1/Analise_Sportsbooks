@@ -6,6 +6,7 @@ import os
 def BrasilDaSorte():
     with sync_playwright() as p:
         # Inicia o navegador
+        browser = p.chromium.launch(args=["--no-sandbox"])
         browser = p.chromium.launch(headless=True)  # headless=False para ver o navegador
         page = browser.new_page()
 
