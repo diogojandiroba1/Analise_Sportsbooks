@@ -9,8 +9,7 @@ import logging
 from playwright.sync_api import sync_playwright
 
 with sync_playwright() as p:
-    p.chromium.install()  # Instala o Chromium, se necessário
-    # Seu código para rodar o Playwright
+    p.chromium.launch()  # Não precisa chamar install() explicitamente
 
 
 # Configuração de logs
