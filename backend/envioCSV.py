@@ -7,7 +7,7 @@ TOKEN = '7980433701:AAFeSQ5J2tCVdNDKfwwEjImx5NF2MIaK6zQ'
 CHAT_ID = '-1002343785289'  # ID do grupo
 TOPIC_ID = 191  # ID do tópico
 DELAY = 5  # Atraso entre cada mensagem
-INTERVALO_ENVIO = 1200  # 20 minutos em segundos
+INTERVALO_ENVIO = 60  # 20 minutos em segundos
 
 # Função para carregar apostas já enviadas em um set
 def carregar_apostas_enviadas():

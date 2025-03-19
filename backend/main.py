@@ -55,8 +55,8 @@ def start_tipo_fotos():
 
 def start_envio_csv():
     """Aguarda um tempo antes de iniciar o envio de apostas"""
-    logging.info("⏳ Aguardando 120 segundos antes de iniciar o envio de apostas...")
-    time.sleep(120)  # Espera 120 segundos antes de iniciar
+    logging.info("⏳ Aguardando 30 segundos antes de iniciar o envio de apostas...")
+    time.sleep(30)  # Espera 120 segundos antes de iniciar
     asyncio.run(envioCSV.main())  # Executa a função assíncrona corretamente
 
 if __name__ == "__main__":
