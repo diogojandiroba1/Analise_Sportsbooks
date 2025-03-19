@@ -5,15 +5,28 @@ import os
 
 def sportingbet():
     with sync_playwright() as p:
-        # Inicia o navegador
-        browser = p.chromium.launch(headless=False)  # headless=False para ver o navegador
-        page = browser.new_page()
+        # Inicia o navegador com argumentos para evitar detecção de headless
+        browser = p.chromium.launch(
+            headless=True, 
+            args=["--disable-blink-features=AutomationControlled"]
+        )
+        context = browser.new_context(
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
+            permissions=["geolocation", "notifications"]
+        )
+        page = context.new_page()
+
+        # Remove a propriedade 'navigator.webdriver' para evitar detecção de bot
+        page.evaluate("() => { Object.defineProperty(navigator, 'webdriver', { get: () => undefined }) }")
 
         # Acessa a URL
         page.goto('https://sports.sportingbet.bet.br/pt-br/sports')
+        
+        # Aguarda um tempo extra para carregamento dinâmico
+        page.wait_for_timeout(5000)
 
         # Espera o carregamento do elemento desejado
-        page.wait_for_selector('//*[@id="main-view"]/ms-widget-layout/ms-widget-slot/ms-marquee-widget[2]/ms-highlights-marquee/ms-header/div[1]/div[2]')
+        page.wait_for_selector('//*[@id="main-view"]/ms-widget-layout/ms-widget-slot/ms-marquee-widget[2]/ms-highlights-marquee/ms-header/div[1]/div[2]', timeout=60000)
 
         # Captura o conteúdo do elemento que contém a string "Cotas Aumentadas"
         cotas_text = page.locator('//*[@id="main-view"]/ms-widget-layout/ms-widget-slot/ms-marquee-widget[2]/ms-highlights-marquee/ms-header/div[1]/div[2]').text_content()
@@ -25,7 +38,7 @@ def sportingbet():
             apostas_registradas = set()
 
             # Caminho do arquivo CSV
-            arquivo_csv = r'data\\csvS\\dados_apostas.csv'
+            arquivo_csv = r'data/csvS/dados_apostas.csv'
 
             # Verifica se o arquivo CSV já existe e carrega apostas registradas
             if os.path.exists(arquivo_csv):
@@ -43,17 +56,18 @@ def sportingbet():
             items = page.locator('//*[@id="main-view"]/ms-widget-layout/ms-widget-slot/ms-marquee-widget[2]/ms-highlights-marquee/ms-scroll-adapter/div/div/ul/li')
             item_count = items.count()
 
+            print(f"Total de elementos encontrados: {item_count}")
+
             # Interage com cada item dentro da lista de apostas
             for i in range(item_count):
                 item = items.nth(i)  # Obtém o elemento <li> pelo índice
-
+                
                 # Captura os dados da aposta, evento e odd
-                aposta = item.locator('div.card-market.ng-star-inserted').text_content()
-                evento = item.locator('div.card-event.ng-star-inserted').text_content()
-                odd = item.locator('span.custom-odds-value-style.ng-star-inserted').text_content()
-
-                # Determina a casa de apostas (por exemplo, o nome da casa pode estar no título da página ou em outra parte do HTML)
-                casa = "SportingBet"  # Isso pode ser ajustado conforme necessário, caso precise pegar de outra parte da página
+                aposta = item.locator('div.card-market.ng-star-inserted').first.text_content()
+                evento = item.locator('div.card-event.ng-star-inserted').first.text_content()
+                odd = item.locator('span.custom-odds-value-style.ng-star-inserted').first.text_content()
+                
+                casa = "SportingBet"
 
                 # Verifica se a aposta já foi registrada
                 aposta_completa = (casa.strip(), evento.strip(), aposta.strip(), odd.strip())

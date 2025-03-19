@@ -126,6 +126,7 @@ urllib3==2.3.0
 useful-functions-easier-life==0.14
 wcwidth==0.2.13
 webdriver-manager==4.0.2
+webdriver-manager
 websocket-client==1.8.0
 websockets==15.0
 Werkzeug==3.1.3

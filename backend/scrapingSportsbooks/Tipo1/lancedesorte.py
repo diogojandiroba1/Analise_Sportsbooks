@@ -15,17 +15,17 @@ except ImportError:
     from webdriver_manager.chrome import ChromeDriverManager
 
 # Configuração do Chrome
-chrome_options = Options()
-#chrome_options.add_argument("--headless")  # Executa sem abrir a janela do navegador
-chrome_options.add_argument("--no-sandbox")
-chrome_options.add_argument("--disable-dev-shm-usage")
-chrome_options.add_argument("--log-level=3")
-chrome_options.add_argument("--disable-gpu")
-chrome_options.add_argument("--disable-software-rasterizer")
-chrome_options.add_argument("--mute-audio")
+options = Options()
+options.add_argument("--headless")  # Executa sem abrir a janela do navegador
+options.add_argument("--no-sandbox")
+options.add_argument("--disable-dev-shm-usage")
+options.add_argument("--log-level=3")
+options.add_argument("--disable-gpu")
+options.add_argument("--disable-software-rasterizer")
+options.add_argument("--mute-audio")
 
 service = Service(ChromeDriverManager().install())
-driver = webdriver.Chrome(service=service, options=chrome_options)
+driver = webdriver.Chrome(service=service, options=options)
 
 def verificar_eventos():
     """Verifica se há eventos disponíveis na página."""

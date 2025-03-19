@@ -12,26 +12,26 @@ url = "https://sb2frontend-altenar2.biahosted.com/api/widget/GetOutrightEvents?c
 # Caminho do arquivo JSON onde os dados serão salvos
 caminho_arquivo = r"data\\jsonCasas\\dataESTRELABET.json"
 
-while True:
-    try:
+
+try:
         # Fazer a requisição usando cloudscraper
-        response = scraper.get(url)
-        response.raise_for_status()  # Levanta um erro se o status não for 200
+    response = scraper.get(url)
+    response.raise_for_status()  # Levanta um erro se o status não for 200
         
         # Converter resposta para JSON
-        dados_json = response.json()
-        print("✅ Dados obtidos com sucesso!")
+    dados_json = response.json()
+    print("✅ Dados obtidos com sucesso!")
 
         # Salvar os dados no arquivo
-        with open(caminho_arquivo, 'w', encoding='utf-8') as arquivo:
-            json.dump(dados_json, arquivo, ensure_ascii=False, indent=4)
-            print("💾 Dados salvos!")
+    with open(caminho_arquivo, 'w', encoding='utf-8') as arquivo:
+        json.dump(dados_json, arquivo, ensure_ascii=False, indent=4)
+        print("💾 Dados salvos!")
 
-    except cloudscraper.exceptions.CloudflareChallengeError as e:
-        print(f"⚠️ Cloudflare bloqueou a requisição: {e}")
+except cloudscraper.exceptions.CloudflareChallengeError as e:
+    print(f"⚠️ Cloudflare bloqueou a requisição: {e}")
 
-    except Exception as e:
-        print(f"❌ Erro na requisição: {e}")
+except Exception as e:
+    print(f"❌ Erro na requisição: {e}")
 
     # Esperar 60 segundos antes da próxima requisição
-    sleep(60)
+

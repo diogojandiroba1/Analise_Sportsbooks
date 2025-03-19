@@ -63,7 +63,7 @@ async def enviar_apostas(bot):
             f"*🎯 Aposta:* {row[2]}\n"
             f"*⚽ Odd:* {row[3]}\n"
             f"*🕒 Data:* {row[4]}\n"
-            "\n*🔥 Boa sorte e aproveite as apostas! 🔥*"
+            "\n*🔥 Lembre-se, isso é um alerta de superODD, e não uma tip! BOA SORTE! 🔥*"
         )
 
         aposta_tuple = tuple(row[:3])  # Normaliza as três primeiras colunas (casa, evento, aposta)

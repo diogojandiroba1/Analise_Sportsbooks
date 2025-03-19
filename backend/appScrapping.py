@@ -67,11 +67,13 @@ def main():
         try:
             # Executar os compostos e CSV direto 3 vezes seguidas
             for _ in range(3):
+                logging.info("Executando scripts CSV DIRETO...")
+                execute_scripts(csv_direto)
+
+
                 logging.info("Executando scripts COMPOSTOS...")
                 execute_composta(execucao_composta)
                 
-                logging.info("Executando scripts CSV DIRETO...")
-                execute_scripts(csv_direto)
 
             logging.info("Aguardando 15 minutos para o próximo ciclo de COMPOSTOS e CSV DIRETO...")
             time.sleep(15 * 60)
