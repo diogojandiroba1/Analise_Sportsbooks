@@ -26793,3 +26793,196 @@ Exception: Connection.init: Connection closed while reading from the driver
 2025-03-18 22:27:15,871 - INFO - Get LATEST chromedriver version for google-chrome
 2025-03-18 22:27:15,953 - INFO - Get LATEST chromedriver version for google-chrome
 2025-03-18 22:27:16,029 - INFO - Driver [C:\Users\Diogo\.wdm\drivers\chromedriver\win64\134.0.6998.88\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-18 22:28:07,827 - INFO - Script backend\\scrapingSportsbooks\\Tipo3\\tipo3(FAZ1BET).py executado com sucesso.
+2025-03-18 22:28:08,569 - INFO - Script backend\\scrapingSportsbooks\\Tipo4\\brasilDasorte.py executado com sucesso.
+2025-03-18 22:28:09,289 - INFO - Script backend\\scrapingSportsbooks\\Tipo3\\tipo3(BETfast).py executado com sucesso.
+2025-03-18 22:28:10,617 - INFO - Script backend\\scrapingSportsbooks\\Tipo1\\BetEsporte.py executado com sucesso.
+2025-03-18 22:28:16,181 - ERROR - Erro ao executar backend\\scrapingSportsbooks\\Tipo4\\sportingbet.py: Locator.text_content: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("//*[@id=\"main-view\"]/ms-widget-layout/ms-widget-slot/ms-marquee-widget[2]/ms-highlights-marquee/ms-scroll-adapter/div/div/ul/li").first.locator("div.card-market.ng-star-inserted").first
+
+2025-03-18 22:28:20,816 - INFO - Script backend\\scrapingSportsbooks\\Tipo4\\tipo4(UXBET).py executado com sucesso.
+2025-03-18 22:28:20,817 - INFO - Executando scripts COMPOSTOS...
+2025-03-18 22:28:20,817 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\betPIX365.py
+2025-03-18 22:28:21,126 - ERROR - Erro ao executar backend\\scrapingSportsbooks\\Tipo1\\betPIX365.py: [WinError 233] Não há processo no outro extremo do pipe
+2025-03-18 22:28:21,126 - ERROR - Falha em backend\\scrapingSportsbooks\\Tipo1\\betPIX365.py, conversão não será executada.
+2025-03-18 22:28:21,126 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\brbet.py
+2025-03-18 22:28:21,500 - ERROR - Erro ao executar backend\\scrapingSportsbooks\\Tipo1\\brbet.py: [WinError 233] Não há processo no outro extremo do pipe
+2025-03-18 22:28:21,500 - ERROR - Falha em backend\\scrapingSportsbooks\\Tipo1\\brbet.py, conversão não será executada.
+2025-03-18 22:28:21,501 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\vaidebet.py
+2025-03-18 22:28:21,607 - ERROR - Erro ao executar backend\\scrapingSportsbooks\\Tipo1\\vaidebet.py: [WinError 233] Não há processo no outro extremo do pipe
+2025-03-18 22:28:21,607 - ERROR - Falha em backend\\scrapingSportsbooks\\Tipo1\\vaidebet.py, conversão não será executada.
+2025-03-18 22:28:21,607 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\estrelabet.py
+2025-03-18 22:28:21,859 - ERROR - Erro ao executar backend\\scrapingSportsbooks\\Tipo1\\estrelabet.py: [WinError 233] Não há processo no outro extremo do pipe
+2025-03-18 22:28:21,859 - ERROR - Falha em backend\\scrapingSportsbooks\\Tipo1\\estrelabet.py, conversão não será executada.
+2025-03-18 22:28:21,859 - INFO - Executando scripts CSV DIRETO...
+2025-03-18 22:28:21,862 - INFO - ====== WebDriver manager ======
+2025-03-18 22:28:21,874 - ERROR - Erro ao executar backend\\scrapingSportsbooks\\Tipo3\\tipo3(FAZ1BET).py: 'PlaywrightContextManager' object has no attribute '_playwright'
+2025-03-18 22:28:21,874 - ERROR - Erro ao executar backend\\scrapingSportsbooks\\Tipo4\\brasilDasorte.py: 'PlaywrightContextManager' object has no attribute '_playwright'
+2025-03-18 22:28:21,874 - ERROR - Erro ao executar backend\\scrapingSportsbooks\\Tipo3\\tipo3(BETfast).py: 'PlaywrightContextManager' object has no attribute '_playwright'
+2025-03-18 22:28:21,875 - ERROR - Erro ao executar backend\\scrapingSportsbooks\\Tipo4\\sportingbet.py: 'PlaywrightContextManager' object has no attribute '_playwright'
+2025-03-18 22:28:21,876 - ERROR - Erro ao executar backend\\scrapingSportsbooks\\Tipo4\\tipo4(UXBET).py: 'PlaywrightContextManager' object has no attribute '_playwright'
+2025-03-18 22:28:21,910 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-18 22:28:22,144 - INFO - About to download new driver from https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_win32.zip
+2025-03-18 22:28:22,320 - INFO - Driver downloading response is 200
+2025-03-18 22:28:22,741 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-18 22:28:23,079 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-18 22:28:23,331 - INFO - Driver has been saved in cache [C:\Users\Diogo\.wdm\drivers\chromedriver\win64\114.0.5735.90]
+2025-03-18 22:28:25,729 - ERROR - Erro ao executar backend\\scrapingSportsbooks\\Tipo1\\BetEsporte.py: Message: Service C:\Users\Diogo\.wdm\drivers\chromedriver\win64\114.0.5735.90\chromedriver.exe unexpectedly exited. Status code was: 3221225794
+
+2025-03-18 22:28:29,811 - INFO - Executando scripts COMPOSTOS...
+2025-03-18 22:28:29,812 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\betPIX365.py
+2025-03-18 22:28:30,137 - ERROR - Erro ao executar backend\\scrapingSportsbooks\\Tipo1\\betPIX365.py: [WinError 233] Não há processo no outro extremo do pipe
+2025-03-18 22:28:30,137 - ERROR - Falha em backend\\scrapingSportsbooks\\Tipo1\\betPIX365.py, conversão não será executada.
+2025-03-18 22:28:30,137 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\brbet.py
+2025-03-18 22:28:30,511 - ERROR - Erro ao executar backend\\scrapingSportsbooks\\Tipo1\\brbet.py: [WinError 233] Não há processo no outro extremo do pipe
+2025-03-18 22:28:30,511 - ERROR - Falha em backend\\scrapingSportsbooks\\Tipo1\\brbet.py, conversão não será executada.
+2025-03-18 22:28:30,512 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\vaidebet.py
+2025-03-18 22:28:30,607 - ERROR - Erro ao executar backend\\scrapingSportsbooks\\Tipo1\\vaidebet.py: [WinError 233] Não há processo no outro extremo do pipe
+2025-03-18 22:28:30,607 - ERROR - Falha em backend\\scrapingSportsbooks\\Tipo1\\vaidebet.py, conversão não será executada.
+2025-03-18 22:28:30,607 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\estrelabet.py
+2025-03-18 22:28:30,860 - ERROR - Erro ao executar backend\\scrapingSportsbooks\\Tipo1\\estrelabet.py: [WinError 233] Não há processo no outro extremo do pipe
+2025-03-18 22:28:30,860 - ERROR - Falha em backend\\scrapingSportsbooks\\Tipo1\\estrelabet.py, conversão não será executada.
+2025-03-18 22:28:30,860 - INFO - Executando scripts CSV DIRETO...
+2025-03-18 22:28:30,862 - INFO - ====== WebDriver manager ======
+2025-03-18 22:28:30,876 - ERROR - Erro ao executar backend\\scrapingSportsbooks\\Tipo4\\brasilDasorte.py: 'PlaywrightContextManager' object has no attribute '_playwright'
+2025-03-18 22:28:30,876 - ERROR - Erro ao executar backend\\scrapingSportsbooks\\Tipo3\\tipo3(FAZ1BET).py: 'PlaywrightContextManager' object has no attribute '_playwright'
+2025-03-18 22:28:30,876 - ERROR - Erro ao executar backend\\scrapingSportsbooks\\Tipo4\\sportingbet.py: 'PlaywrightContextManager' object has no attribute '_playwright'
+2025-03-18 22:28:30,880 - ERROR - Erro ao executar backend\\scrapingSportsbooks\\Tipo3\\tipo3(BETfast).py: 'PlaywrightContextManager' object has no attribute '_playwright'
+2025-03-18 22:28:30,880 - ERROR - Erro ao executar backend\\scrapingSportsbooks\\Tipo4\\tipo4(UXBET).py: 'PlaywrightContextManager' object has no attribute '_playwright'
+2025-03-18 22:28:30,920 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-18 22:28:31,137 - INFO - About to download new driver from https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_win32.zip
+2025-03-18 22:28:31,307 - INFO - Driver downloading response is 200
+2025-03-18 22:28:31,727 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-18 22:28:31,728 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-1545' coro=<Connection.run.<locals>.init() done, defined at C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py:276> exception=Exception('Connection.init: Connection closed while reading from the driver')>
+Traceback (most recent call last):
+  File "C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py", line 277, in init
+    self.playwright_future.set_result(await self._root_object.initialize())
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py", line 219, in initialize
+    await self._channel.send(
+    ...<4 lines>...
+    )
+  File "C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py", line 61, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py", line 528, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+Exception: Connection.init: Connection closed while reading from the driver
+2025-03-18 22:28:31,731 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-1566' coro=<Connection.run.<locals>.init() done, defined at C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py:276> exception=Exception('Connection.init: Connection closed while reading from the driver')>
+Traceback (most recent call last):
+  File "C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py", line 277, in init
+    self.playwright_future.set_result(await self._root_object.initialize())
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py", line 219, in initialize
+    await self._channel.send(
+    ...<4 lines>...
+    )
+  File "C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py", line 61, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py", line 528, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+Exception: Connection.init: Connection closed while reading from the driver
+2025-03-18 22:28:31,732 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-1569' coro=<Connection.run.<locals>.init() done, defined at C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py:276> exception=Exception('Connection.init: Connection closed while reading from the driver')>
+Traceback (most recent call last):
+  File "C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py", line 277, in init
+    self.playwright_future.set_result(await self._root_object.initialize())
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py", line 219, in initialize
+    await self._channel.send(
+    ...<4 lines>...
+    )
+  File "C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py", line 61, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py", line 528, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+Exception: Connection.init: Connection closed while reading from the driver
+2025-03-18 22:28:31,733 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-1571' coro=<Connection.run.<locals>.init() done, defined at C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py:276> exception=Exception('Connection.init: Connection closed while reading from the driver')>
+Traceback (most recent call last):
+  File "C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py", line 277, in init
+    self.playwright_future.set_result(await self._root_object.initialize())
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py", line 219, in initialize
+    await self._channel.send(
+    ...<4 lines>...
+    )
+  File "C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py", line 61, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py", line 528, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+Exception: Connection.init: Connection closed while reading from the driver
+2025-03-18 22:28:31,734 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-1576' coro=<Connection.run.<locals>.init() done, defined at C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py:276> exception=Exception('Connection.init: Connection closed while reading from the driver')>
+Traceback (most recent call last):
+  File "C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py", line 277, in init
+    self.playwright_future.set_result(await self._root_object.initialize())
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py", line 219, in initialize
+    await self._channel.send(
+    ...<4 lines>...
+    )
+  File "C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py", line 61, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py", line 528, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+Exception: Connection.init: Connection closed while reading from the driver
+2025-03-18 22:28:31,734 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-1584' coro=<Connection.run.<locals>.init() done, defined at C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py:276> exception=Exception('Connection.init: Connection closed while reading from the driver')>
+Traceback (most recent call last):
+  File "C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py", line 277, in init
+    self.playwright_future.set_result(await self._root_object.initialize())
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py", line 219, in initialize
+    await self._channel.send(
+    ...<4 lines>...
+    )
+  File "C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py", line 61, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "C:\Users\Diogo\Documents\analise_esportiva\analise_esportiva\venv\Lib\site-packages\playwright\_impl\_connection.py", line 528, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+Exception: Connection.init: Connection closed while reading from the driver
+2025-03-18 22:28:32,013 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-18 22:28:32,254 - INFO - Driver has been saved in cache [C:\Users\Diogo\.wdm\drivers\chromedriver\win64\114.0.5735.90]
+2025-03-18 22:28:34,636 - ERROR - Erro ao executar backend\\scrapingSportsbooks\\Tipo1\\BetEsporte.py: Message: Service C:\Users\Diogo\.wdm\drivers\chromedriver\win64\114.0.5735.90\chromedriver.exe unexpectedly exited. Status code was: 3221225794
+
+2025-03-18 22:28:38,711 - INFO - Executando scripts COMPOSTOS...
+2025-03-18 22:28:38,711 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\betPIX365.py
+2025-03-18 22:28:39,083 - ERROR - Erro ao executar backend\\scrapingSportsbooks\\Tipo1\\betPIX365.py: [WinError 233] Não há processo no outro extremo do pipe
+2025-03-18 22:28:39,084 - ERROR - Falha em backend\\scrapingSportsbooks\\Tipo1\\betPIX365.py, conversão não será executada.
+2025-03-18 22:28:39,084 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\brbet.py
+2025-03-18 22:28:39,549 - ERROR - Erro ao executar backend\\scrapingSportsbooks\\Tipo1\\brbet.py: [WinError 233] Não há processo no outro extremo do pipe
+2025-03-18 22:28:39,550 - ERROR - Falha em backend\\scrapingSportsbooks\\Tipo1\\brbet.py, conversão não será executada.
+2025-03-18 22:28:39,550 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\vaidebet.py
+2025-03-18 22:28:39,674 - ERROR - Erro ao executar backend\\scrapingSportsbooks\\Tipo1\\vaidebet.py: [WinError 233] Não há processo no outro extremo do pipe
+2025-03-18 22:28:39,674 - ERROR - Falha em backend\\scrapingSportsbooks\\Tipo1\\vaidebet.py, conversão não será executada.
+2025-03-18 22:28:39,674 - INFO - Executando scraping: backend\\scrapingSportsbooks\\Tipo1\\estrelabet.py
+2025-03-18 22:28:39,924 - ERROR - Erro ao executar backend\\scrapingSportsbooks\\Tipo1\\estrelabet.py: [WinError 233] Não há processo no outro extremo do pipe
+2025-03-18 22:28:39,924 - ERROR - Falha em backend\\scrapingSportsbooks\\Tipo1\\estrelabet.py, conversão não será executada.
+2025-03-18 22:28:39,924 - INFO - Aguardando 15 minutos para o próximo ciclo de COMPOSTOS e CSV DIRETO...
