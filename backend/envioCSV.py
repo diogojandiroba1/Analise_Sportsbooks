@@ -4,8 +4,8 @@ from telegram import Bot
 
 # Substitua pelo seu token do Telegram
 TOKEN = '7980433701:AAFeSQ5J2tCVdNDKfwwEjImx5NF2MIaK6zQ'
-CHAT_ID = '-1002343785289'  # ID do grupo
-TOPIC_ID = 191  # ID do tópico
+CHAT_ID = '-1002647595950'  # ID do grupo
+TOPIC_ID = 963  # ID do tópico
 DELAY = 5  # Atraso entre cada mensagem
 INTERVALO_ENVIO = 60  # 20 minutos em segundos
 
