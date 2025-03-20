@@ -3,7 +3,7 @@ import json
 from time import sleep
 
 # URL da API
-url = "https://m.vaidebet.com/api-v2/antepost-fixture/m/23/vaidebet/803527/eyJyZXF1ZXN0Qm9keSI6eyJzZWFzb25JZHMiOls4MDM1MjddfSwibGFuZ3VhZ2VJZCI6MjN9"
+url = "https://vaidebet.bet.br/api-v2/fixture/category-details/d/23/vaidebet/null/false/ante/20/super-odds-multi-specials-/soccer/super-odds"
 
 # Cabeçalhos ajustados
 headers = {

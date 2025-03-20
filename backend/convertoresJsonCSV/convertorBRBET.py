@@ -20,7 +20,7 @@ def brbet():
                     partida = item['question']
                     odd = item['odds']['answers'][0]['value']
                     aposta = item['odds']['answers'][0]['answer']
-                    dados.append(['BRBET', partida, aposta, odd, dataatual])
+                    dados.append(['BRBET', partida, aposta, odd, dataatual, 'https://www.brbet.bet.br/home/events-area/s/CGR?group_type=GROUP&identifier=SUPERBRBET&name=Super%20BrBet' ])
                 except (KeyError, IndexError) as e:
                     print(f"Erro ao processar item: {e}")
                     continue
@@ -30,7 +30,7 @@ def brbet():
                     partida = item['question']
                     odd = item['odds']['answers'][0]['value']
                     aposta = item['odds']['answers'][0]['answer']
-                    dados.append(['BRBET', partida, aposta, odd, dataatual])
+                    dados.append(['BRBET', partida, aposta, odd, dataatual, 'https://www.brbet.bet.br/home/events-area/s/CGR?group_type=GROUP&identifier=SUPERBRBET&name=Super%20BrBet' ])
                 except (KeyError, IndexError) as e:
                     print(f"Erro ao processar item: {e}")
                     continue
@@ -51,10 +51,10 @@ def salvar_dados_sem_duplicatas(novos_dados, caminho_csv):
         df_existente = pd.read_csv(caminho_csv)
     else:
         # Cria um DataFrame vazio se o arquivo não existir
-        df_existente = pd.DataFrame(columns=['Casa', 'Evento', 'Aposta', 'Odd', 'Data'])
+        df_existente = pd.DataFrame(columns=['Casa', 'Evento', 'Aposta', 'Odd', 'Data', "Link"])
     
     # Converte os novos dados para DataFrame
-    df_novos = pd.DataFrame(novos_dados, columns=['Casa', 'Evento', 'Aposta', 'Odd', 'Data'])
+    df_novos = pd.DataFrame(novos_dados, columns=['Casa', 'Evento', 'Aposta', 'Odd', 'Data', "Link"])
     
     # Concatena os dados existentes com os novos
     df_final = pd.concat([df_existente, df_novos], ignore_index=True)

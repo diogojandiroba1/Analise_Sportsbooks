@@ -22,7 +22,7 @@ def betpix365():
                     for fo in btg['fos']:
                         aposta = fo['btN']
                         odd = fo['hO']
-                        dados.append(['BETPIX365', nome_partida, aposta, odd, dataatual])
+                        dados.append(['BETPIX365', nome_partida, aposta, odd, dataatual, 'https://betpix365.bet.br/ptb/bet/fixture-detail/super-odds-multi-specials-/soccer/super-odds'])
             except (KeyError, IndexError) as e:
                 print(f"Erro ao processar partida: {e}")
                 continue
@@ -39,10 +39,10 @@ def salvar_dados_sem_duplicatas(novos_dados, caminho_csv):
         df_existente = pd.read_csv(caminho_csv)
     else:
         # Cria um DataFrame vazio se o arquivo não existir
-        df_existente = pd.DataFrame(columns=['Casa', 'Evento', 'Aposta', 'Odd', 'Data'])
+        df_existente = pd.DataFrame(columns=['Casa', 'Evento', 'Aposta', 'Odd', 'Data', "Link"])
     
     # Converte os novos dados para DataFrame
-    df_novos = pd.DataFrame(novos_dados, columns=['Casa', 'Evento', 'Aposta', 'Odd', 'Data'])
+    df_novos = pd.DataFrame(novos_dados, columns=['Casa', 'Evento', 'Aposta', 'Odd', 'Data', "Link"])
     
     # Concatena os dados existentes com os novos
     df_final = pd.concat([df_existente, df_novos], ignore_index=True)

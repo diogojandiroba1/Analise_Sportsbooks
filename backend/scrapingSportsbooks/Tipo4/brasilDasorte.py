@@ -43,7 +43,7 @@ def BrasilDaSorte():
         else:
             with open(arquivo_csv, mode='w', newline='', encoding='utf-8') as file:
                 writer = csv.writer(file)
-                writer.writerow(['Casa', 'Evento', 'Aposta', 'Odd', 'Data'])
+                writer.writerow(['Casa', 'Evento', 'Aposta', 'Odd', 'Data', "Link"])
 
         # Itera sobre as divs
         for div in divs_match_list:
@@ -56,7 +56,7 @@ def BrasilDaSorte():
                 aposta_texto = aposta.inner_text().strip()
                 odd_texto = odd.inner_text().strip()
                 data_hora = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                aposta_tuple = ("BrasilDaSorte", partida_texto, aposta_texto, odd_texto, data_hora)
+                aposta_tuple = ("BrasilDaSorte", partida_texto, aposta_texto, odd_texto, data_hora, "https://www.brasildasorte.bet.br/home/events-area/s/SUPER_ODDS")
                 aposta_identificador = ("BrasilDaSorte", partida_texto, aposta_texto, odd_texto)
 
                 if aposta_identificador not in apostas_registradas:

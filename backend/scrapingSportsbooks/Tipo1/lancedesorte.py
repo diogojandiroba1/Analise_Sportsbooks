@@ -82,9 +82,9 @@ def salvar_dados(dados):
     try:
         df_existente = pd.read_csv(caminho_csv)
     except (FileNotFoundError, pd.errors.ParserError):
-        df_existente = pd.DataFrame(columns=['Casa', 'Evento', 'Aposta', 'Odd', 'Data'])
+        df_existente = pd.DataFrame(columns=['Casa', 'Evento', 'Aposta', 'Odd', 'Data', "Link"])
 
-    df_novo = pd.DataFrame(dados, columns=['Casa', 'Evento', 'Aposta', 'Odd'])
+    df_novo = pd.DataFrame(dados, columns=['Casa', 'Evento', 'Aposta', 'Odd', "Link"])
     df_novo['Data'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
     df_completo = pd.concat([df_existente, df_novo]).drop_duplicates(subset=['Casa', 'Evento', 'Aposta'], keep='last')

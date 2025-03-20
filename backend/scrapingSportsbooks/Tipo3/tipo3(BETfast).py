@@ -32,7 +32,7 @@ def betfast():
         else:
             with open(arquivo_csv, mode='w', newline='', encoding='utf-8') as file:
                 writer = csv.writer(file)
-                writer.writerow(['Casa', 'Evento', 'Aposta', 'Odd', 'Data'])
+                writer.writerow(['Casa', 'Evento', 'Aposta', 'Odd', 'Data', "Link"])
 
         sections = iframe_content.query_selector_all('section.prematch-matches.outright-champ')
         for section_idx, section in enumerate(sections):

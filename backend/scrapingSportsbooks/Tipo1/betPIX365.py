@@ -3,7 +3,7 @@ import json
 from time import sleep
 
 # BETPIX365 API URL
-url = "https://betpix365.com/api-v2/fixture/category-details/d/23/betpix365/null/false/ante/20/super-odds-multi-specials-/soccer/super-odds"
+url = "https://betpix365.bet.br/api-v2/fixture/category-details/d/23/betpix365/null/false/ante/20/super-odds-multi-specials-/soccer/super-odds"
 
 # Headers for the request
 headers = {

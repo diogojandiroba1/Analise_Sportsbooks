@@ -20,7 +20,7 @@ def estrelabet():
                     partida = 'Partida'
                     odd = data["odds"][0]["price"]
                     aposta = data["markets"][0]["name"]
-                    dados.append(['ESTRELABET', partida, aposta, odd, dataatual])
+                    dados.append(['ESTRELABET', partida, aposta, odd, dataatual, 'falta o link'])
                 except (KeyError, IndexError) as e:
                     print(f"Erro ao processar item: {e}")
                     continue
@@ -30,7 +30,7 @@ def estrelabet():
                     partida = 'Partida'
                     odd = data["odds"][0]["price"]
                     aposta = data["markets"][0]["name"]
-                    dados.append(['ESTRELABET', partida, aposta, odd, dataatual])
+                    dados.append(['ESTRELABET', partida, aposta, odd, dataatual, 'falta o link'])
                 except (KeyError, IndexError) as e:
                     print(f"Erro ao processar item: {e}")
                     continue
@@ -51,10 +51,10 @@ def salvar_dados_sem_duplicatas(novos_dados, caminho_csv):
         df_existente = pd.read_csv(caminho_csv)
     else:
         # Cria um DataFrame vazio se o arquivo não existir
-        df_existente = pd.DataFrame(columns=['Casa', 'Evento', 'Aposta', 'Odd', 'Data'])
+        df_existente = pd.DataFrame(columns=['Casa', 'Evento', 'Aposta', 'Odd', 'Data', "Link"])
     
     # Converte os novos dados para DataFrame
-    df_novos = pd.DataFrame(novos_dados, columns=['Casa', 'Evento', 'Aposta', 'Odd', 'Data'])
+    df_novos = pd.DataFrame(novos_dados, columns=['Casa', 'Evento', 'Aposta', 'Odd', 'Data', "Link"])
     
     # Concatena os dados existentes com os novos
     df_final = pd.concat([df_existente, df_novos], ignore_index=True)

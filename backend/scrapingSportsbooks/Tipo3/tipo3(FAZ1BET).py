@@ -43,7 +43,7 @@ def faz1bet():
         else:
             with open(arquivo_csv, mode='w', newline='', encoding='utf-8') as file:
                 writer = csv.writer(file)
-                writer.writerow(['Casa', 'Evento', 'Aposta', 'Odd', 'Data'])
+                writer.writerow(['Casa', 'Evento', 'Aposta', 'Odd', 'Data', "Link"])
 
         for i, div in enumerate(divs_match_list):
             li_outright_rows = div.query_selector_all('li.outright-row')

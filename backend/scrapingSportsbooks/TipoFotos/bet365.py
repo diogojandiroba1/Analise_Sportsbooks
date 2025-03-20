@@ -40,21 +40,35 @@ with sync_playwright() as p:
         print("✅ Cookies aceitos")
     except:
         print("⚠️ Botão de cookies não encontrado, seguindo adiante...")
-    
-    # Esperar pelo carregamento do conteúdo
+
+    # Esperar carregamento do conteúdo
     page.wait_for_selector('.pbb-PopularBetBuilder_BoostLogo.pbb-BetBoost', timeout=30000)
-    images = page.query_selector_all('.pbb-PopularBetBuilder_BoostLogo.pbb-BetBoost')
-    
-    print(f"🔍 Encontradas {len(images)} imagens para capturar.")
-    
-    for i, img in enumerate(images):
+
+    # Captura os Boosts do Popular Bet Builder
+    images1 = page.query_selector_all('.pbb-PopularBetBuilder_BoostLogo.pbb-BetBoost')
+    print(f"🔍 Encontradas {len(images1)} imagens de BetBoost para capturar.")
+
+    for i, img in enumerate(images1, start=1):
         parent_div = img.evaluate_handle("(el) => el.closest('.pbb-PopularBetBuilder.gl-Participant_General')")
         if parent_div:
-            screenshot_path = os.path.join(output_folder, f"bet_{i + 1}.png")
+            screenshot_path = os.path.join(output_folder, f"bet_boost_{i}.png")
             parent_div.screenshot(path=screenshot_path)
             print(f"📸 Print salvo: {screenshot_path}")
             send_image_to_telegram(bot_token, chat_id, topic_id, screenshot_path)
             time.sleep(2)  # Pequena pausa entre envios
-    
+
+    # Captura os Boosts do Popular Bet Content
+    images2 = page.query_selector_all('.pbb-PopularBet_Content .pbb-PopularBet_BoostLogo.pbb-SuperBetBoost')
+    print(f"🔍 Encontradas {len(images2)} imagens de Super BetBoost para capturar.")
+
+    for i, img in enumerate(images2, start=1):
+        parent_div = img.evaluate_handle("(el) => el.closest('.pbb-PopularBet_Content')")
+        if parent_div:
+            screenshot_path = os.path.join(output_folder, f"super_bet_boost_{i}.png")
+            parent_div.screenshot(path=screenshot_path)
+            print(f"📸 Print salvo: {screenshot_path}")
+            send_image_to_telegram(bot_token, chat_id, topic_id, screenshot_path)
+            time.sleep(2)  # Pequena pausa entre envios
+
     browser.close()
     print("✅ Processo concluído!")
