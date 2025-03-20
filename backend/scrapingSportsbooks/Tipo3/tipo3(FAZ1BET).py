@@ -66,7 +66,7 @@ def faz1bet():
                 for odd in odds_text:
                     aposta_identificador = (partida, aposta, odd)
                     if aposta_identificador not in apostas_registradas:
-                        dados.append((casa_aposta, partida, aposta, odd, data_hora))
+                        dados.append((casa_aposta, partida, aposta, odd, data_hora, "https://faz1.bet.br/br/sportsbook/prematch#/prematch/selection/197"))
                         apostas_registradas.add(aposta_identificador)
                     else:
                         print(f"Aposta já cadastrada: {aposta_identificador}")

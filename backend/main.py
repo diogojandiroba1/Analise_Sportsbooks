@@ -12,15 +12,6 @@ with sync_playwright() as p:
     p.chromium.launch()  # Não precisa chamar install() explicitamente
 
 
-# Configuração de logs
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.FileHandler("execution_log.log", encoding='utf-8'),
-        logging.StreamHandler()
-    ]
-)
 
 # Lista de arquivos do TipoFotos para executar uma vez por dia
 tipo_fotos_scripts = [

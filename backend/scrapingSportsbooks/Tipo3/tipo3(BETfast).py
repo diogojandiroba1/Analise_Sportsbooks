@@ -63,7 +63,7 @@ def betfast():
 
                     aposta_identificador = (partida_nome, aposta, odd)
                     if aposta_identificador not in apostas_registradas:
-                        dados.append((casa_aposta, partida_nome, aposta, odd, data_hora))
+                        dados.append((casa_aposta, partida_nome, aposta, odd, data_hora, 'https://betfast.bet.br/br/sportsbook/prematch#/prematch/197'))
                         apostas_registradas.add(aposta_identificador)
                     else:
                         print(f"Aposta já cadastrada: {aposta_identificador}")
