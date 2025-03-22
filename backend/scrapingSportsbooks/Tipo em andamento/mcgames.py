@@ -1,87 +1,81 @@
+import csv
+from datetime import datetime
+from playwright.sync_api import sync_playwright
 import os
-import requests
-from time import sleep
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
-from webdriver_manager.chrome import ChromeDriverManager
 
-# Função para enviar a imagem para o Telegram
-def send_image_to_telegram(bot_token, chat_id, topic_id, image_bytes):
-    url = f'https://api.telegram.org/bot{bot_token}/sendPhoto'
-    payload = {
-        'chat_id': chat_id,
-        'reply_to_message_id': topic_id  # Usando 'topic_id' como 'reply_to_message_id'
-    }
-    files = {'photo': image_bytes}
+def betfast():
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=False)
+        page = browser.new_page()
+        page.goto('https://mcgames.bet.br/sports#/sport/115/category/1365')
+        page.wait_for_load_state('networkidle')
+        page.wait_for_selector('body')
 
-    response = requests.post(url, data=payload, files=files)
-    if response.status_code == 200:
-        print(f'✅ Imagem enviada para o tópico {topic_id}')
-    else:
-        print(f'❌ Falha ao enviar imagem, status: {response.status_code}')
+        dados = []
+        arquivo_csv = 'data/csvS/dados_apostas.csv'
+        apostas_registradas = set()
 
-# Função para capturar a tela completa e enviar para o Telegram
-def tirar_print_completo(driver, bot_token, chat_id, topic_id):
-    total_altura = driver.execute_script("return document.body.scrollHeight")
-    viewport_altura = driver.execute_script("return window.innerHeight")
-    scroll_pos = 0
-    contador = 1
-    
-    while scroll_pos < total_altura:
-        driver.execute_script(f"window.scrollTo(0, {scroll_pos});")
-        sleep(3)  # Aguardar a rolagem
-        
-        # Capturar a tela
-        imagem_bytes = driver.get_screenshot_as_png()
-        print(f"Captura de tela {contador} enviada...")
-        
-        # Enviar para o Telegram
-        send_image_to_telegram(bot_token, chat_id, topic_id, imagem_bytes)
-        
-        # Rolagem pela metade da altura da janela
-        scroll_pos += viewport_altura / 2
-        contador += 1
-        sleep(3)  # Tempo de espera entre os envios para evitar erros
+        # Tentativa de lidar com a verificação humana
+        try:
+            verification_button = page.query_selector('.OFi5b')
+            if verification_button:
+                verification_button.click()
+                page.wait_for_timeout(5000)  # Aguarda a verificação
+        except Exception as e:
+            print("Erro ao clicar na verificação:", e)
 
-# Função principal para acessar as URLs e tirar prints
-def mcgames():
-    urls = [
-        "https://mcgames.bet.br/sports#/sport/115/category/1365/championship/50459",
-        "https://mcgames.bet.br/sports#/sport/90/category/1325/championship/51072"
-    ]
-    
-    chrome_options = Options()
-    chrome_options.add_argument("--headless")  # Rodar sem abrir janela (opcional)
-    chrome_options.add_argument("--disable-gpu")
-    chrome_options.add_argument("--window-size=1920,1080")
-    
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
-    
-    for i, url in enumerate(urls):
-        driver.get(url)
-        sleep(50)  # Aguardar carregamento inicial
-        
-        if i == 0:
-            try:
-                driver.find_element(By.XPATH, "/html/body/div[5]/div[1]/div[2]/div[2]/button[2]").click()
-                sleep(40)  # Esperar carregamento
-            except:
-                pass
-        
-        # Tirar print da página e enviar para o Telegram
-        tirar_print_completo(driver, bot_token, chat_id, topic_id)
-    
-    driver.quit()
+        page.wait_for_timeout(10000)  # Espera para carregar as odds
 
-if __name__ == "__main__":
-    bot_token = '7980433701:AAFeSQ5J2tCVdNDKfwwEjImx5NF2MIaK6zQ'  # Substitua pelo seu token
-    chat_id = '-1002647595950'  # Substitua pelo ID do grupo
-    topic_id = 380  # ID do tópico correto (se necessário para agrupamento de posts)
-    
-    # Executar o processo 5 vezes
-    for _ in range(2):
-        print("Iniciando nova execução...")
-        mcgames()
-        sleep(5)  # Aguardar antes de iniciar a próxima execução
+        # Carregar apostas registradas do CSV
+        if os.path.exists(arquivo_csv):
+            with open(arquivo_csv, mode='r', newline='', encoding='utf-8') as file:
+                reader = csv.reader(file)
+                next(reader, None)  # Pula o cabeçalho
+                for row in reader:
+                    apostas_registradas.add((row[1].strip(), row[2].strip(), row[3].strip()))
+        else:
+            with open(arquivo_csv, mode='w', newline='', encoding='utf-8') as file:
+                writer = csv.writer(file)
+                writer.writerow(['Casa', 'Evento', 'Aposta', 'Odd', 'Data', 'Link'])
+
+        # Identificar os botões de odds
+        odd_buttons = page.query_selector_all('[class*="OddBox"] button')
+        
+        for button in odd_buttons:
+            button.click()
+            print("Clicou no botão de odd.")
+            page.wait_for_timeout(5000)  # Aguarda o carregamento da aposta
+            
+            # Coletar informações da aposta
+            aposta_box = page.query_selector('[class*="BetSlipSelectionBox"]')
+            if aposta_box:
+                evento = aposta_box.query_selector('[class*="EventName"]').inner_text().strip()
+                aposta = aposta_box.query_selector('[class*="OddName"]').inner_text().strip()
+                odd = aposta_box.query_selector('[class*="OddValue"]').inner_text().strip()
+                
+                # Data e hora atual
+                data_hora = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                casa_aposta = "MCGAMES"
+
+                # Identificador único para evitar duplicatas
+                aposta_identificador = (evento, aposta, odd)
+                if aposta_identificador not in apostas_registradas:
+                    dados.append((casa_aposta, evento, aposta, odd, data_hora, 'https://mcgames.bet.br/sports#/sport/115/category/1365'))
+                    apostas_registradas.add(aposta_identificador)
+                else:
+                    print(f"Aposta já cadastrada: {aposta_identificador}")
+            else:
+                print("Nenhuma aposta encontrada para o botão de odd clicado.")
+
+        # Salvar os dados no CSV
+        if dados:
+            with open(arquivo_csv, mode='a', newline='', encoding='utf-8') as file:
+                writer = csv.writer(file)
+                writer.writerows(dados)
+            print(f"{len(dados)} novas apostas adicionadas ao arquivo 'dados_apostas.csv'.")
+        else:
+            print("Nenhuma aposta nova encontrada.")
+
+        browser.close()
+
+betfast()

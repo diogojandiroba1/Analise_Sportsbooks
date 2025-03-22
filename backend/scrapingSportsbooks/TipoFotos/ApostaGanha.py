@@ -12,10 +12,19 @@ def generate_unique_filename(base_name):
 def send_image_to_telegram(bot_token, chat_id, topic_id, image_path):
     url = f'https://api.telegram.org/bot{bot_token}/sendPhoto'
     
+    caption = (
+            f"🏠 Casa: APOSTA GANHA\n"
+            f"⚽ Odd: \n"
+            f"🚧 Limite: R$ \n"
+            f"🔗 Link: https://www.apostaganha.bet.br/esportes/odd-suprema\n"
+            "\n🔥 Lembre-se isso é um alerta de superODD e não uma tip BOA SORTE 🔥")
+    
+
     with open(image_path, 'rb') as photo:
         payload = {
             'chat_id': chat_id,
-            'reply_to_message_id': topic_id
+            'reply_to_message_id': topic_id,
+            'caption': caption 
         }
         files = {'photo': photo}
         

@@ -7,8 +7,6 @@ __pycache__/
 execution_log.log
 
 # Ignorar arquivos CSV específicos
-data/csvS/apostas_enviadas.csv
-data/csvS/dados_apostas.csv
 data/csvS/jsonCasas
 
 # Ignorar ambiente virtual
