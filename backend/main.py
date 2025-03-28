@@ -16,8 +16,7 @@ with sync_playwright() as p:
 # Lista de arquivos do TipoFotos para executar uma vez por dia
 tipo_fotos_scripts = [
     "backend/scrapingSportsbooks/TipoFotos/ApostaGanha.py",
-    "backend/scrapingSportsbooks/TipoFotos/EsportivaBet.py",
-    "backend/scrapingSportsbooks/TipoFotos/bet365.py",
+    "backend/scrapingSportsbooks/TipoFotos/EsportivaBet.py"
 ]
 
 def execute_python_file(file_path):

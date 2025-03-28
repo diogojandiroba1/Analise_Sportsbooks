@@ -53,7 +53,8 @@ def main():
         r'backend\\scrapingSportsbooks\\Tipo3\\tipo3(BETfast).py',
         r'backend\\scrapingSportsbooks\\Tipo1\\BetEsporte.py',
         r'backend\\scrapingSportsbooks\\Tipo4\\brasilDasorte.py',
-        r'backend\\scrapingSportsbooks\\Tipo4\\sportingbet.py'
+        r'backend\\scrapingSportsbooks\\Tipo4\\sportingbet.py',
+        r'backend\\scrapingSportsbooks\\Tipo2\\BET365scrap.PY'
     ]
 
     execucao_composta = [

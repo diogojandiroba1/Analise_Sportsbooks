@@ -1,0 +1,215 @@
+{
+    "success": true,
+    "responseCodes": [],
+    "data": [
+        {
+            "stId": 596,
+            "xid": "18",
+            "stN": "Super Cotações & Múltiplas Especiais",
+            "iconId": 18,
+            "pid": 2,
+            "mdt": 99,
+            "lvt": false,
+            "fCnt": 3,
+            "oCnt": 3,
+            "aCnt": 3,
+            "fCM": 3,
+            "oCM": 3,
+            "ord": 2,
+            "cs": [
+                {
+                    "cId": 10002809,
+                    "xid": "2~custom~10002809",
+                    "cN": "Futebol",
+                    "fCnt": 3,
+                    "oCnt": 3,
+                    "aCnt": 3,
+                    "fCM": 3,
+                    "oCM": 3,
+                    "ord": 50001,
+                    "sns": [
+                        {
+                            "sId": 803527,
+                            "lId": 987517,
+                            "seaN": "Super Cotações",
+                            "cshOut": false,
+                            "lord": 1,
+                            "ord": 1,
+                            "seaSURL": "super-odds",
+                            "lName": "Super Odds",
+                            "fCnt": 3,
+                            "oCnt": 3,
+                            "aCnt": 3,
+                            "fCM": 3,
+                            "oCM": 3,
+                            "fs": [
+                                {
+                                    "fId": 63481422,
+                                    "fsd": 1743122100000,
+                                    "cshOut": false,
+                                    "ante": true,
+                                    "afed": 1743122100000,
+                                    "hcN": "HIPERODDS - Corinthians VS Palmeiras",
+                                    "xid": "63481422",
+                                    "lxid": "2~custom~987517",
+                                    "lbO": false,
+                                    "lSt": false,
+                                    "vld": true,
+                                    "frz": false,
+                                    "fDS": 1,
+                                    "mmp": 1,
+                                    "ce": true,
+                                    "spl": true,
+                                    "btgs": [
+                                        {
+                                            "btgId": 115206,
+                                            "btgN": "Total de escanteios",
+                                            "mrkp": "_id=115206",
+                                            "btgNO": "Total de escanteios",
+                                            "btgSpl": true,
+                                            "btgSiOn": true,
+                                            "btgCe": true,
+                                            "dt": [
+                                                1
+                                            ],
+                                            "prm": false,
+                                            "cshOut": false,
+                                            "fos": [
+                                                {
+                                                    "foId": 8386112402,
+                                                    "btId": 2412774,
+                                                    "btN": "Mais de 0.5 escanteios",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": false,
+                                                    "lineItem": false,
+                                                    "hO": 2,
+                                                    "hSh": "Mais de 0.5 escanteios",
+                                                    "tmId": 442037,
+                                                    "foCe": true,
+                                                    "btCe": true,
+                                                    "taCe": false
+                                                }
+                                            ],
+                                            "lineItem": false
+                                        }
+                                    ]
+                                },
+                                {
+                                    "fId": 63481423,
+                                    "fsd": 1743122100000,
+                                    "cshOut": false,
+                                    "ante": true,
+                                    "afed": 1743122100000,
+                                    "hcN": "HIPERODDS - Corinthians VS Palmeiras",
+                                    "xid": "63481423",
+                                    "lxid": "2~custom~987517",
+                                    "lbO": false,
+                                    "lSt": false,
+                                    "vld": true,
+                                    "frz": false,
+                                    "fDS": 1,
+                                    "mmp": 1,
+                                    "ce": true,
+                                    "spl": true,
+                                    "btgs": [
+                                        {
+                                            "btgId": 115207,
+                                            "btgN": "Total de gols no primeiro tempo",
+                                            "mrkp": "_id=115207",
+                                            "btgNO": "Total de gols no primeiro tempo",
+                                            "btgSpl": true,
+                                            "btgSiOn": true,
+                                            "btgCe": true,
+                                            "dt": [
+                                                3
+                                            ],
+                                            "prm": false,
+                                            "cshOut": false,
+                                            "fos": [
+                                                {
+                                                    "foId": 8386112403,
+                                                    "btId": 2412775,
+                                                    "btN": "Mais de 0.5 gols no primeiro tempo",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": false,
+                                                    "lineItem": false,
+                                                    "hO": 2,
+                                                    "hSh": "Mais de 0.5 gols no primeiro tempo",
+                                                    "tmId": 442038,
+                                                    "foCe": true,
+                                                    "btCe": true,
+                                                    "taCe": false
+                                                }
+                                            ],
+                                            "lineItem": false
+                                        }
+                                    ]
+                                },
+                                {
+                                    "fId": 63481424,
+                                    "fsd": 1743122100000,
+                                    "cshOut": false,
+                                    "ante": true,
+                                    "afed": 1743122100000,
+                                    "hcN": "HIPERODDS - Corinthians VS Palmeiras",
+                                    "xid": "63481424",
+                                    "lxid": "2~custom~987517",
+                                    "lbO": false,
+                                    "lSt": false,
+                                    "vld": true,
+                                    "frz": false,
+                                    "fDS": 1,
+                                    "mmp": 1,
+                                    "ce": true,
+                                    "spl": true,
+                                    "btgs": [
+                                        {
+                                            "btgId": 115203,
+                                            "btgN": "Hiper Odds",
+                                            "mrkp": "_id=115203",
+                                            "btgNO": "Hiper Odds",
+                                            "btgSpl": true,
+                                            "btgSiOn": true,
+                                            "btgCe": true,
+                                            "dt": [
+                                                1
+                                            ],
+                                            "prm": false,
+                                            "cshOut": false,
+                                            "fos": [
+                                                {
+                                                    "foId": 8386112404,
+                                                    "btId": 2412776,
+                                                    "btN": "Mais de 1.5 gols + Mais de 10.5 escanteios",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": false,
+                                                    "lineItem": false,
+                                                    "hO": 2.5,
+                                                    "hSh": "Mais de 1.5 gols + Mais de 10.5 escanteios",
+                                                    "tmId": 442039,
+                                                    "foCe": true,
+                                                    "btCe": true,
+                                                    "taCe": false
+                                                }
+                                            ],
+                                            "lineItem": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "cSURL": "soccer"
+                }
+            ],
+            "stSURL": "super-odds-multi-specials-"
+        }
+    ],
+    "type": null
+}
